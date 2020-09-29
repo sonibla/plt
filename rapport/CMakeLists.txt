@@ -1,6 +1,21 @@
-
-# Find dia and ps2pdf
+set(LATEX_OUTPUT_PATH "")
+set(CMAKE_MODULE_PATH "../cmake" ${CMAKE_MODULE_PATH})
+include(../cmake/UseLATEX.cmake)
+include(FindLATEX)
 include(FindPackageHandleStandardArgs)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
+
+if(LATEX_FOUND)
+  # Generate LaTeX report
+  file(GLOB_RECURSE contents_files RELATIVE ${CMAKE_SOURCE_DIR} rapport/*.tex)
+
+  ADD_LATEX_DOCUMENT(
+    Rapport.tex
+    IMAGE_DIRS images)
+else()
+  message(WARNING "LaTeX not found! Rapport generation not available!")
+endif()
+
 find_program(DIA_EXECUTABLE NAMES dia)
 find_package_handle_standard_args(Dia DEFAULT_MSG DIA_EXECUTABLE)
 find_program(PS2PDF_EXECUTABLE NAMES ps2pdf)
@@ -8,7 +23,7 @@ find_package_handle_standard_args(Ps2Pdf DEFAULT_MSG PS2PDF_EXECUTABLE)
 
 if(Ps2Pdf_FOUND AND Dia_FOUND)
   # Custom "rapport" target that creates pdf out of dia UML files
-  add_custom_target(rapport)
+  add_custom_target(diagrams)
 
   # Function that generate a pdf file out of a dia UML file.
   #
@@ -40,8 +55,8 @@ if(Ps2Pdf_FOUND AND Dia_FOUND)
     add_dependencies(rapport rapport-diapdf-${name})
   endfunction()
 
-  # Generate all pdf
-  generate_dia_pdf(state)
+  # Generate dia PDFs
+  #generate_dia_pdf(state)
   #generate_dia_pdf(render)
   #generate_dia_pdf(engine)
   #generate_dia_pdf(ai)
@@ -50,5 +65,3 @@ if(Ps2Pdf_FOUND AND Dia_FOUND)
 else()
   message(WARNING "Dia or ps2pdf not found! Rapport generation not available!")
 endif()
-
-# vim: set sw=2 sts=2 et:
