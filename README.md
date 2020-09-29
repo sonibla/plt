@@ -16,7 +16,7 @@ sudo apt install git dia ghostscript cmake g++ lcov gcovr libxml2-dev libsfml-de
 git clone https://github.com/sonibla/plt.git
 ```
 
-### Build
+### Build binaries
 
 ```
 mkdir build
@@ -26,6 +26,20 @@ make -j
 ```
 
 Binaries are generated in *bin/* folder
+
+### Report
+
+Install LaTeX dependencies :
+
+```
+sudo apt install texlive texlive-math-extra texlive-science texlive-latex-extra texlive-lang-french
+```
+
+After running CMake, use the following command to generate the report :
+
+```
+make Rapport
+```
 
 ## Authors
 
