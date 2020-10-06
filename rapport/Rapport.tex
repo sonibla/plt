@@ -51,22 +51,6 @@
 \textwidth 18cm
 \textheight 25cm
 
-\usepackage{glossaries}
-\makeglossaries
-
-\newglossaryentry{joueur-actif}{
-name={joueur actif},
-description={joueur dont c'est le tour}}
-
-\newglossaryentry{engage-degage}{
-name={engag{\'e} ou d{\'e}gag{\'e}},
-plural={engag{\'e}s ou d{\'e}gag{\'e}s},
-description={un permenant est dit \emph{engagé} lorsque la carte qui le représente est tourné de 90 degrés vers la droite, il est dit \emph{dégagé} lorsqu'il ne l'est pas}}
-
-\newglossaryentry{deck}{
-name={deck},
-description={ensemble de cartes qu'un joueur utilise pendant la partie}}
-
 \begin{document}
 
 \thispagestyle{empty}
@@ -104,8 +88,8 @@ description={ensemble de cartes qu'un joueur utilise pendant la partie}}
 
 Le jeu proposé se base sur \href{https://en.wikipedia.org/wiki/Magic\%3A\_The_Gathering\_Online}{Magic : The Gathering Online}, la version numérique du jeu de carte à collectionner éponyme.
 
-Dans \emph{Magic : The Gathering}, les joueurs assemblent un \gls{deck} contenant $60$ cartes et s'affrontent en utilisant celles-ci.
-\emph{Magic : The Gathering} est séparé en deux étapes bien distinctes : la création de \gls{deck}, et le jeu en lui-même.
+Dans \emph{Magic : The Gathering}, les joueurs assemblent un deck contenant $60$ cartes et s'affrontent en utilisant celles-ci.
+\emph{Magic : The Gathering} est séparé en deux étapes bien distinctes : la création de deck, et le jeu en lui-même.
 Nous nous focaliserons sur une seule de ces deux composantes : le jeu de carte.
 
 \subsection{Règles du jeu}
@@ -114,7 +98,7 @@ Nous nous focaliserons sur une seule de ces deux composantes : le jeu de carte.
 Le Jeu est composé de sept zones :
 
 \begin{description}
-\item[La Bibliothèque :] chaque joueur a la sienne, c'est la zone ou les joueurs placent leurs \gls{deck} faces cachées.
+\item[La Bibliothèque :] chaque joueur a la sienne, c'est la zone ou les joueurs placent leurs deck faces cachées.
 Lorsqu'un joueur pioche une carte, il pioche depuis cette zone.
 \item[La Main :] propre à chaque joueur, c'est la zone depuis laquelle les joueurs peuvent jouer des cartes.
 \item[Le Cimetiere :] propre à chaque joueur, c'est la zone ou les joueurs placent les cartes déffausées.
@@ -136,14 +120,14 @@ Un joueur perd la partie si au moins une des conditions suivantes est réalisée
 
 \subsubsection{Structure du tour}
 Le tour est composé de cinq phases.
-Pendant les tours, les permanents peuvent être \glspl{engage-degage}.
+Pendant les tours, les permanents peuvent être engagé ou dégagés.
 
 \begin{description}
-\item[Phase de début de tour :] phase pendant laquelle le \gls{joueur-actif} pioche une carte et dégage les permanents qu'il contrôle.
-\item[Phase principale :] c'est la phase durant laquelle le \gls{joueur-actif} peut jouer des sorts lents.
-\item[Phase de combat :] c'est la phase durant laquelle le \gls{joueur-actif} va déclarer une ou plusieurs créatures comme attaquant un autre joueur. Le joueur défenseur pourra alors bloquer avec ses propres créatures.
-\item[Phase principale post-combat :] le \gls{joueur-actif} peut de nouveau jouer des sorts lents.
-\item[Phase de fin de tour :] c'est la phase durant laquelle le \gls{joueur-actif} va défausser des cartes s'il en a trop en main et où toutes les bléssures de combats sur les créatures sont retirées.
+\item[Phase de début de tour :] phase pendant laquelle le joueur actif pioche une carte et dégage les permanents qu'il contrôle.
+\item[Phase principale :] c'est la phase durant laquelle le joueur actif peut jouer des sorts lents.
+\item[Phase de combat :] c'est la phase durant laquelle le joueur actif va déclarer une ou plusieurs créatures comme attaquant un autre joueur. Le joueur défenseur pourra alors bloquer avec ses propres créatures.
+\item[Phase principale post-combat :] le joueur actif peut de nouveau jouer des sorts lents.
+\item[Phase de fin de tour :] c'est la phase durant laquelle le joueur actif va défausser des cartes s'il en a trop en main et où toutes les bléssures de combats sur les créatures sont retirées.
 \end{description}
 
 \subsubsection{Déroulement de la partie}
@@ -248,7 +232,12 @@ Les graphiques de \emph{Magic : The Gathering} ne sont pas libres de droit, on n
 %\end{figure}
 %\end{landscape}
 
-% Glossaire
-\printglossary
+\section{Glossaire}
+
+\begin{description}
+\item[Joueur actif :] joueur dont c'est le tour
+\item[Engage/dégagé :] un permenant est dit \emph{engagé} lorsque la carte qui le représente est tourné de 90 degrés vers la droite, il est dit \emph{dégagé} lorsqu'il ne l'est pas
+\item[Deck :] ensemble de cartes qu'un joueur utilise pendant la partie
+\end{description}
 
 \end{document}
