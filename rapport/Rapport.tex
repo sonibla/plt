@@ -11,6 +11,9 @@
 \usepackage{listings}
 \usepackage{longtable}
 \usepackage{hyperref}
+\usepackage{graphicx} 
+\graphicspath{ {./images/} }
+
 \lstset{literate=
 {é}{{\'e}}1
 {è}{{\`e}}1
@@ -102,11 +105,25 @@ Le Jeu est composé de sept zones :
 Lorsqu'un joueur pioche une carte, il pioche depuis cette zone.
 \item[La Main :] propre à chaque joueur, c'est la zone depuis laquelle les joueurs peuvent jouer des cartes.
 \item[Le Cimetiere :] propre à chaque joueur, c'est la zone ou les joueurs placent les cartes déffausées.
-\item[L'exile :] propre à chaque joueur, c'est la zone où vont les cartes retirées du jeu par des effets de cartes.
+\item[L'exil :] propre à chaque joueur, c'est la zone où vont les cartes retirées du jeu par des effets de cartes.
 \item[Le champ de bataille :] commun a tous les joueurs, c'est la zone ou l'on trouve des permanents qui sont soit des cartes soit des jetons crées par des effets de cartes.
 \item[La Pile :] commune a tous les joueurs c'est la zone où vont les cartes jouées, effets de cartes et effets de permanents avant d'etre résolus.
 \item[Zone de commandement :] commune a tous les joueurs, c'est une zone où vont des objets qui ne pourront pas être altérés par des effets de cartes.
+
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{Plateau.PNG}
+\caption{\label{Plateau-du-jeu}Plateau du jeu}
+\end{center}
+\end{figure}
+
+
+
 \end{description}
+
+Voir exemple de plateau : Figure 1.
 
 \subsubsection{Conditions de défaite}
 Un joueur perd la partie si au moins une des conditions suivantes est réalisée : 
@@ -238,6 +255,14 @@ Les graphiques de \emph{Magic : The Gathering} ne sont pas libres de droit, on n
 \item[Joueur actif :] joueur dont c'est le tour
 \item[Engage/dégagé :] un permenant est dit \emph{engagé} lorsque la carte qui le représente est tournée de 90 degrés vers la droite, il est dit \emph{dégagé} lorsqu'il ne l'est pas
 \item[Deck :] ensemble de cartes qu'un joueur utilise pendant la partie
+\end{description}
+
+
+\section{Bibliographie}
+
+\begin{description}
+\item[Règles du jeu officielles :] https://media.wizards.com/2014/docs/FR\_M15\_QckStrtBklt\_LR\_Crop.pdf
+
 \end{description}
 
 \end{document}
