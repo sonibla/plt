@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{times}
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -10,6 +10,7 @@
 \usepackage{pdflscape}
 \usepackage{listings}
 \usepackage{longtable}
+\usepackage{hyperref}
 \lstset{literate=
 {é}{{\'e}}1
 {è}{{\`e}}1
@@ -50,6 +51,22 @@
 \textwidth 18cm
 \textheight 25cm
 
+\usepackage{glossaries}
+\makeglossaries
+
+\newglossaryentry{joueur-actif}{
+name={joueur actif},
+description={joueur dont c'est le tour}}
+
+\newglossaryentry{engage-degage}{
+name={engag{\'e} ou d{\'e}gag{\'e}},
+plural={engag{\'e}s ou d{\'e}gag{\'e}s},
+description={un permenant est dit \emph{engagé} lorsque la carte qui le représente est tourné de 90 degrés vers la droite, il est dit \emph{dégagé} lorsqu'il ne l'est pas}}
+
+\newglossaryentry{deck}{
+name={deck},
+description={ensemble de cartes qu'un joueur utilise pendant la partie}}
+
 \begin{document}
 
 \thispagestyle{empty}
@@ -60,7 +77,7 @@
 
 \begin{center}\textbf{\Huge Projet Logiciel Transversal}\end{center}{\Large \par}
 
-\begin{center}\textbf{\large Auteurs}\end{center}{\large \par}
+\begin{center}\textbf{\large Maxime Marroufin, Quentin Chhean,\\Abinaya Mathibala, Alban Benmouffek}\end{center}{\large \par}
 
 \vspace{2cm}
 
@@ -84,61 +101,57 @@
 \section{Présentation Générale}
 
 \subsection{Archétype}
-Le jeu proposé se base sur Magic : The Gathering Online, la version numérique du jeu de carte à collectionner éponyme.
 
-Dans Magic : The Gathering les joueurs assemblent un "deck" contenant au minimum 60 cartes et s'affrontent en utilisant celles-ci, Magic : The Gathering étant un jeu qui est séparé en deux étapes bien distinctes : la création de "deck" et le jeu de carte, nous nous focaliserons sur une seule de ces deux composantes : le jeu de carte.
+Le jeu proposé se base sur \href{https://en.wikipedia.org/wiki/Magic\%3A\_The_Gathering\_Online}{Magic : The Gathering Online}, la version numérique du jeu de carte à collectionner éponyme.
 
+Dans \emph{Magic : The Gathering}, les joueurs assemblent un \gls{deck} contenant $60$ cartes et s'affrontent en utilisant celles-ci.
+\emph{Magic : The Gathering} est séparé en deux étapes bien distinctes : la création de \gls{deck}, et le jeu en lui-même.
+Nous nous focaliserons sur une seule de ces deux composantes : le jeu de carte.
 
 \subsection{Règles du jeu}
-
-\subsubsection{Glossaire}
-
-Joueur actif : Joueur dont c'est le tour
-Engagé/Dégagé : un permenant est dit engagé lorsque la carte qui le représente est tourné de 90 degrés vers la droite, il est dit dégagé lorsqu'il ne l'est pas. 
 
 \subsubsection{Zones de jeu}
 Le Jeu est composé de sept zones :
 
-- La Bibliothèque : Chaque joueur a la sienne, c'est la zone ou les joueurs placent leurs "deck" faces cachés, lorsqu'un joueur pioche il pioche depuis cette zone.
+\begin{description}
+\item[La Bibliothèque :] chaque joueur a la sienne, c'est la zone ou les joueurs placent leurs \gls{deck} faces cachées.
+Lorsqu'un joueur pioche une carte, il pioche depuis cette zone.
+\item[La Main :] propre à chaque joueur, c'est la zone depuis laquelle les joueurs peuvent jouer des cartes.
+\item[Le Cimetiere :] propre à chaque joueur, c'est la zone ou les joueurs placent les cartes déffausées.
+\item[L'exile :] propre à chaque joueur, c'est la zone où vont les cartes retirées du jeu par des effets de cartes.
+\item[Le champ de bataille :] commun a tous les joueurs, c'est la zone ou l'on trouve des permanents qui sont soit des cartes soit des jetons crées par des effets de cartes.
+\item[La Pile :] commune a tous les joueurs c'est la zone où vont les cartes jouées, effets de cartes et effets de permanents avant d'etre résolus.
+\item[Zone de commandement :] commune a tous les joueurs, c'est une zone où vont des objets qui ne pourront pas être altérés par des effets de cartes.
+\end{description}
 
-- La Main : Propre à chaque joueur, c'est la zone depuis laquelle les joueurs peuvent jouer des cartes.
+\subsubsection{Conditions de défaite}
+Un joueur perd la partie si au moins une des conditions suivantes est réalisée : 
 
-- Le Cimetiere : Propre à chaque joueur, c'est la zone ou les joueurs placent les cartes déffausés.
-
-- L'exile : Propre à chaque joueur, c'est la zone ou vont les cartes retirés du jeu par des effets de cartes.
-
-- Le champ de battaile : Commun a tous les joueurs, c'est la zone ou l'on trouve des permanents qui sont soit des cartes soit des "jetons" créer par des effets de cartes.
-
-- La Pile : Commune a tous les joueurs c'est la zone ou vont les cartes jouées, effets de cartes et effets de permanents avant d'etre résolus.
-
-- Zone de commandement : Commune a tous les joueurs, c'est une zone ou vont des objets qui ne pourront etre altéré par des effets de cartes.
-
-\subsubsection{Condition de défaite}
-Un joueur perd la partie si : 
-
--Ses points de vie sont réduits a zéro
-
--Il pioche alors que sa bibliothèque est vide
-
--Un effet de carte lui fait perdre la partie
-
--Un effet de carte fait gagner un de ses advairsaires 
+\begin{itemize}
+\item[-] Ses points de vie sont réduits a zéro
+\item[-] Il pioche alors que sa bibliothèque est vide
+\item[-] Un effet de carte lui fait perdre la partie
+\item[-] Un effet de carte fait gagner un de ses advairsaires 
+\end{itemize}
 
 \subsubsection{Structure du tour}
-Le tour est composée de cinq phases : 
-- Phase de début de tour : phase pendant laquelle le joueur actif pioche une carte et dégage les permanents qu'il controle.
+Le tour est composé de cinq phases.
+Pendant les tours, les permanents peuvent être \glspl{engage-degage}.
 
-- Phase principale : C'est la phase durant laquelle le joueur actif peut jouer des sorts "lent".
-
-- Phase de combat : C'est la phase durant laquelle le joueur actif va déclarer une ou plusieurs créatures comme attaquant un autre joueur , le joueur défenseur pourra alors bloquer avec ses propre créatures.
-
-- Phase principale post-combat : voir phase principale ci-dessus.
-
-- Phase de fin de tour : C'est la phase durant laquelle le joueur actif va défausser des cartes s'il en a trop en main et où toutes les bléssures de combats sur les créatures sont retirées.
+\begin{description}
+\item[Phase de début de tour :] phase pendant laquelle le \gls{joueur-actif} pioche une carte et dégage les permanents qu'il contrôle.
+\item[Phase principale :] c'est la phase durant laquelle le \gls{joueur-actif} peut jouer des sorts lents.
+\item[Phase de combat :] c'est la phase durant laquelle le \gls{joueur-actif} va déclarer une ou plusieurs créatures comme attaquant un autre joueur. Le joueur défenseur pourra alors bloquer avec ses propres créatures.
+\item[Phase principale post-combat :] le \gls{joueur-actif} peut de nouveau jouer des sorts lents.
+\item[Phase de fin de tour :] c'est la phase durant laquelle le \gls{joueur-actif} va défausser des cartes s'il en a trop en main et où toutes les bléssures de combats sur les créatures sont retirées.
+\end{description}
 
 \subsubsection{Déroulement de la partie}
+
 Chaque joueur commence la partie avec un total de vingt points de vie et une main de départ de sept cartes.
-La partie commence dans la phase principale du premier joueur qui joue et à la fin de son tour le tour d'un de ses adversaires commence, cela continue jusqu'à ce qu'un joueur est gagné la partie.
+La partie commence dans la phase principale du premier joueur qui joue.
+À la fin de son tour, le tour d'un de ses adversaires commence.
+Ce cycle continue jusqu'à ce qu'un joueur gagne la partie.
 
 \subsection{Ressources}
 
@@ -224,5 +237,8 @@ La partie commence dans la phase principale du premier joueur qui joue et à la 
 %\caption{\label{uml:module}Diagramme des classes pour la modularisation.} 
 %\end{figure}
 %\end{landscape}
+
+% Glossaire
+\printglossary
 
 \end{document}
