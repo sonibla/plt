@@ -1,4 +1,4 @@
-# PLT
+# MagiX
 
 ## Getting started
 
@@ -51,7 +51,7 @@ make simple
 
 * [**Maxime Marroufin**](https://github.com/Marroufin)
 * [**Quentin Chhean**](https://github.com/quenchhe)
-* **Abinaya Mathibala**
+* [**Abinaya Mathibala**](https://github.com/AbinayaM-coder)
 * [**Alban Benmouffek**](https://github.com/sonibla)
 
 See also the list of [contributors](https://github.com/sonibla/plt/contributors) who participated in this project.
