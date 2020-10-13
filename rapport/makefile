@@ -1,17 +1,21 @@
 NAME=Rapport
 COMPILER=pdflatex
-COMPARGS=| tail -n -233 | grep -v .pfb
+LATEX=latex
+PDFVIEWER=evince
 BIBLIO=bibtex
 INDEXER=makeindex
 GLOSSARY=makeglossaries
 
-all: clean once bib glo idx
-	$(COMPILER) $(NAME).tex $(COMPARGS)
-	$(INDEXER) $(NAME).idx
-	$(COMPILER) $(NAME).tex $(COMPARGS)
+simple: clean twice view
 
+all: clean once bib glo idx twice view
+	
 once:
-	$(COMPILER) $(NAME).tex $(COMPARGS)
+	$(COMPILER) --shell-escape -synctex=1 -interaction=nonstopmode $(NAME).tex
+
+twice:
+	$(COMPILER) --shell-escape -synctex=1 -interaction=nonstopmode $(NAME).tex
+	$(COMPILER) --shell-escape -synctex=1 -interaction=nonstopmode $(NAME).tex
 
 clean:
 	rm -rf $(NAME).toc $(NAME).lot $(NAME).lof
@@ -30,5 +34,8 @@ idx: once
 bib: once
 	$(BIBLIO) $(NAME).aux
 
-simple: once bib glo idx
-	$(COMPILER) $(NAME).tex $(COMPARGS)
+latex:
+	$(LATEX) -interaction=nonstopmode $(NAME).tex
+
+view:
+	$(PDFVIEWER) $(NAME).pdf
