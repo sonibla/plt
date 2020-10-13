@@ -2594,7 +2594,7 @@
       <dia:attribute name="operations">
         <dia:composite type="umloperation">
           <dia:attribute name="name">
-            <dia:string>#getInstance#</dia:string>
+            <dia:string>#GetInstance#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
             <dia:string>##</dia:string>
@@ -2702,7 +2702,7 @@
         </dia:composite>
         <dia:composite type="umloperation">
           <dia:attribute name="name">
-            <dia:string>#getStack#</dia:string>
+            <dia:string>#GetStack#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
             <dia:string>##</dia:string>
@@ -3520,7 +3520,7 @@
         </dia:composite>
         <dia:composite type="umloperation">
           <dia:attribute name="name">
-            <dia:string>#isDead#</dia:string>
+            <dia:string>#IsDead#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
             <dia:string>##</dia:string>
@@ -4958,7 +4958,7 @@
       <dia:attribute name="operations">
         <dia:composite type="umloperation">
           <dia:attribute name="name">
-            <dia:string>#move#</dia:string>
+            <dia:string>#Move#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
             <dia:string>##</dia:string>
@@ -8903,15 +8903,15 @@
         <dia:point val="-37.2475,83"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-38.0975,82.95;-33.5825,95.8"/>
+        <dia:rectangle val="-38.0975,82.95;-33.5825,96.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="-37.2475,83"/>
-        <dia:point val="-37.2475,95"/>
-        <dia:point val="-33.6325,95"/>
+        <dia:point val="-37.2475,95.25"/>
+        <dia:point val="-33.6325,95.25"/>
         <dia:point val="-33.6325,94.2"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
