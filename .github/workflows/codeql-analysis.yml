@@ -59,6 +59,7 @@ jobs:
     #    uses a compiled language
 
     - run: |
+       apt install git dia ghostscript cmake g++ lcov gcovr libxml2-dev libsfml-dev libboost-test-dev
        mkdir build 
        cd build
        cmake ..
