@@ -7,7 +7,7 @@
 using namespace state;
 using namespace std;
 
-static std::weak_ptr<Game> Game::GetInstance(){}
+std::weak_ptr<Game> Game::GetInstance(){}
 void Game::NextTurn(std::weak_ptr<Player> player){}
 std::weak_ptr<Battlefield> Game::GetBattlefield(){}
 std::weak_ptr<Exile> Game::GetExile(){}
