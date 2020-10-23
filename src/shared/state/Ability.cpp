@@ -3,6 +3,6 @@
 using namespace std;
 using namespace state;
 
-void Resolve () {}
-bool ValidTargets () {}
-void Copy () {}
+void Ability::Resolve () {}
+bool Ability::ValidTargets () {}
+void Ability::Copy () {}

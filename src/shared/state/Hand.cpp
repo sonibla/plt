@@ -5,3 +5,6 @@
 #include "Hand.h"
 using namespace state;
 using namespace std;
+
+Hand::Hand() {}
+Hand::~Hand() {}

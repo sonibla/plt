@@ -3,3 +3,9 @@
 //
 
 #include "Cost.h"
+
+using namespace std;
+using namespace state;
+
+Cost::Cost() {}
+Cost::~Cost() {}

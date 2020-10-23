@@ -2,3 +2,6 @@
 
 using namespace std;
 using namespace state;
+
+TriggeredAbility::TriggeredAbility() {}
+TriggeredAbility::~TriggeredAbility() {}

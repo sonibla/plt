@@ -5,3 +5,5 @@
 #include "Command.h"
 using namespace state;
 using namespace std;
+Command::Command() {}
+Command::~Command() {}

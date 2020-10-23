@@ -4,3 +4,6 @@
 #include "Exile.h"
 using namespace state;
 using namespace std;
+
+Exile::Exile() {}
+Exile::~Exile() {}

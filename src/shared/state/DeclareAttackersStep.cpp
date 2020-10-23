@@ -3,4 +3,5 @@
 using namespace std;
 using namespace state;
 
-
+DeclareAttackersStep::DeclareAttackersStep() {}
+DeclareAttackersStep::~DeclareAttackersStep() {}

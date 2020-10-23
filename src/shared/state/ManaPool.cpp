@@ -5,3 +5,6 @@
 #include "ManaPool.h"
 using namespace state;
 using namespace std;
+
+ManaPool::ManaPool() {}
+ManaPool::~ManaPool() {}

@@ -5,3 +5,6 @@
 #include "Library.h"
 using namespace state;
 using namespace std;
+
+Library::Library() {}
+Library::~Library() {}

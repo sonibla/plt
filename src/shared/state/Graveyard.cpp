@@ -6,3 +6,6 @@
 
 using namespace state;
 using namespace std;
+
+Graveyard::Graveyard(){}
+Graveyard::~Graveyard(){}

@@ -5,3 +5,6 @@
 #include "Mana.h"
 using namespace state;
 using namespace std;
+
+Mana::Mana() {}
+Mana::~Mana() {}

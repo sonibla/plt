@@ -4,6 +4,10 @@
 
 #include "Player.h"
 
+using namespace state;
+using namespace std;
+
+
 bool Player::Cast(std::weak_ptr<Card>){}
 bool Player::Play(std::weak_ptr<Card>){}
 bool Player::ActivateAbility(std::weak_ptr<PlayableGameElement> source){}
@@ -17,4 +21,6 @@ std::weak_ptr<Graveyard> Player::GetGraveyard(){}
 std::weak_ptr<Library> Player::GetGraveyard(){}
 std::weak_ptr<Hand> Player::GetGraveyard(){}
 std::weak_ptr<ManaPool> Player::GetManaPool(){}
+Player::Player(){}
+Player::~Player(){}
 

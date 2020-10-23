@@ -3,4 +3,5 @@
 using namespace std;
 using namespace state;
 
-virtual void Phase::NextStep() {}
+PostcombatMainPhase::PostcombatMainPhase() {}
+PostcombatMainPhase::~PostcombatMainPhase() {}
