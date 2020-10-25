@@ -18,8 +18,8 @@ std::list<std::weak_ptr<GameElement>> Player::Target(){}
 bool Player::Win(){}
 bool Player::Lose(){}
 std::weak_ptr<Graveyard> Player::GetGraveyard(){}
-std::weak_ptr<Library> Player::GetGraveyard(){}
-std::weak_ptr<Hand> Player::GetGraveyard(){}
+std::weak_ptr<Library> Player::GetLibrary(){}
+std::weak_ptr<Hand> Player::GetHand(){}
 std::weak_ptr<ManaPool> Player::GetManaPool(){}
 Player::Player(){}
 Player::~Player(){}
