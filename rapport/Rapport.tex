@@ -173,9 +173,47 @@ Les graphiques de \emph{Magic : The Gathering} ne sont pas libres de droit, on n
 
 \subsection{Description des états}
 
+Le jeu dépend de plusieurs éléments : les joueurs, les zones et les tours de jeu. 
+
+\subsubsection{Les zones}
+
+Le jeu Magic The Gathering est composé d’un ensemble de surface sur le plateau où sont les différentes cartes. On peut les qualifier ici d’éléments fixes. 
+Ces « zones » sont répartis de la façon suivante : 
+
+\paragraph{« CardZone »}
+Il s’agit de la zone propre à chaque joueur. Cette zone est séparée en 4 parties : 
+
+\begin{description}
+
+\item[« Library » (FR : « Bibliothèque ») :] Au début du jeu chaque joueur se voit attribuer une liste de 60 cartes au hasard par le système. Cet ensemble constitue la « Library » du joueur.  Ces cartes restent masquées au joueur, propre à lui et reste dans l’ordre établi en début de partie. Lors de chaque pioche le joueur devra avoir accès à la première carte de la liste et cette dernière doit disparaitre de la liste. 
+
+\item[« Hand » (FR : « Main »)  :] A chaque opération de pioche, la carte est stockée dans la zone « Hand ». Au début du jeu, 7 cartes sont piochées de la « Library ».  Cette liste peut avoir au maximum 7 cartes et est visible par le joueur. 
+
+\item[« Graveyard » (FR : « Cimetière ») :] Cette liste conserve les cartes défaussées du joueur. Elle est peut être consultée par tous les joueurs. Une carte peut être envoyé au cimetière pour plusieurs raisons : si une carte a résolu son sort ou rituel, si une carte de type « planeswalkers » perdent tous ces marqueurs « loyalty » (FR : « loyauté »), ou si les blessures subies par une créature, pendant un seul tour, sont supérieures ou égales à leur endurance (ou si leur endurance est réduite à 0 ou moins).
+
+\item[« Exile » (FR : « Exil ») :] Un sort ou une capacité peut « exiler » une carte. Cette dernière est alors ajoutée dans cette liste.  
+Cette carte y reste pour toujours à moins que l'effet qui l’y a mise soit capable de la récupérer. Les cartes exilées. Cette zone est visible par tous les joueurs. 
+
+
+\end{description}
+
+\paragraph{« Stack » (FR : « Pile »)}
+La zone « Stack » est partagée par les joueurs. C’est ici qu’attendent les sorts et les capacités avant de se résoudre. Les joueurs peuvent alors décider de ne pas lancer de nouveaux sorts ou de ne pas
+activer des capacités. Quand c'est le cas, le dernier sort ou la dernière capacité à être arrivé sur la pile qui se résout, et les joueurs ont une nouvelle occasion de lancer des sorts et d'activer des capacités.
+
+\paragraph{« Battlefield » (FR : « Champ de Bataille »)}
+Cette zone en début de partie. A chaque tour, le joueur peut déposer des cartes de type « terrain » depuis son « Main » et invoquer des sorts ou des créatures. 
+
+\paragraph{« Command »}
+A completer
+
+\subsubsection{Tours de jeu}
+Le jeu peut se jouer en plusieurs tours. Chaque tour est composé d’une séquence de plusieurs phases. Ces dernières sont eux même composées d’étapes (contrôlé par « Step »).
+
+Les tours s’enchainent jusqu’à que les points de vie d'un des joueurs soient réduits à 0. Dès qu'un joueur a 0 point de vie, la partie se termine et l'autre joueur est déclaré vainqueur.
 
 \subsection{Conception Logiciel}
-
+Le diagramme des classes pour les états est présenté en Figure
 
 %\begin{landscape}
 %\begin{figure}[p]
