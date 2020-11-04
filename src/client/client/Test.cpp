@@ -16,7 +16,6 @@ void Test::state(){
     _players.push_back(std::make_shared<Player>());
     _players.push_back(std::make_shared<Player>());
     
-
     std::weak_ptr<Game> game = Game::GetInstance();
     auto _game = game.lock();
     _game->SetPlayers(_players);
