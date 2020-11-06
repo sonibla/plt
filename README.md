@@ -1,4 +1,4 @@
-# PLT
+# MagiX
 
 ## Getting started
 
@@ -27,25 +27,31 @@ make -j
 
 Binaries are generated in *bin/* folder
 
+You can also display a list of makefile targets with :
+```
+make help
+```
+
 ### Report
 
 Install LaTeX dependencies :
 
 ```
-sudo apt install texlive texlive-math-extra texlive-science texlive-latex-extra texlive-lang-french
+sudo apt install texlive texlive-math-extra texlive-science texlive-latex-extra texlive-lang-french evince
 ```
 
-After running CMake, use the following command to generate the report :
+Use the following commands to generate and view the report :
 
 ```
-make Rapport
+cd rapport
+make simple
 ```
 
 ## Authors
 
 * [**Maxime Marroufin**](https://github.com/Marroufin)
 * [**Quentin Chhean**](https://github.com/quenchhe)
-* **Abinaya Mathibala**
+* [**Abinaya Mathibala**](https://github.com/AbinayaM-coder)
 * [**Alban Benmouffek**](https://github.com/sonibla)
 
 See also the list of [contributors](https://github.com/sonibla/plt/contributors) who participated in this project.
