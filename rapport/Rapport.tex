@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{times}
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -10,6 +10,10 @@
 \usepackage{pdflscape}
 \usepackage{listings}
 \usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{graphicx} 
+\graphicspath{ {./images/} }
+
 \lstset{literate=
 {é}{{\'e}}1
 {è}{{\`e}}1
@@ -60,7 +64,7 @@
 
 \begin{center}\textbf{\Huge Projet Logiciel Transversal}\end{center}{\Large \par}
 
-\begin{center}\textbf{\large Auteurs}\end{center}{\large \par}
+\begin{center}\textbf{\large Maxime Marroufin, Quentin Chhean,\\Abinaya Mathibala, Alban Benmouffek}\end{center}{\large \par}
 
 \vspace{2cm}
 
@@ -84,81 +88,136 @@
 \section{Présentation Générale}
 
 \subsection{Archétype}
-Le jeu proposé se base sur Magic : The Gathering Online, la version numérique du jeu de carte à collectionner éponyme.
 
-Dans Magic : The Gathering les joueurs assemblent un "deck" contenant au minimum 60 cartes et s'affrontent en utilisant celles-ci, Magic : The Gathering étant un jeu qui est séparé en deux étapes bien distinctes : la création de "deck" et le jeu de carte, nous nous focaliserons sur une seule de ces deux composantes : le jeu de carte.
+Le jeu proposé que nous nommerons \textit{MagiX}, se base sur \href{https://en.wikipedia.org/wiki/Magic\%3A\_The_Gathering\_Online}{Magic : The Gathering Online}, la version numérique du jeu de carte à collectionner éponyme.
 
+Dans \emph{Magic : The Gathering}, les joueurs assemblent un deck contenant $60$ cartes et s'affrontent en utilisant celles-ci.
+\emph{Magic : The Gathering} est séparé en deux étapes bien distinctes : la création de deck, et le jeu en lui-même.
+Nous nous focaliserons sur une seule de ces deux composantes : le jeu de carte.
 
 \subsection{Règles du jeu}
-
-\subsubsection{Glossaire}
-
-Joueur actif : Joueur dont c'est le tour
-Engagé/Dégagé : un permenant est dit engagé lorsque la carte qui le représente est tourné de 90 degrés vers la droite, il est dit dégagé lorsqu'il ne l'est pas. 
 
 \subsubsection{Zones de jeu}
 Le Jeu est composé de sept zones :
 
-- La Bibliothèque : Chaque joueur a la sienne, c'est la zone ou les joueurs placent leurs "deck" faces cachés, lorsqu'un joueur pioche il pioche depuis cette zone.
+\begin{description}
+\item[La Bibliothèque :] chaque joueur a la sienne, c'est la zone ou les joueurs placent leurs deck faces cachées.
+Lorsqu'un joueur pioche une carte, il pioche depuis cette zone.
+\item[La Main :] propre à chaque joueur, c'est la zone depuis laquelle les joueurs peuvent jouer des cartes.
+\item[Le Cimetiere :] propre à chaque joueur, c'est la zone ou les joueurs placent les cartes déffausées.
+\item[L'exil :] propre à chaque joueur, c'est la zone où vont les cartes retirées du jeu par des effets de cartes.
+\item[Le champ de bataille :] commun a tous les joueurs, c'est la zone ou l'on trouve des permanents qui sont soit des cartes soit des jetons crées par des effets de cartes.
+\item[La Pile :] commune a tous les joueurs c'est la zone où vont les cartes jouées, effets de cartes et effets de permanents avant d'etre résolus.
+\item[Zone de commandement :] commune a tous les joueurs, c'est une zone où vont des objets qui ne pourront pas être altérés par des effets de cartes.
 
-- La Main : Propre à chaque joueur, c'est la zone depuis laquelle les joueurs peuvent jouer des cartes.
 
-- Le Cimetiere : Propre à chaque joueur, c'est la zone ou les joueurs placent les cartes déffausés.
 
-- L'exile : Propre à chaque joueur, c'est la zone ou vont les cartes retirés du jeu par des effets de cartes.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{Plateau.PNG}
+\caption{\label{Plateau-du-jeu}Plateau du jeu}
+\end{center}
+\end{figure}
 
-- Le champ de battaile : Commun a tous les joueurs, c'est la zone ou l'on trouve des permanents qui sont soit des cartes soit des "jetons" créer par des effets de cartes.
 
-- La Pile : Commune a tous les joueurs c'est la zone ou vont les cartes jouées, effets de cartes et effets de permanents avant d'etre résolus.
 
-- Zone de commandement : Commune a tous les joueurs, c'est une zone ou vont des objets qui ne pourront etre altéré par des effets de cartes.
+\end{description}
 
-\subsubsection{Condition de défaite}
-Un joueur perd la partie si : 
+Voir exemple de plateau : Figure 1.
 
--Ses points de vie sont réduits a zéro
+\subsubsection{Conditions de défaite}
+Un joueur perd la partie si au moins une des conditions suivantes est réalisée : 
 
--Il pioche alors que sa bibliothèque est vide
-
--Un effet de carte lui fait perdre la partie
-
--Un effet de carte fait gagner un de ses advairsaires 
+\begin{itemize}
+\item[-] Ses points de vie sont réduits a zéro
+\item[-] Il pioche alors que sa bibliothèque est vide
+\item[-] Un effet de carte lui fait perdre la partie
+\item[-] Un effet de carte fait gagner un de ses adversaire
+\end{itemize}
 
 \subsubsection{Structure du tour}
-Le tour est composée de cinq phases : 
-- Phase de début de tour : phase pendant laquelle le joueur actif pioche une carte et dégage les permanents qu'il controle.
+Le tour est composé de cinq phases.
+Pendant les tours, les permanents peuvent être engagé ou dégagés.
 
-- Phase principale : C'est la phase durant laquelle le joueur actif peut jouer des sorts "lent".
-
-- Phase de combat : C'est la phase durant laquelle le joueur actif va déclarer une ou plusieurs créatures comme attaquant un autre joueur , le joueur défenseur pourra alors bloquer avec ses propre créatures.
-
-- Phase principale post-combat : voir phase principale ci-dessus.
-
-- Phase de fin de tour : C'est la phase durant laquelle le joueur actif va défausser des cartes s'il en a trop en main et où toutes les bléssures de combats sur les créatures sont retirées.
+\begin{description}
+\item[Phase de début de tour :] phase pendant laquelle le joueur actif pioche une carte et dégage les permanents qu'il contrôle.
+\item[Phase principale :] c'est la phase durant laquelle le joueur actif peut jouer des sorts lents.
+\item[Phase de combat :] c'est la phase durant laquelle le joueur actif va déclarer une ou plusieurs créatures comme attaquant un autre joueur. Le joueur défenseur pourra alors bloquer avec ses propres créatures.
+\item[Phase principale post-combat :] le joueur actif peut de nouveau jouer des sorts lents.
+\item[Phase de fin de tour :] c'est la phase durant laquelle le joueur actif va défausser des cartes s'il en a trop en main et où toutes les bléssures de combats sur les créatures sont retirées.
+\end{description}
 
 \subsubsection{Déroulement de la partie}
+
 Chaque joueur commence la partie avec un total de vingt points de vie et une main de départ de sept cartes.
-La partie commence dans la phase principale du premier joueur qui joue et à la fin de son tour le tour d'un de ses adversaires commence, cela continue jusqu'à ce qu'un joueur est gagné la partie.
+La partie commence dans la phase principale du premier joueur qui joue.
+À la fin de son tour, le tour d'un de ses adversaires commence.
+Ce cycle continue jusqu'à ce qu'un joueur gagne la partie.
 
 \subsection{Ressources}
 
+\subsubsection{Textures}
 
+Nous avons mis beaucoup de textures dans le dossier \texttt{/res/textures}.
+Ces images sont libres de droit, à condition de citer la source : \href{https://www.toptal.com/designers/subtlepetterns}{Toptal Subtle Patterns}.
+
+Nous utiliserons ces textures par exemple pour les couleurs de fond, les contours, les zones...
+
+\subsubsection{Cartes et graphiques propres à Magic}
+
+Les graphiques de \emph{Magic : The Gathering} ne sont pas libres de droit, on ne peut donc pas les mettre dans le dépôt Git.
+À la place, nous utiliserons l'API de \href{https://scryfall.com/}{Scryfall} pour télécharger les images et les placer dans la mémoire disque des utilisaturs.
 
 \clearpage
 \section{Description et conception des états}
 
 \subsection{Description des états}
 
+Le jeu dépend de plusieurs éléments : les joueurs, les zones, les objets contenus dans les zones et les tours de jeu. 
+
+\subsubsection{Les zones}
+
+Le jeu Magic The Gathering est composé d’un ensemble de surfaces sur le plateau où sont les différentes cartes. On peut les qualifier ici d’éléments fixes. 
+Ces « zones » sont réparties de la façon suivante : 
+
+\paragraph{« Library » (FR : « Bibliothèque ») :} Chaque joueur en possede une, elle contient plusieurs cartes, cette zone ne peut être consultée par les joueurs et son contenu est ordonné.
+Lorsque qu'un joueur pioche, l'élement du haut de cette zone est déplacé vers la main.
+Au debut de la partie celle-ci est mélangé.
+Lorsqu'un effet mélange cette zone, l'ordre des cartes qu'elle contient est randomisé.
+
+\paragraph{« Hand » (FR : « Main »)  :}  Chaque joueur en possede une. Contient plusieurs cartes, les cartes piochées sont déplacées dans cette zone, de celle-ci un joueur peut jouer des cartes "terrain" et lancer des cartes "sort", le contenu de cette zone est visible par son propriétaire uniquement.
+Au debut de la partie 7 cartes sont piochés.
+Lorsqu'un joueur se défausse d'une carte, il choisi une carte et la déplace vers le cimetière.
+A la fin du tour d'un joueur si son nombre de cartes en main est supérieur à sa limite (par défaut 7) il doit se défausser de la difference.
+
+\paragraph{« Graveyard » (FR : « Cimetière ») :}  Chaque joueur en possede un. Cette liste conserve les cartes défaussées du joueur. Elle peut être consultée par tous les joueurs. Un objet peut être envoyé au cimetière pour plusieurs raisons : si une carte "sort" se résout sans engendrer de permanent, si un permanent est détruit ou si des cartes sont directement déplacés depuis une zone vers le cimetière.
+
+\paragraph{« Exile » (FR : « Exil ») :} Un sort ou une capacité peut « exiler » une carte. Cette dernière est alors ajoutée dans cette liste. Cette carte y reste pour toujours à moins que l'effet qui l’y a mise soit capable de la récupérer. Cette zone est visible par tous les joueurs. 
+
+\paragraph{« Stack » (FR : « Pile »)}
+La zone « Stack » est partagée par les joueurs. C’est ici qu’attendent les sorts et les capacités avant de se résoudre. Les joueurs peuvent alors décider de ne pas lancer de nouveaux sorts ou de ne pas activer des capacités.
+Quand c'est le cas, c'est le dernier sort ou la dernière capacité à être arrivé sur la pile qui se résout en premier, et les joueurs ont une nouvelle occasion de lancer des sorts et d'activer des capacités et ce jusqu'à ce que la pile soit vide.
+
+\paragraph{« Battlefield » (FR : « Champ de Bataille »)}
+C'est la zone qui contient tous les permanents.
+
+\paragraph{« Command » (FR : « Zone de commandement »)}
+Correspond a la zone de commandement, une zone où vont des objets qui agissent sur le reste du jeu mais pas l'inverse.
+
+\subsubsection{Tours de jeu}
+Le jeu peut se jouer en plusieurs tours. Chaque tour est composé d’une séquence de plusieurs phases. Ces dernières sont eux même composées d’étapes.
+
+Les tours s’enchaînent jusqu’à ce qu'un qu'un joueur ne gagne la partie ou que tous les joueurs la perdent.
 
 \subsection{Conception Logiciel}
+Le diagramme des classes pour les états est présenté en Figure
 
-
-%\begin{landscape}
-%\begin{figure}[p]
-%\includegraphics[width=0.9\paperheight]{state.pdf}
-%\caption{\label{uml:state}Diagramme des classes d'état.} 
-%\end{figure}
-%\end{landscape}
+\begin{landscape}
+\begin{figure}[p]
+\includegraphics[width=0.95\paperheight, page=4, trim=0 600 0 0, clip]{state.pdf}
+\caption{\label{uml:state}Diagramme des classes d'état.} 
+\end{figure}
+\end{landscape}
 
 \clearpage
 \section{Rendu: Stratégie et Conception}
@@ -224,5 +283,21 @@ La partie commence dans la phase principale du premier joueur qui joue et à la 
 %\caption{\label{uml:module}Diagramme des classes pour la modularisation.} 
 %\end{figure}
 %\end{landscape}
+
+\section{Glossaire}
+
+\begin{description}
+\item[Joueur actif :] joueur dont c'est le tour
+\item[Engage/dégagé :] un permenant est dit \emph{engagé} lorsque la carte qui le représente est tournée de 90 degrés vers la droite, il est dit \emph{dégagé} lorsqu'il ne l'est pas
+\item[Deck :] ensemble de cartes qu'un joueur utilise pendant la partie
+\end{description}
+
+
+\section{Bibliographie}
+
+\begin{description}
+\item[Règles du jeu officielles :] https://media.wizards.com/2014/docs/FR\_M15\_QckStrtBklt\_LR\_Crop.pdf
+
+\end{description}
 
 \end{document}
