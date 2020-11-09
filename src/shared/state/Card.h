@@ -23,6 +23,7 @@ namespace state {
   public:
     std::string name;
     Cost cost;
+    std::string image_uri;
     // Operations
   public:
     Card ();

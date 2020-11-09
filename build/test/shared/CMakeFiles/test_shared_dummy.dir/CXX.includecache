@@ -37,12 +37,12 @@ state/Mana.h
 /home/maxime/projetcs/plt/src/shared/state/Mana.h
 state/Cost.h
 /home/maxime/projetcs/plt/src/shared/state/Cost.h
-state/Zone.h
-/home/maxime/projetcs/plt/src/shared/state/Zone.h
 state/GameElement.h
 /home/maxime/projetcs/plt/src/shared/state/GameElement.h
 state/PlayableGameElement.h
 /home/maxime/projetcs/plt/src/shared/state/PlayableGameElement.h
+state/Zone.h
+/home/maxime/projetcs/plt/src/shared/state/Zone.h
 state/CardZone.h
 /home/maxime/projetcs/plt/src/shared/state/CardZone.h
 state/Card.h
@@ -229,10 +229,6 @@ string
 -
 set
 -
-memory
--
-Zone.h
-/home/maxime/projetcs/plt/src/shared/state/Zone.h
 GameElement.h
 /home/maxime/projetcs/plt/src/shared/state/GameElement.h
 

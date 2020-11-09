@@ -21,12 +21,12 @@ state/Mana.h
 ../src/shared/state/Mana.h
 state/Cost.h
 ../src/shared/state/Cost.h
-state/Zone.h
-../src/shared/state/Zone.h
 state/GameElement.h
 ../src/shared/state/GameElement.h
 state/PlayableGameElement.h
 ../src/shared/state/PlayableGameElement.h
+state/Zone.h
+../src/shared/state/Zone.h
 state/CardZone.h
 ../src/shared/state/CardZone.h
 state/Card.h
@@ -213,10 +213,6 @@ string
 -
 set
 -
-memory
--
-Zone.h
-../src/shared/state/Zone.h
 GameElement.h
 ../src/shared/state/GameElement.h
 

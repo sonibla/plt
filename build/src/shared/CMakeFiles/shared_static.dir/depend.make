@@ -5,14 +5,12 @@ src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/Ability.h
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/PlayableGameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/Zone.h
 
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/Ability.h
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/ActivatedAbility.cpp
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/ActivatedAbility.h
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/PlayableGameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/Zone.h
 
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/Player.h
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/turn/Phase.h
@@ -257,7 +255,6 @@ src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/s
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/ManaAbility.cpp
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/ManaAbility.h
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/PlayableGameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/Zone.h
 
 src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.o: ../src/shared/state/Cost.h
 src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.o: ../src/shared/state/Mana.h
@@ -279,7 +276,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/sta
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/PlayableGameElement.cpp
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/PlayableGameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/Zone.h
 
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/Player.h
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/turn/Phase.h
@@ -358,14 +354,12 @@ src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/P
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/Token.cpp
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/Token.h
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/TriggeredAbility.h
-src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/Zone.h
 
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/Ability.h
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/PlayableGameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/TriggeredAbility.cpp
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/TriggeredAbility.h
-src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/Zone.h
 
 src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o: ../src/shared/state/Zone.cpp
 src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o: ../src/shared/state/Zone.h
