@@ -1,4 +1,4 @@
-# Install script for directory: /home/maxime/projects/plt/src/client
+# Install script for directory: /home/maxime/projetcs/plt/src/client
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

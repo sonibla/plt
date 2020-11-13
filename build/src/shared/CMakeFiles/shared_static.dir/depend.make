@@ -4,16 +4,12 @@
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/Ability.cpp
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/Ability.h
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/PlayableGameElement.h
 
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/Ability.h
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/ActivatedAbility.cpp
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/ActivatedAbility.h
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/PlayableGameElement.h
 
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/Player.h
@@ -33,8 +29,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/s
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/ManaPool.h
@@ -50,8 +44,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/Ca
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/CardZone.h
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/Cost.h
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/ManaPool.h
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/PlayableGameElement.h
@@ -65,8 +57,6 @@ src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared/state/CardZone.h
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared/state/Cost.h
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared/state/ManaPool.h
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared/state/Permanent.h
@@ -79,8 +69,6 @@ src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/stat
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/state/CardZone.h
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/state/Cost.h
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/state/ManaPool.h
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/state/PlayableGameElement.h
@@ -103,8 +91,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state/ManaPool.h
@@ -137,8 +123,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/G
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/ManaPool.h
@@ -166,8 +150,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/Ga
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/ManaPool.h
@@ -180,8 +162,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/Zo
 
 src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o: ../src/shared/state/GameElement.cpp
 src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o: ../src/shared/state/IObserver.h
 
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/Player.h
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/turn/Phase.h
@@ -200,8 +180,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/sta
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/Graveyard.cpp
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/ManaPool.h
@@ -229,8 +207,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Ga
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Hand.cpp
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/ManaPool.h
@@ -240,10 +216,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Pl
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Stack.h
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/TriggeredAbility.h
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Zone.h
-
-src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.o: ../src/shared/state/IObservable.cpp
-src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.o: ../src/shared/state/IObserver.h
 
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/Player.h
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/turn/Phase.h
@@ -261,8 +233,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/Library.cpp
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/Mana.h
@@ -282,8 +252,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.o: ../src/shared/state/Ma
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/Ability.h
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/ActivatedAbility.h
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/ManaAbility.cpp
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/ManaAbility.h
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/PlayableGameElement.h
@@ -297,8 +265,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/sta
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/ActivatedAbility.h
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/Cost.h
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/ManaPool.h
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/Permanent.cpp
@@ -308,8 +274,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/sta
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/Zone.h
 
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/PlayableGameElement.cpp
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/PlayableGameElement.h
 
@@ -329,8 +293,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/ManaPool.h
@@ -347,8 +309,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/C
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/CardZone.h
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/Cost.h
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/ManaPool.h
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/PlayableGameElement.h
@@ -372,8 +332,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/G
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/ManaPool.h
@@ -389,8 +347,6 @@ src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/A
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/ActivatedAbility.h
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/Cost.h
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/ManaPool.h
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/Permanent.h
@@ -401,14 +357,10 @@ src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/T
 
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/Ability.h
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/GameElement.h
-src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/PlayableGameElement.h
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/TriggeredAbility.cpp
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/TriggeredAbility.h
 
-src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o: ../src/shared/state/Zone.cpp
 src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o: ../src/shared/state/Zone.h
 
@@ -424,8 +376,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -454,8 +404,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared/state/ManaPool.h
@@ -487,8 +435,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/st
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -517,8 +463,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shar
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -548,8 +492,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/st
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/state/ManaPool.h
@@ -585,8 +527,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -615,8 +555,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/s
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -645,8 +583,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/state
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -675,8 +611,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/share
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -705,8 +639,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/state/
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -735,8 +667,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/st
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/state/ManaPool.h
@@ -767,8 +697,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: 
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -797,8 +725,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/state/Ga
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/state/ManaPool.h
@@ -826,8 +752,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/s
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/shared/state/ManaPool.h
@@ -856,8 +780,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/sh
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/shared/state/ManaPool.h
@@ -886,8 +808,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/state/Gam
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/state/ManaPool.h
@@ -915,8 +835,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/state/Gam
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/state/ManaPool.h
@@ -944,8 +862,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/stat
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/state/ManaPool.h
@@ -974,8 +890,6 @@ src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/sta
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/state/GameElement.h
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/state/Graveyard.h
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/state/Hand.h
-src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/state/IObservable.h
-src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/state/IObserver.h
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/state/Library.h
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/state/Mana.h
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/state/ManaPool.h

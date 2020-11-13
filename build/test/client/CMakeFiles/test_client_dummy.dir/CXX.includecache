@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/maxime/projects/plt/test/client/test_client_dummy.cpp
+/home/maxime/projetcs/plt/test/client/test_client_dummy.cpp
 boost/test/unit_test.hpp
 -
 SFML/Graphics.hpp

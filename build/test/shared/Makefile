@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projects/plt
+CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles /home/maxime/projects/plt/build/test/shared/CMakeFiles/progress.marks
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles /home/maxime/projetcs/plt/build/test/shared/CMakeFiles/progress.marks
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/clean
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/preinstall
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/preinstall
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/shared/CMakeFiles/test_shared_dummy.dir/rule:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/CMakeFiles/test_shared_dummy.dir/rule
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/shared/CMakeFiles/test_shared_dummy.dir/rule
 .PHONY : test/shared/CMakeFiles/test_shared_dummy.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ test_shared_dummy: test/shared/CMakeFiles/test_shared_dummy.dir/rule
 
 # fast build rule for target.
 test_shared_dummy/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/build
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/build
 .PHONY : test_shared_dummy/fast
 
 test_shared_dummy.o: test_shared_dummy.cpp.o
@@ -131,7 +131,7 @@ test_shared_dummy.o: test_shared_dummy.cpp.o
 
 # target to build an object file
 test_shared_dummy.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o
 .PHONY : test_shared_dummy.cpp.o
 
 test_shared_dummy.i: test_shared_dummy.cpp.i
@@ -140,7 +140,7 @@ test_shared_dummy.i: test_shared_dummy.cpp.i
 
 # target to preprocess a source file
 test_shared_dummy.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.i
 .PHONY : test_shared_dummy.cpp.i
 
 test_shared_dummy.s: test_shared_dummy.cpp.s
@@ -149,7 +149,7 @@ test_shared_dummy.s: test_shared_dummy.cpp.s
 
 # target to generate assembly for a file
 test_shared_dummy.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.s
 .PHONY : test_shared_dummy.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

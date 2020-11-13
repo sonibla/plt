@@ -13,8 +13,6 @@ src/client/CMakeFiles/client_static.dir/client/Test.cpp.o: ../src/shared/state/G
 src/client/CMakeFiles/client_static.dir/client/Test.cpp.o: ../src/shared/state/GameElement.h
 src/client/CMakeFiles/client_static.dir/client/Test.cpp.o: ../src/shared/state/Graveyard.h
 src/client/CMakeFiles/client_static.dir/client/Test.cpp.o: ../src/shared/state/Hand.h
-src/client/CMakeFiles/client_static.dir/client/Test.cpp.o: ../src/shared/state/IObservable.h
-src/client/CMakeFiles/client_static.dir/client/Test.cpp.o: ../src/shared/state/IObserver.h
 src/client/CMakeFiles/client_static.dir/client/Test.cpp.o: ../src/shared/state/Library.h
 src/client/CMakeFiles/client_static.dir/client/Test.cpp.o: ../src/shared/state/Mana.h
 src/client/CMakeFiles/client_static.dir/client/Test.cpp.o: ../src/shared/state/ManaPool.h

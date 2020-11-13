@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -std=c++11 -pthread -g -g --coverage -fprofile-arcs -ftest-co
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/maxime/projects/plt/src/shared 
+CXX_INCLUDES = -I/home/maxime/projetcs/plt/src/shared 
 

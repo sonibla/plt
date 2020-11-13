@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projects/plt
+CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
 
 # Utility rule file for generate-header-client.
 
@@ -57,11 +57,11 @@ src/client/CMakeFiles/generate-header-client: generate_header_client.stamp
 
 
 generate_header_client.stamp: ../src/client.dia
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../generate_header_client.stamp"
-	cd /home/maxime/projects/plt/build/src/client && rm -vf /home/maxime/projects/plt/src/*/client.h
-	cd /home/maxime/projects/plt/build/src/client && rm -vf /home/maxime/projects/plt/src/*/client/*.h
-	cd /home/maxime/projects/plt/build/src/client && ../../../bin/dia2code -ns client -d /home/maxime/projects/plt/src/client -t cpp /home/maxime/projects/plt/src/client/../client.dia
-	cd /home/maxime/projects/plt/build/src/client && /usr/bin/cmake -E touch /home/maxime/projects/plt/build/generate_header_client.stamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../generate_header_client.stamp"
+	cd /home/maxime/projetcs/plt/build/src/client && rm -vf /home/maxime/projetcs/plt/src/*/client.h
+	cd /home/maxime/projetcs/plt/build/src/client && rm -vf /home/maxime/projetcs/plt/src/*/client/*.h
+	cd /home/maxime/projetcs/plt/build/src/client && ../../../bin/dia2code -ns client -d /home/maxime/projetcs/plt/src/client -t cpp /home/maxime/projetcs/plt/src/client/../client.dia
+	cd /home/maxime/projetcs/plt/build/src/client && /usr/bin/cmake -E touch /home/maxime/projetcs/plt/build/generate_header_client.stamp
 
 generate-header-client: src/client/CMakeFiles/generate-header-client
 generate-header-client: generate_header_client.stamp
@@ -75,10 +75,10 @@ src/client/CMakeFiles/generate-header-client.dir/build: generate-header-client
 .PHONY : src/client/CMakeFiles/generate-header-client.dir/build
 
 src/client/CMakeFiles/generate-header-client.dir/clean:
-	cd /home/maxime/projects/plt/build/src/client && $(CMAKE_COMMAND) -P CMakeFiles/generate-header-client.dir/cmake_clean.cmake
+	cd /home/maxime/projetcs/plt/build/src/client && $(CMAKE_COMMAND) -P CMakeFiles/generate-header-client.dir/cmake_clean.cmake
 .PHONY : src/client/CMakeFiles/generate-header-client.dir/clean
 
 src/client/CMakeFiles/generate-header-client.dir/depend:
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projects/plt /home/maxime/projects/plt/src/client /home/maxime/projects/plt/build /home/maxime/projects/plt/build/src/client /home/maxime/projects/plt/build/src/client/CMakeFiles/generate-header-client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projetcs/plt /home/maxime/projetcs/plt/src/client /home/maxime/projetcs/plt/build /home/maxime/projetcs/plt/build/src/client /home/maxime/projetcs/plt/build/src/client/CMakeFiles/generate-header-client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/client/CMakeFiles/generate-header-client.dir/depend
 

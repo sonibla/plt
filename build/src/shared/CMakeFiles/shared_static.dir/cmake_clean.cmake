@@ -12,7 +12,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/shared_static.dir/state/GameElement.cpp.o"
   "CMakeFiles/shared_static.dir/state/Graveyard.cpp.o"
   "CMakeFiles/shared_static.dir/state/Hand.cpp.o"
-  "CMakeFiles/shared_static.dir/state/IObservable.cpp.o"
   "CMakeFiles/shared_static.dir/state/Library.cpp.o"
   "CMakeFiles/shared_static.dir/state/Mana.cpp.o"
   "CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o"

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projects/plt
+CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles /home/maxime/projects/plt/build/src/shared/CMakeFiles/progress.marks
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles /home/maxime/projetcs/plt/build/src/shared/CMakeFiles/progress.marks
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/clean
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/preinstall
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/preinstall
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/shared/CMakeFiles/shared_static.dir/rule:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/shared_static.dir/rule
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/shared_static.dir/rule
 .PHONY : src/shared/CMakeFiles/shared_static.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ shared_static: src/shared/CMakeFiles/shared_static.dir/rule
 
 # fast build rule for target.
 shared_static/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/build
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/build
 .PHONY : shared_static/fast
 
 # Convenience name for target.
 src/shared/CMakeFiles/generate-header-turn.dir/rule:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/generate-header-turn.dir/rule
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/generate-header-turn.dir/rule
 .PHONY : src/shared/CMakeFiles/generate-header-turn.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ generate-header-turn: src/shared/CMakeFiles/generate-header-turn.dir/rule
 
 # fast build rule for target.
 generate-header-turn/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/generate-header-turn.dir/build.make src/shared/CMakeFiles/generate-header-turn.dir/build
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/generate-header-turn.dir/build.make src/shared/CMakeFiles/generate-header-turn.dir/build
 .PHONY : generate-header-turn/fast
 
 # Convenience name for target.
 src/shared/CMakeFiles/generate-header-state.dir/rule:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/generate-header-state.dir/rule
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/generate-header-state.dir/rule
 .PHONY : src/shared/CMakeFiles/generate-header-state.dir/rule
 
 # Convenience name for target.
@@ -152,7 +152,7 @@ generate-header-state: src/shared/CMakeFiles/generate-header-state.dir/rule
 
 # fast build rule for target.
 generate-header-state/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/generate-header-state.dir/build.make src/shared/CMakeFiles/generate-header-state.dir/build
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/generate-header-state.dir/build.make src/shared/CMakeFiles/generate-header-state.dir/build
 .PHONY : generate-header-state/fast
 
 state/Ability.o: state/Ability.cpp.o
@@ -161,7 +161,7 @@ state/Ability.o: state/Ability.cpp.o
 
 # target to build an object file
 state/Ability.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o
 .PHONY : state/Ability.cpp.o
 
 state/Ability.i: state/Ability.cpp.i
@@ -170,7 +170,7 @@ state/Ability.i: state/Ability.cpp.i
 
 # target to preprocess a source file
 state/Ability.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.i
 .PHONY : state/Ability.cpp.i
 
 state/Ability.s: state/Ability.cpp.s
@@ -179,7 +179,7 @@ state/Ability.s: state/Ability.cpp.s
 
 # target to generate assembly for a file
 state/Ability.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.s
 .PHONY : state/Ability.cpp.s
 
 state/ActivatedAbility.o: state/ActivatedAbility.cpp.o
@@ -188,7 +188,7 @@ state/ActivatedAbility.o: state/ActivatedAbility.cpp.o
 
 # target to build an object file
 state/ActivatedAbility.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o
 .PHONY : state/ActivatedAbility.cpp.o
 
 state/ActivatedAbility.i: state/ActivatedAbility.cpp.i
@@ -197,7 +197,7 @@ state/ActivatedAbility.i: state/ActivatedAbility.cpp.i
 
 # target to preprocess a source file
 state/ActivatedAbility.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.i
 .PHONY : state/ActivatedAbility.cpp.i
 
 state/ActivatedAbility.s: state/ActivatedAbility.cpp.s
@@ -206,7 +206,7 @@ state/ActivatedAbility.s: state/ActivatedAbility.cpp.s
 
 # target to generate assembly for a file
 state/ActivatedAbility.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.s
 .PHONY : state/ActivatedAbility.cpp.s
 
 state/Battlefield.o: state/Battlefield.cpp.o
@@ -215,7 +215,7 @@ state/Battlefield.o: state/Battlefield.cpp.o
 
 # target to build an object file
 state/Battlefield.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o
 .PHONY : state/Battlefield.cpp.o
 
 state/Battlefield.i: state/Battlefield.cpp.i
@@ -224,7 +224,7 @@ state/Battlefield.i: state/Battlefield.cpp.i
 
 # target to preprocess a source file
 state/Battlefield.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.i
 .PHONY : state/Battlefield.cpp.i
 
 state/Battlefield.s: state/Battlefield.cpp.s
@@ -233,7 +233,7 @@ state/Battlefield.s: state/Battlefield.cpp.s
 
 # target to generate assembly for a file
 state/Battlefield.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.s
 .PHONY : state/Battlefield.cpp.s
 
 state/Card.o: state/Card.cpp.o
@@ -242,7 +242,7 @@ state/Card.o: state/Card.cpp.o
 
 # target to build an object file
 state/Card.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o
 .PHONY : state/Card.cpp.o
 
 state/Card.i: state/Card.cpp.i
@@ -251,7 +251,7 @@ state/Card.i: state/Card.cpp.i
 
 # target to preprocess a source file
 state/Card.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.i
 .PHONY : state/Card.cpp.i
 
 state/Card.s: state/Card.cpp.s
@@ -260,7 +260,7 @@ state/Card.s: state/Card.cpp.s
 
 # target to generate assembly for a file
 state/Card.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.s
 .PHONY : state/Card.cpp.s
 
 state/CardPermanent.o: state/CardPermanent.cpp.o
@@ -269,7 +269,7 @@ state/CardPermanent.o: state/CardPermanent.cpp.o
 
 # target to build an object file
 state/CardPermanent.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o
 .PHONY : state/CardPermanent.cpp.o
 
 state/CardPermanent.i: state/CardPermanent.cpp.i
@@ -278,7 +278,7 @@ state/CardPermanent.i: state/CardPermanent.cpp.i
 
 # target to preprocess a source file
 state/CardPermanent.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.i
 .PHONY : state/CardPermanent.cpp.i
 
 state/CardPermanent.s: state/CardPermanent.cpp.s
@@ -287,7 +287,7 @@ state/CardPermanent.s: state/CardPermanent.cpp.s
 
 # target to generate assembly for a file
 state/CardPermanent.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.s
 .PHONY : state/CardPermanent.cpp.s
 
 state/CardZone.o: state/CardZone.cpp.o
@@ -296,7 +296,7 @@ state/CardZone.o: state/CardZone.cpp.o
 
 # target to build an object file
 state/CardZone.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o
 .PHONY : state/CardZone.cpp.o
 
 state/CardZone.i: state/CardZone.cpp.i
@@ -305,7 +305,7 @@ state/CardZone.i: state/CardZone.cpp.i
 
 # target to preprocess a source file
 state/CardZone.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.i
 .PHONY : state/CardZone.cpp.i
 
 state/CardZone.s: state/CardZone.cpp.s
@@ -314,7 +314,7 @@ state/CardZone.s: state/CardZone.cpp.s
 
 # target to generate assembly for a file
 state/CardZone.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.s
 .PHONY : state/CardZone.cpp.s
 
 state/Command.o: state/Command.cpp.o
@@ -323,7 +323,7 @@ state/Command.o: state/Command.cpp.o
 
 # target to build an object file
 state/Command.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o
 .PHONY : state/Command.cpp.o
 
 state/Command.i: state/Command.cpp.i
@@ -332,7 +332,7 @@ state/Command.i: state/Command.cpp.i
 
 # target to preprocess a source file
 state/Command.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.i
 .PHONY : state/Command.cpp.i
 
 state/Command.s: state/Command.cpp.s
@@ -341,7 +341,7 @@ state/Command.s: state/Command.cpp.s
 
 # target to generate assembly for a file
 state/Command.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.s
 .PHONY : state/Command.cpp.s
 
 state/Cost.o: state/Cost.cpp.o
@@ -350,7 +350,7 @@ state/Cost.o: state/Cost.cpp.o
 
 # target to build an object file
 state/Cost.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.o
 .PHONY : state/Cost.cpp.o
 
 state/Cost.i: state/Cost.cpp.i
@@ -359,7 +359,7 @@ state/Cost.i: state/Cost.cpp.i
 
 # target to preprocess a source file
 state/Cost.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.i
 .PHONY : state/Cost.cpp.i
 
 state/Cost.s: state/Cost.cpp.s
@@ -368,7 +368,7 @@ state/Cost.s: state/Cost.cpp.s
 
 # target to generate assembly for a file
 state/Cost.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.s
 .PHONY : state/Cost.cpp.s
 
 state/Exile.o: state/Exile.cpp.o
@@ -377,7 +377,7 @@ state/Exile.o: state/Exile.cpp.o
 
 # target to build an object file
 state/Exile.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o
 .PHONY : state/Exile.cpp.o
 
 state/Exile.i: state/Exile.cpp.i
@@ -386,7 +386,7 @@ state/Exile.i: state/Exile.cpp.i
 
 # target to preprocess a source file
 state/Exile.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.i
 .PHONY : state/Exile.cpp.i
 
 state/Exile.s: state/Exile.cpp.s
@@ -395,7 +395,7 @@ state/Exile.s: state/Exile.cpp.s
 
 # target to generate assembly for a file
 state/Exile.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.s
 .PHONY : state/Exile.cpp.s
 
 state/Game.o: state/Game.cpp.o
@@ -404,7 +404,7 @@ state/Game.o: state/Game.cpp.o
 
 # target to build an object file
 state/Game.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o
 .PHONY : state/Game.cpp.o
 
 state/Game.i: state/Game.cpp.i
@@ -413,7 +413,7 @@ state/Game.i: state/Game.cpp.i
 
 # target to preprocess a source file
 state/Game.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.i
 .PHONY : state/Game.cpp.i
 
 state/Game.s: state/Game.cpp.s
@@ -422,7 +422,7 @@ state/Game.s: state/Game.cpp.s
 
 # target to generate assembly for a file
 state/Game.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.s
 .PHONY : state/Game.cpp.s
 
 state/GameElement.o: state/GameElement.cpp.o
@@ -431,7 +431,7 @@ state/GameElement.o: state/GameElement.cpp.o
 
 # target to build an object file
 state/GameElement.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o
 .PHONY : state/GameElement.cpp.o
 
 state/GameElement.i: state/GameElement.cpp.i
@@ -440,7 +440,7 @@ state/GameElement.i: state/GameElement.cpp.i
 
 # target to preprocess a source file
 state/GameElement.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.i
 .PHONY : state/GameElement.cpp.i
 
 state/GameElement.s: state/GameElement.cpp.s
@@ -449,7 +449,7 @@ state/GameElement.s: state/GameElement.cpp.s
 
 # target to generate assembly for a file
 state/GameElement.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.s
 .PHONY : state/GameElement.cpp.s
 
 state/Graveyard.o: state/Graveyard.cpp.o
@@ -458,7 +458,7 @@ state/Graveyard.o: state/Graveyard.cpp.o
 
 # target to build an object file
 state/Graveyard.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o
 .PHONY : state/Graveyard.cpp.o
 
 state/Graveyard.i: state/Graveyard.cpp.i
@@ -467,7 +467,7 @@ state/Graveyard.i: state/Graveyard.cpp.i
 
 # target to preprocess a source file
 state/Graveyard.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.i
 .PHONY : state/Graveyard.cpp.i
 
 state/Graveyard.s: state/Graveyard.cpp.s
@@ -476,7 +476,7 @@ state/Graveyard.s: state/Graveyard.cpp.s
 
 # target to generate assembly for a file
 state/Graveyard.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.s
 .PHONY : state/Graveyard.cpp.s
 
 state/Hand.o: state/Hand.cpp.o
@@ -485,7 +485,7 @@ state/Hand.o: state/Hand.cpp.o
 
 # target to build an object file
 state/Hand.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o
 .PHONY : state/Hand.cpp.o
 
 state/Hand.i: state/Hand.cpp.i
@@ -494,7 +494,7 @@ state/Hand.i: state/Hand.cpp.i
 
 # target to preprocess a source file
 state/Hand.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.i
 .PHONY : state/Hand.cpp.i
 
 state/Hand.s: state/Hand.cpp.s
@@ -503,35 +503,8 @@ state/Hand.s: state/Hand.cpp.s
 
 # target to generate assembly for a file
 state/Hand.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.s
 .PHONY : state/Hand.cpp.s
-
-state/IObservable.o: state/IObservable.cpp.o
-
-.PHONY : state/IObservable.o
-
-# target to build an object file
-state/IObservable.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.o
-.PHONY : state/IObservable.cpp.o
-
-state/IObservable.i: state/IObservable.cpp.i
-
-.PHONY : state/IObservable.i
-
-# target to preprocess a source file
-state/IObservable.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.i
-.PHONY : state/IObservable.cpp.i
-
-state/IObservable.s: state/IObservable.cpp.s
-
-.PHONY : state/IObservable.s
-
-# target to generate assembly for a file
-state/IObservable.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.s
-.PHONY : state/IObservable.cpp.s
 
 state/Library.o: state/Library.cpp.o
 
@@ -539,7 +512,7 @@ state/Library.o: state/Library.cpp.o
 
 # target to build an object file
 state/Library.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o
 .PHONY : state/Library.cpp.o
 
 state/Library.i: state/Library.cpp.i
@@ -548,7 +521,7 @@ state/Library.i: state/Library.cpp.i
 
 # target to preprocess a source file
 state/Library.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.i
 .PHONY : state/Library.cpp.i
 
 state/Library.s: state/Library.cpp.s
@@ -557,7 +530,7 @@ state/Library.s: state/Library.cpp.s
 
 # target to generate assembly for a file
 state/Library.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.s
 .PHONY : state/Library.cpp.s
 
 state/Mana.o: state/Mana.cpp.o
@@ -566,7 +539,7 @@ state/Mana.o: state/Mana.cpp.o
 
 # target to build an object file
 state/Mana.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.o
 .PHONY : state/Mana.cpp.o
 
 state/Mana.i: state/Mana.cpp.i
@@ -575,7 +548,7 @@ state/Mana.i: state/Mana.cpp.i
 
 # target to preprocess a source file
 state/Mana.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.i
 .PHONY : state/Mana.cpp.i
 
 state/Mana.s: state/Mana.cpp.s
@@ -584,7 +557,7 @@ state/Mana.s: state/Mana.cpp.s
 
 # target to generate assembly for a file
 state/Mana.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.s
 .PHONY : state/Mana.cpp.s
 
 state/ManaAbility.o: state/ManaAbility.cpp.o
@@ -593,7 +566,7 @@ state/ManaAbility.o: state/ManaAbility.cpp.o
 
 # target to build an object file
 state/ManaAbility.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o
 .PHONY : state/ManaAbility.cpp.o
 
 state/ManaAbility.i: state/ManaAbility.cpp.i
@@ -602,7 +575,7 @@ state/ManaAbility.i: state/ManaAbility.cpp.i
 
 # target to preprocess a source file
 state/ManaAbility.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.i
 .PHONY : state/ManaAbility.cpp.i
 
 state/ManaAbility.s: state/ManaAbility.cpp.s
@@ -611,7 +584,7 @@ state/ManaAbility.s: state/ManaAbility.cpp.s
 
 # target to generate assembly for a file
 state/ManaAbility.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.s
 .PHONY : state/ManaAbility.cpp.s
 
 state/ManaPool.o: state/ManaPool.cpp.o
@@ -620,7 +593,7 @@ state/ManaPool.o: state/ManaPool.cpp.o
 
 # target to build an object file
 state/ManaPool.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.o
 .PHONY : state/ManaPool.cpp.o
 
 state/ManaPool.i: state/ManaPool.cpp.i
@@ -629,7 +602,7 @@ state/ManaPool.i: state/ManaPool.cpp.i
 
 # target to preprocess a source file
 state/ManaPool.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.i
 .PHONY : state/ManaPool.cpp.i
 
 state/ManaPool.s: state/ManaPool.cpp.s
@@ -638,7 +611,7 @@ state/ManaPool.s: state/ManaPool.cpp.s
 
 # target to generate assembly for a file
 state/ManaPool.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.s
 .PHONY : state/ManaPool.cpp.s
 
 state/Permanent.o: state/Permanent.cpp.o
@@ -647,7 +620,7 @@ state/Permanent.o: state/Permanent.cpp.o
 
 # target to build an object file
 state/Permanent.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o
 .PHONY : state/Permanent.cpp.o
 
 state/Permanent.i: state/Permanent.cpp.i
@@ -656,7 +629,7 @@ state/Permanent.i: state/Permanent.cpp.i
 
 # target to preprocess a source file
 state/Permanent.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.i
 .PHONY : state/Permanent.cpp.i
 
 state/Permanent.s: state/Permanent.cpp.s
@@ -665,7 +638,7 @@ state/Permanent.s: state/Permanent.cpp.s
 
 # target to generate assembly for a file
 state/Permanent.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.s
 .PHONY : state/Permanent.cpp.s
 
 state/PlayableGameElement.o: state/PlayableGameElement.cpp.o
@@ -674,7 +647,7 @@ state/PlayableGameElement.o: state/PlayableGameElement.cpp.o
 
 # target to build an object file
 state/PlayableGameElement.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o
 .PHONY : state/PlayableGameElement.cpp.o
 
 state/PlayableGameElement.i: state/PlayableGameElement.cpp.i
@@ -683,7 +656,7 @@ state/PlayableGameElement.i: state/PlayableGameElement.cpp.i
 
 # target to preprocess a source file
 state/PlayableGameElement.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.i
 .PHONY : state/PlayableGameElement.cpp.i
 
 state/PlayableGameElement.s: state/PlayableGameElement.cpp.s
@@ -692,7 +665,7 @@ state/PlayableGameElement.s: state/PlayableGameElement.cpp.s
 
 # target to generate assembly for a file
 state/PlayableGameElement.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.s
 .PHONY : state/PlayableGameElement.cpp.s
 
 state/Player.o: state/Player.cpp.o
@@ -701,7 +674,7 @@ state/Player.o: state/Player.cpp.o
 
 # target to build an object file
 state/Player.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o
 .PHONY : state/Player.cpp.o
 
 state/Player.i: state/Player.cpp.i
@@ -710,7 +683,7 @@ state/Player.i: state/Player.cpp.i
 
 # target to preprocess a source file
 state/Player.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.i
 .PHONY : state/Player.cpp.i
 
 state/Player.s: state/Player.cpp.s
@@ -719,7 +692,7 @@ state/Player.s: state/Player.cpp.s
 
 # target to generate assembly for a file
 state/Player.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.s
 .PHONY : state/Player.cpp.s
 
 state/Spell.o: state/Spell.cpp.o
@@ -728,7 +701,7 @@ state/Spell.o: state/Spell.cpp.o
 
 # target to build an object file
 state/Spell.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o
 .PHONY : state/Spell.cpp.o
 
 state/Spell.i: state/Spell.cpp.i
@@ -737,7 +710,7 @@ state/Spell.i: state/Spell.cpp.i
 
 # target to preprocess a source file
 state/Spell.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.i
 .PHONY : state/Spell.cpp.i
 
 state/Spell.s: state/Spell.cpp.s
@@ -746,7 +719,7 @@ state/Spell.s: state/Spell.cpp.s
 
 # target to generate assembly for a file
 state/Spell.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.s
 .PHONY : state/Spell.cpp.s
 
 state/Stack.o: state/Stack.cpp.o
@@ -755,7 +728,7 @@ state/Stack.o: state/Stack.cpp.o
 
 # target to build an object file
 state/Stack.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o
 .PHONY : state/Stack.cpp.o
 
 state/Stack.i: state/Stack.cpp.i
@@ -764,7 +737,7 @@ state/Stack.i: state/Stack.cpp.i
 
 # target to preprocess a source file
 state/Stack.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.i
 .PHONY : state/Stack.cpp.i
 
 state/Stack.s: state/Stack.cpp.s
@@ -773,7 +746,7 @@ state/Stack.s: state/Stack.cpp.s
 
 # target to generate assembly for a file
 state/Stack.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.s
 .PHONY : state/Stack.cpp.s
 
 state/Token.o: state/Token.cpp.o
@@ -782,7 +755,7 @@ state/Token.o: state/Token.cpp.o
 
 # target to build an object file
 state/Token.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o
 .PHONY : state/Token.cpp.o
 
 state/Token.i: state/Token.cpp.i
@@ -791,7 +764,7 @@ state/Token.i: state/Token.cpp.i
 
 # target to preprocess a source file
 state/Token.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.i
 .PHONY : state/Token.cpp.i
 
 state/Token.s: state/Token.cpp.s
@@ -800,7 +773,7 @@ state/Token.s: state/Token.cpp.s
 
 # target to generate assembly for a file
 state/Token.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.s
 .PHONY : state/Token.cpp.s
 
 state/TriggeredAbility.o: state/TriggeredAbility.cpp.o
@@ -809,7 +782,7 @@ state/TriggeredAbility.o: state/TriggeredAbility.cpp.o
 
 # target to build an object file
 state/TriggeredAbility.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o
 .PHONY : state/TriggeredAbility.cpp.o
 
 state/TriggeredAbility.i: state/TriggeredAbility.cpp.i
@@ -818,7 +791,7 @@ state/TriggeredAbility.i: state/TriggeredAbility.cpp.i
 
 # target to preprocess a source file
 state/TriggeredAbility.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.i
 .PHONY : state/TriggeredAbility.cpp.i
 
 state/TriggeredAbility.s: state/TriggeredAbility.cpp.s
@@ -827,7 +800,7 @@ state/TriggeredAbility.s: state/TriggeredAbility.cpp.s
 
 # target to generate assembly for a file
 state/TriggeredAbility.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.s
 .PHONY : state/TriggeredAbility.cpp.s
 
 state/Zone.o: state/Zone.cpp.o
@@ -836,7 +809,7 @@ state/Zone.o: state/Zone.cpp.o
 
 # target to build an object file
 state/Zone.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o
 .PHONY : state/Zone.cpp.o
 
 state/Zone.i: state/Zone.cpp.i
@@ -845,7 +818,7 @@ state/Zone.i: state/Zone.cpp.i
 
 # target to preprocess a source file
 state/Zone.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.i
 .PHONY : state/Zone.cpp.i
 
 state/Zone.s: state/Zone.cpp.s
@@ -854,7 +827,7 @@ state/Zone.s: state/Zone.cpp.s
 
 # target to generate assembly for a file
 state/Zone.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.s
 .PHONY : state/Zone.cpp.s
 
 turn/BeginningOfCombatStep.o: turn/BeginningOfCombatStep.cpp.o
@@ -863,7 +836,7 @@ turn/BeginningOfCombatStep.o: turn/BeginningOfCombatStep.cpp.o
 
 # target to build an object file
 turn/BeginningOfCombatStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o
 .PHONY : turn/BeginningOfCombatStep.cpp.o
 
 turn/BeginningOfCombatStep.i: turn/BeginningOfCombatStep.cpp.i
@@ -872,7 +845,7 @@ turn/BeginningOfCombatStep.i: turn/BeginningOfCombatStep.cpp.i
 
 # target to preprocess a source file
 turn/BeginningOfCombatStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.i
 .PHONY : turn/BeginningOfCombatStep.cpp.i
 
 turn/BeginningOfCombatStep.s: turn/BeginningOfCombatStep.cpp.s
@@ -881,7 +854,7 @@ turn/BeginningOfCombatStep.s: turn/BeginningOfCombatStep.cpp.s
 
 # target to generate assembly for a file
 turn/BeginningOfCombatStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.s
 .PHONY : turn/BeginningOfCombatStep.cpp.s
 
 turn/BeginningPhase.o: turn/BeginningPhase.cpp.o
@@ -890,7 +863,7 @@ turn/BeginningPhase.o: turn/BeginningPhase.cpp.o
 
 # target to build an object file
 turn/BeginningPhase.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o
 .PHONY : turn/BeginningPhase.cpp.o
 
 turn/BeginningPhase.i: turn/BeginningPhase.cpp.i
@@ -899,7 +872,7 @@ turn/BeginningPhase.i: turn/BeginningPhase.cpp.i
 
 # target to preprocess a source file
 turn/BeginningPhase.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.i
 .PHONY : turn/BeginningPhase.cpp.i
 
 turn/BeginningPhase.s: turn/BeginningPhase.cpp.s
@@ -908,7 +881,7 @@ turn/BeginningPhase.s: turn/BeginningPhase.cpp.s
 
 # target to generate assembly for a file
 turn/BeginningPhase.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.s
 .PHONY : turn/BeginningPhase.cpp.s
 
 turn/CleanupStep.o: turn/CleanupStep.cpp.o
@@ -917,7 +890,7 @@ turn/CleanupStep.o: turn/CleanupStep.cpp.o
 
 # target to build an object file
 turn/CleanupStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o
 .PHONY : turn/CleanupStep.cpp.o
 
 turn/CleanupStep.i: turn/CleanupStep.cpp.i
@@ -926,7 +899,7 @@ turn/CleanupStep.i: turn/CleanupStep.cpp.i
 
 # target to preprocess a source file
 turn/CleanupStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.i
 .PHONY : turn/CleanupStep.cpp.i
 
 turn/CleanupStep.s: turn/CleanupStep.cpp.s
@@ -935,7 +908,7 @@ turn/CleanupStep.s: turn/CleanupStep.cpp.s
 
 # target to generate assembly for a file
 turn/CleanupStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.s
 .PHONY : turn/CleanupStep.cpp.s
 
 turn/CombatDamageStep.o: turn/CombatDamageStep.cpp.o
@@ -944,7 +917,7 @@ turn/CombatDamageStep.o: turn/CombatDamageStep.cpp.o
 
 # target to build an object file
 turn/CombatDamageStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o
 .PHONY : turn/CombatDamageStep.cpp.o
 
 turn/CombatDamageStep.i: turn/CombatDamageStep.cpp.i
@@ -953,7 +926,7 @@ turn/CombatDamageStep.i: turn/CombatDamageStep.cpp.i
 
 # target to preprocess a source file
 turn/CombatDamageStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.i
 .PHONY : turn/CombatDamageStep.cpp.i
 
 turn/CombatDamageStep.s: turn/CombatDamageStep.cpp.s
@@ -962,7 +935,7 @@ turn/CombatDamageStep.s: turn/CombatDamageStep.cpp.s
 
 # target to generate assembly for a file
 turn/CombatDamageStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.s
 .PHONY : turn/CombatDamageStep.cpp.s
 
 turn/CombatPhase.o: turn/CombatPhase.cpp.o
@@ -971,7 +944,7 @@ turn/CombatPhase.o: turn/CombatPhase.cpp.o
 
 # target to build an object file
 turn/CombatPhase.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o
 .PHONY : turn/CombatPhase.cpp.o
 
 turn/CombatPhase.i: turn/CombatPhase.cpp.i
@@ -980,7 +953,7 @@ turn/CombatPhase.i: turn/CombatPhase.cpp.i
 
 # target to preprocess a source file
 turn/CombatPhase.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.i
 .PHONY : turn/CombatPhase.cpp.i
 
 turn/CombatPhase.s: turn/CombatPhase.cpp.s
@@ -989,7 +962,7 @@ turn/CombatPhase.s: turn/CombatPhase.cpp.s
 
 # target to generate assembly for a file
 turn/CombatPhase.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.s
 .PHONY : turn/CombatPhase.cpp.s
 
 turn/DeclareAttackersStep.o: turn/DeclareAttackersStep.cpp.o
@@ -998,7 +971,7 @@ turn/DeclareAttackersStep.o: turn/DeclareAttackersStep.cpp.o
 
 # target to build an object file
 turn/DeclareAttackersStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o
 .PHONY : turn/DeclareAttackersStep.cpp.o
 
 turn/DeclareAttackersStep.i: turn/DeclareAttackersStep.cpp.i
@@ -1007,7 +980,7 @@ turn/DeclareAttackersStep.i: turn/DeclareAttackersStep.cpp.i
 
 # target to preprocess a source file
 turn/DeclareAttackersStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.i
 .PHONY : turn/DeclareAttackersStep.cpp.i
 
 turn/DeclareAttackersStep.s: turn/DeclareAttackersStep.cpp.s
@@ -1016,7 +989,7 @@ turn/DeclareAttackersStep.s: turn/DeclareAttackersStep.cpp.s
 
 # target to generate assembly for a file
 turn/DeclareAttackersStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.s
 .PHONY : turn/DeclareAttackersStep.cpp.s
 
 turn/DeclareBlockersStep.o: turn/DeclareBlockersStep.cpp.o
@@ -1025,7 +998,7 @@ turn/DeclareBlockersStep.o: turn/DeclareBlockersStep.cpp.o
 
 # target to build an object file
 turn/DeclareBlockersStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o
 .PHONY : turn/DeclareBlockersStep.cpp.o
 
 turn/DeclareBlockersStep.i: turn/DeclareBlockersStep.cpp.i
@@ -1034,7 +1007,7 @@ turn/DeclareBlockersStep.i: turn/DeclareBlockersStep.cpp.i
 
 # target to preprocess a source file
 turn/DeclareBlockersStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.i
 .PHONY : turn/DeclareBlockersStep.cpp.i
 
 turn/DeclareBlockersStep.s: turn/DeclareBlockersStep.cpp.s
@@ -1043,7 +1016,7 @@ turn/DeclareBlockersStep.s: turn/DeclareBlockersStep.cpp.s
 
 # target to generate assembly for a file
 turn/DeclareBlockersStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.s
 .PHONY : turn/DeclareBlockersStep.cpp.s
 
 turn/DrawStep.o: turn/DrawStep.cpp.o
@@ -1052,7 +1025,7 @@ turn/DrawStep.o: turn/DrawStep.cpp.o
 
 # target to build an object file
 turn/DrawStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o
 .PHONY : turn/DrawStep.cpp.o
 
 turn/DrawStep.i: turn/DrawStep.cpp.i
@@ -1061,7 +1034,7 @@ turn/DrawStep.i: turn/DrawStep.cpp.i
 
 # target to preprocess a source file
 turn/DrawStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.i
 .PHONY : turn/DrawStep.cpp.i
 
 turn/DrawStep.s: turn/DrawStep.cpp.s
@@ -1070,7 +1043,7 @@ turn/DrawStep.s: turn/DrawStep.cpp.s
 
 # target to generate assembly for a file
 turn/DrawStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.s
 .PHONY : turn/DrawStep.cpp.s
 
 turn/EndOfCombatStep.o: turn/EndOfCombatStep.cpp.o
@@ -1079,7 +1052,7 @@ turn/EndOfCombatStep.o: turn/EndOfCombatStep.cpp.o
 
 # target to build an object file
 turn/EndOfCombatStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o
 .PHONY : turn/EndOfCombatStep.cpp.o
 
 turn/EndOfCombatStep.i: turn/EndOfCombatStep.cpp.i
@@ -1088,7 +1061,7 @@ turn/EndOfCombatStep.i: turn/EndOfCombatStep.cpp.i
 
 # target to preprocess a source file
 turn/EndOfCombatStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.i
 .PHONY : turn/EndOfCombatStep.cpp.i
 
 turn/EndOfCombatStep.s: turn/EndOfCombatStep.cpp.s
@@ -1097,7 +1070,7 @@ turn/EndOfCombatStep.s: turn/EndOfCombatStep.cpp.s
 
 # target to generate assembly for a file
 turn/EndOfCombatStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.s
 .PHONY : turn/EndOfCombatStep.cpp.s
 
 turn/EndStep.o: turn/EndStep.cpp.o
@@ -1106,7 +1079,7 @@ turn/EndStep.o: turn/EndStep.cpp.o
 
 # target to build an object file
 turn/EndStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o
 .PHONY : turn/EndStep.cpp.o
 
 turn/EndStep.i: turn/EndStep.cpp.i
@@ -1115,7 +1088,7 @@ turn/EndStep.i: turn/EndStep.cpp.i
 
 # target to preprocess a source file
 turn/EndStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.i
 .PHONY : turn/EndStep.cpp.i
 
 turn/EndStep.s: turn/EndStep.cpp.s
@@ -1124,7 +1097,7 @@ turn/EndStep.s: turn/EndStep.cpp.s
 
 # target to generate assembly for a file
 turn/EndStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.s
 .PHONY : turn/EndStep.cpp.s
 
 turn/EndingPhase.o: turn/EndingPhase.cpp.o
@@ -1133,7 +1106,7 @@ turn/EndingPhase.o: turn/EndingPhase.cpp.o
 
 # target to build an object file
 turn/EndingPhase.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o
 .PHONY : turn/EndingPhase.cpp.o
 
 turn/EndingPhase.i: turn/EndingPhase.cpp.i
@@ -1142,7 +1115,7 @@ turn/EndingPhase.i: turn/EndingPhase.cpp.i
 
 # target to preprocess a source file
 turn/EndingPhase.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.i
 .PHONY : turn/EndingPhase.cpp.i
 
 turn/EndingPhase.s: turn/EndingPhase.cpp.s
@@ -1151,7 +1124,7 @@ turn/EndingPhase.s: turn/EndingPhase.cpp.s
 
 # target to generate assembly for a file
 turn/EndingPhase.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.s
 .PHONY : turn/EndingPhase.cpp.s
 
 turn/FirstStrikeCombatDamageStep.o: turn/FirstStrikeCombatDamageStep.cpp.o
@@ -1160,7 +1133,7 @@ turn/FirstStrikeCombatDamageStep.o: turn/FirstStrikeCombatDamageStep.cpp.o
 
 # target to build an object file
 turn/FirstStrikeCombatDamageStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o
 .PHONY : turn/FirstStrikeCombatDamageStep.cpp.o
 
 turn/FirstStrikeCombatDamageStep.i: turn/FirstStrikeCombatDamageStep.cpp.i
@@ -1169,7 +1142,7 @@ turn/FirstStrikeCombatDamageStep.i: turn/FirstStrikeCombatDamageStep.cpp.i
 
 # target to preprocess a source file
 turn/FirstStrikeCombatDamageStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.i
 .PHONY : turn/FirstStrikeCombatDamageStep.cpp.i
 
 turn/FirstStrikeCombatDamageStep.s: turn/FirstStrikeCombatDamageStep.cpp.s
@@ -1178,7 +1151,7 @@ turn/FirstStrikeCombatDamageStep.s: turn/FirstStrikeCombatDamageStep.cpp.s
 
 # target to generate assembly for a file
 turn/FirstStrikeCombatDamageStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.s
 .PHONY : turn/FirstStrikeCombatDamageStep.cpp.s
 
 turn/Phase.o: turn/Phase.cpp.o
@@ -1187,7 +1160,7 @@ turn/Phase.o: turn/Phase.cpp.o
 
 # target to build an object file
 turn/Phase.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o
 .PHONY : turn/Phase.cpp.o
 
 turn/Phase.i: turn/Phase.cpp.i
@@ -1196,7 +1169,7 @@ turn/Phase.i: turn/Phase.cpp.i
 
 # target to preprocess a source file
 turn/Phase.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.i
 .PHONY : turn/Phase.cpp.i
 
 turn/Phase.s: turn/Phase.cpp.s
@@ -1205,7 +1178,7 @@ turn/Phase.s: turn/Phase.cpp.s
 
 # target to generate assembly for a file
 turn/Phase.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.s
 .PHONY : turn/Phase.cpp.s
 
 turn/PostcombatMainPhase.o: turn/PostcombatMainPhase.cpp.o
@@ -1214,7 +1187,7 @@ turn/PostcombatMainPhase.o: turn/PostcombatMainPhase.cpp.o
 
 # target to build an object file
 turn/PostcombatMainPhase.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o
 .PHONY : turn/PostcombatMainPhase.cpp.o
 
 turn/PostcombatMainPhase.i: turn/PostcombatMainPhase.cpp.i
@@ -1223,7 +1196,7 @@ turn/PostcombatMainPhase.i: turn/PostcombatMainPhase.cpp.i
 
 # target to preprocess a source file
 turn/PostcombatMainPhase.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.i
 .PHONY : turn/PostcombatMainPhase.cpp.i
 
 turn/PostcombatMainPhase.s: turn/PostcombatMainPhase.cpp.s
@@ -1232,7 +1205,7 @@ turn/PostcombatMainPhase.s: turn/PostcombatMainPhase.cpp.s
 
 # target to generate assembly for a file
 turn/PostcombatMainPhase.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.s
 .PHONY : turn/PostcombatMainPhase.cpp.s
 
 turn/PrecombatMainPhase.o: turn/PrecombatMainPhase.cpp.o
@@ -1241,7 +1214,7 @@ turn/PrecombatMainPhase.o: turn/PrecombatMainPhase.cpp.o
 
 # target to build an object file
 turn/PrecombatMainPhase.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o
 .PHONY : turn/PrecombatMainPhase.cpp.o
 
 turn/PrecombatMainPhase.i: turn/PrecombatMainPhase.cpp.i
@@ -1250,7 +1223,7 @@ turn/PrecombatMainPhase.i: turn/PrecombatMainPhase.cpp.i
 
 # target to preprocess a source file
 turn/PrecombatMainPhase.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.i
 .PHONY : turn/PrecombatMainPhase.cpp.i
 
 turn/PrecombatMainPhase.s: turn/PrecombatMainPhase.cpp.s
@@ -1259,7 +1232,7 @@ turn/PrecombatMainPhase.s: turn/PrecombatMainPhase.cpp.s
 
 # target to generate assembly for a file
 turn/PrecombatMainPhase.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.s
 .PHONY : turn/PrecombatMainPhase.cpp.s
 
 turn/Step.o: turn/Step.cpp.o
@@ -1268,7 +1241,7 @@ turn/Step.o: turn/Step.cpp.o
 
 # target to build an object file
 turn/Step.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o
 .PHONY : turn/Step.cpp.o
 
 turn/Step.i: turn/Step.cpp.i
@@ -1277,7 +1250,7 @@ turn/Step.i: turn/Step.cpp.i
 
 # target to preprocess a source file
 turn/Step.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.i
 .PHONY : turn/Step.cpp.i
 
 turn/Step.s: turn/Step.cpp.s
@@ -1286,7 +1259,7 @@ turn/Step.s: turn/Step.cpp.s
 
 # target to generate assembly for a file
 turn/Step.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.s
 .PHONY : turn/Step.cpp.s
 
 turn/Turn.o: turn/Turn.cpp.o
@@ -1295,7 +1268,7 @@ turn/Turn.o: turn/Turn.cpp.o
 
 # target to build an object file
 turn/Turn.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o
 .PHONY : turn/Turn.cpp.o
 
 turn/Turn.i: turn/Turn.cpp.i
@@ -1304,7 +1277,7 @@ turn/Turn.i: turn/Turn.cpp.i
 
 # target to preprocess a source file
 turn/Turn.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.i
 .PHONY : turn/Turn.cpp.i
 
 turn/Turn.s: turn/Turn.cpp.s
@@ -1313,7 +1286,7 @@ turn/Turn.s: turn/Turn.cpp.s
 
 # target to generate assembly for a file
 turn/Turn.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.s
 .PHONY : turn/Turn.cpp.s
 
 turn/UntapStep.o: turn/UntapStep.cpp.o
@@ -1322,7 +1295,7 @@ turn/UntapStep.o: turn/UntapStep.cpp.o
 
 # target to build an object file
 turn/UntapStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o
 .PHONY : turn/UntapStep.cpp.o
 
 turn/UntapStep.i: turn/UntapStep.cpp.i
@@ -1331,7 +1304,7 @@ turn/UntapStep.i: turn/UntapStep.cpp.i
 
 # target to preprocess a source file
 turn/UntapStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.i
 .PHONY : turn/UntapStep.cpp.i
 
 turn/UntapStep.s: turn/UntapStep.cpp.s
@@ -1340,7 +1313,7 @@ turn/UntapStep.s: turn/UntapStep.cpp.s
 
 # target to generate assembly for a file
 turn/UntapStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.s
 .PHONY : turn/UntapStep.cpp.s
 
 turn/UpkeepStep.o: turn/UpkeepStep.cpp.o
@@ -1349,7 +1322,7 @@ turn/UpkeepStep.o: turn/UpkeepStep.cpp.o
 
 # target to build an object file
 turn/UpkeepStep.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o
 .PHONY : turn/UpkeepStep.cpp.o
 
 turn/UpkeepStep.i: turn/UpkeepStep.cpp.i
@@ -1358,7 +1331,7 @@ turn/UpkeepStep.i: turn/UpkeepStep.cpp.i
 
 # target to preprocess a source file
 turn/UpkeepStep.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.i
 .PHONY : turn/UpkeepStep.cpp.i
 
 turn/UpkeepStep.s: turn/UpkeepStep.cpp.s
@@ -1367,7 +1340,7 @@ turn/UpkeepStep.s: turn/UpkeepStep.cpp.s
 
 # target to generate assembly for a file
 turn/UpkeepStep.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.s
 .PHONY : turn/UpkeepStep.cpp.s
 
 # Help Target
@@ -1420,9 +1393,6 @@ help:
 	@echo "... state/Hand.o"
 	@echo "... state/Hand.i"
 	@echo "... state/Hand.s"
-	@echo "... state/IObservable.o"
-	@echo "... state/IObservable.i"
-	@echo "... state/IObservable.s"
 	@echo "... state/Library.o"
 	@echo "... state/Library.i"
 	@echo "... state/Library.s"
@@ -1527,6 +1497,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

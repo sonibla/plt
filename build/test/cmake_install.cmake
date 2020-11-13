@@ -1,4 +1,4 @@
-# Install script for directory: /home/maxime/projects/plt/test
+# Install script for directory: /home/maxime/projetcs/plt/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/maxime/projects/plt/build/test/shared/cmake_install.cmake")
-  include("/home/maxime/projects/plt/build/test/client/cmake_install.cmake")
+  include("/home/maxime/projetcs/plt/build/test/shared/cmake_install.cmake")
+  include("/home/maxime/projetcs/plt/build/test/client/cmake_install.cmake")
 
 endif()
 

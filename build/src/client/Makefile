@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projects/plt
+CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles /home/maxime/projects/plt/build/src/client/CMakeFiles/progress.marks
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles /home/maxime/projetcs/plt/build/src/client/CMakeFiles/progress.marks
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/clean
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/preinstall
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/preinstall
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/client/CMakeFiles/client.dir/rule:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client.dir/rule
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client.dir/rule
 .PHONY : src/client/CMakeFiles/client.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ client: src/client/CMakeFiles/client.dir/rule
 
 # fast build rule for target.
 client/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/build
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/build
 .PHONY : client/fast
 
 # Convenience name for target.
 src/client/CMakeFiles/client_static.dir/rule:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client_static.dir/rule
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client_static.dir/rule
 .PHONY : src/client/CMakeFiles/client_static.dir/rule
 
 # Convenience name for target.
@@ -137,27 +137,12 @@ client_static: src/client/CMakeFiles/client_static.dir/rule
 
 # fast build rule for target.
 client_static/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/build
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/build
 .PHONY : client_static/fast
 
 # Convenience name for target.
-src/client/CMakeFiles/generate-header-render.dir/rule:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/generate-header-render.dir/rule
-.PHONY : src/client/CMakeFiles/generate-header-render.dir/rule
-
-# Convenience name for target.
-generate-header-render: src/client/CMakeFiles/generate-header-render.dir/rule
-
-.PHONY : generate-header-render
-
-# fast build rule for target.
-generate-header-render/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/generate-header-render.dir/build.make src/client/CMakeFiles/generate-header-render.dir/build
-.PHONY : generate-header-render/fast
-
-# Convenience name for target.
 src/client/CMakeFiles/generate-header-client.dir/rule:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/generate-header-client.dir/rule
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/generate-header-client.dir/rule
 .PHONY : src/client/CMakeFiles/generate-header-client.dir/rule
 
 # Convenience name for target.
@@ -167,7 +152,7 @@ generate-header-client: src/client/CMakeFiles/generate-header-client.dir/rule
 
 # fast build rule for target.
 generate-header-client/fast:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/generate-header-client.dir/build.make src/client/CMakeFiles/generate-header-client.dir/build
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/client/CMakeFiles/generate-header-client.dir/build.make src/client/CMakeFiles/generate-header-client.dir/build
 .PHONY : generate-header-client/fast
 
 client/Test.o: client/Test.cpp.o
@@ -176,7 +161,7 @@ client/Test.o: client/Test.cpp.o
 
 # target to build an object file
 client/Test.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/client/Test.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/client/Test.cpp.o
 .PHONY : client/Test.cpp.o
 
 client/Test.i: client/Test.cpp.i
@@ -185,7 +170,7 @@ client/Test.i: client/Test.cpp.i
 
 # target to preprocess a source file
 client/Test.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/client/Test.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/client/Test.cpp.i
 .PHONY : client/Test.cpp.i
 
 client/Test.s: client/Test.cpp.s
@@ -194,7 +179,7 @@ client/Test.s: client/Test.cpp.s
 
 # target to generate assembly for a file
 client/Test.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/client/Test.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/client/Test.cpp.s
 .PHONY : client/Test.cpp.s
 
 main.o: main.cpp.o
@@ -203,7 +188,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/main.cpp.o
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -212,7 +197,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/main.cpp.i
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -221,7 +206,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/maxime/projects/plt/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/main.cpp.s
+	cd /home/maxime/projetcs/plt/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -234,7 +219,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... client"
 	@echo "... client_static"
-	@echo "... generate-header-render"
 	@echo "... generate-header-client"
 	@echo "... client/Test.o"
 	@echo "... client/Test.i"
@@ -253,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projects/plt
+CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -56,6 +56,7 @@ CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
 all: extern/dia2code/all
 all: src/shared/all
 all: src/client/all
+all: rapport/all
 all: test/all
 
 .PHONY : all
@@ -64,6 +65,7 @@ all: test/all
 preinstall: extern/dia2code/preinstall
 preinstall: src/shared/preinstall
 preinstall: src/client/preinstall
+preinstall: rapport/preinstall
 preinstall: test/preinstall
 
 .PHONY : preinstall
@@ -76,6 +78,7 @@ clean: CMakeFiles/generate-headers.dir/clean
 clean: extern/dia2code/clean
 clean: src/shared/clean
 clean: src/client/clean
+clean: rapport/clean
 clean: test/clean
 
 .PHONY : clean
@@ -99,6 +102,25 @@ extern/dia2code/clean: extern/dia2code/CMakeFiles/dia2code.dir/clean
 .PHONY : extern/dia2code/clean
 
 #=============================================================================
+# Directory level rules for directory rapport
+
+# Recursive "all" directory target.
+rapport/all:
+
+.PHONY : rapport/all
+
+# Recursive "preinstall" directory target.
+rapport/preinstall:
+
+.PHONY : rapport/preinstall
+
+# Recursive "clean" directory target.
+rapport/clean: rapport/CMakeFiles/rapport-diapdf-state.dir/clean
+rapport/clean: rapport/CMakeFiles/rapport.dir/clean
+
+.PHONY : rapport/clean
+
+#=============================================================================
 # Directory level rules for directory src/client
 
 # Recursive "all" directory target.
@@ -115,7 +137,6 @@ src/client/preinstall:
 # Recursive "clean" directory target.
 src/client/clean: src/client/CMakeFiles/client.dir/clean
 src/client/clean: src/client/CMakeFiles/client_static.dir/clean
-src/client/clean: src/client/CMakeFiles/generate-header-render.dir/clean
 src/client/clean: src/client/CMakeFiles/generate-header-client.dir/clean
 
 .PHONY : src/client/clean
@@ -208,14 +229,14 @@ CMakeFiles/code-coverage.dir/all: test/shared/CMakeFiles/test_shared_dummy.dir/a
 CMakeFiles/code-coverage.dir/all: test/client/CMakeFiles/test_client_dummy.dir/all
 	$(MAKE) -f CMakeFiles/code-coverage.dir/build.make CMakeFiles/code-coverage.dir/depend
 	$(MAKE) -f CMakeFiles/code-coverage.dir/build.make CMakeFiles/code-coverage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=5 "Built target code-coverage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=5 "Built target code-coverage"
 .PHONY : CMakeFiles/code-coverage.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/code-coverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 69
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 67
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/code-coverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : CMakeFiles/code-coverage.dir/rule
 
 # Convenience name for target.
@@ -235,14 +256,14 @@ CMakeFiles/code-coverage.dir/clean:
 CMakeFiles/clean-headers.dir/all:
 	$(MAKE) -f CMakeFiles/clean-headers.dir/build.make CMakeFiles/clean-headers.dir/depend
 	$(MAKE) -f CMakeFiles/clean-headers.dir/build.make CMakeFiles/clean-headers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num= "Built target clean-headers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num= "Built target clean-headers"
 .PHONY : CMakeFiles/clean-headers.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clean-headers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean-headers.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : CMakeFiles/clean-headers.dir/rule
 
 # Convenience name for target.
@@ -263,14 +284,14 @@ CMakeFiles/code-coverage-gcov.dir/all: test/shared/CMakeFiles/test_shared_dummy.
 CMakeFiles/code-coverage-gcov.dir/all: test/client/CMakeFiles/test_client_dummy.dir/all
 	$(MAKE) -f CMakeFiles/code-coverage-gcov.dir/build.make CMakeFiles/code-coverage-gcov.dir/depend
 	$(MAKE) -f CMakeFiles/code-coverage-gcov.dir/build.make CMakeFiles/code-coverage-gcov.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=6 "Built target code-coverage-gcov"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=6 "Built target code-coverage-gcov"
 .PHONY : CMakeFiles/code-coverage-gcov.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/code-coverage-gcov.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 67
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 65
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/code-coverage-gcov.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : CMakeFiles/code-coverage-gcov.dir/rule
 
 # Convenience name for target.
@@ -289,18 +310,17 @@ CMakeFiles/code-coverage-gcov.dir/clean:
 # All Build rule for target.
 CMakeFiles/generate-headers.dir/all: src/shared/CMakeFiles/generate-header-turn.dir/all
 CMakeFiles/generate-headers.dir/all: src/shared/CMakeFiles/generate-header-state.dir/all
-CMakeFiles/generate-headers.dir/all: src/client/CMakeFiles/generate-header-render.dir/all
 CMakeFiles/generate-headers.dir/all: src/client/CMakeFiles/generate-header-client.dir/all
 	$(MAKE) -f CMakeFiles/generate-headers.dir/build.make CMakeFiles/generate-headers.dir/depend
 	$(MAKE) -f CMakeFiles/generate-headers.dir/build.make CMakeFiles/generate-headers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num= "Built target generate-headers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num= "Built target generate-headers"
 .PHONY : CMakeFiles/generate-headers.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/generate-headers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/generate-headers.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : CMakeFiles/generate-headers.dir/rule
 
 # Convenience name for target.
@@ -320,14 +340,14 @@ CMakeFiles/generate-headers.dir/clean:
 extern/dia2code/CMakeFiles/dia2code.dir/all:
 	$(MAKE) -f extern/dia2code/CMakeFiles/dia2code.dir/build.make extern/dia2code/CMakeFiles/dia2code.dir/depend
 	$(MAKE) -f extern/dia2code/CMakeFiles/dia2code.dir/build.make extern/dia2code/CMakeFiles/dia2code.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16 "Built target dia2code"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16 "Built target dia2code"
 .PHONY : extern/dia2code/CMakeFiles/dia2code.dir/all
 
 # Build rule for subdir invocation for target.
 extern/dia2code/CMakeFiles/dia2code.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 extern/dia2code/CMakeFiles/dia2code.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : extern/dia2code/CMakeFiles/dia2code.dir/rule
 
 # Convenience name for target.
@@ -347,14 +367,14 @@ extern/dia2code/CMakeFiles/dia2code.dir/clean:
 src/shared/CMakeFiles/shared_static.dir/all: CMakeFiles/generate-headers.dir/all
 	$(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/depend
 	$(MAKE) -f src/shared/CMakeFiles/shared_static.dir/build.make src/shared/CMakeFiles/shared_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66 "Built target shared_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65 "Built target shared_static"
 .PHONY : src/shared/CMakeFiles/shared_static.dir/all
 
 # Build rule for subdir invocation for target.
 src/shared/CMakeFiles/shared_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/shared_static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : src/shared/CMakeFiles/shared_static.dir/rule
 
 # Convenience name for target.
@@ -374,14 +394,14 @@ src/shared/CMakeFiles/shared_static.dir/clean:
 src/shared/CMakeFiles/generate-header-turn.dir/all: extern/dia2code/CMakeFiles/dia2code.dir/all
 	$(MAKE) -f src/shared/CMakeFiles/generate-header-turn.dir/build.make src/shared/CMakeFiles/generate-header-turn.dir/depend
 	$(MAKE) -f src/shared/CMakeFiles/generate-header-turn.dir/build.make src/shared/CMakeFiles/generate-header-turn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=20 "Built target generate-header-turn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=19 "Built target generate-header-turn"
 .PHONY : src/shared/CMakeFiles/generate-header-turn.dir/all
 
 # Build rule for subdir invocation for target.
 src/shared/CMakeFiles/generate-header-turn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/generate-header-turn.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : src/shared/CMakeFiles/generate-header-turn.dir/rule
 
 # Convenience name for target.
@@ -401,14 +421,14 @@ src/shared/CMakeFiles/generate-header-turn.dir/clean:
 src/shared/CMakeFiles/generate-header-state.dir/all: extern/dia2code/CMakeFiles/dia2code.dir/all
 	$(MAKE) -f src/shared/CMakeFiles/generate-header-state.dir/build.make src/shared/CMakeFiles/generate-header-state.dir/depend
 	$(MAKE) -f src/shared/CMakeFiles/generate-header-state.dir/build.make src/shared/CMakeFiles/generate-header-state.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=19 "Built target generate-header-state"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=18 "Built target generate-header-state"
 .PHONY : src/shared/CMakeFiles/generate-header-state.dir/all
 
 # Build rule for subdir invocation for target.
 src/shared/CMakeFiles/generate-header-state.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/generate-header-state.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : src/shared/CMakeFiles/generate-header-state.dir/rule
 
 # Convenience name for target.
@@ -429,14 +449,14 @@ src/client/CMakeFiles/client.dir/all: src/shared/CMakeFiles/shared_static.dir/al
 src/client/CMakeFiles/client.dir/all: src/client/CMakeFiles/client_static.dir/all
 	$(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/depend
 	$(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=1,2 "Built target client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=1,2 "Built target client"
 .PHONY : src/client/CMakeFiles/client.dir/all
 
 # Build rule for subdir invocation for target.
 src/client/CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 64
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 62
 	$(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : src/client/CMakeFiles/client.dir/rule
 
 # Convenience name for target.
@@ -457,14 +477,14 @@ src/client/CMakeFiles/client_static.dir/all: CMakeFiles/generate-headers.dir/all
 src/client/CMakeFiles/client_static.dir/all: src/shared/CMakeFiles/shared_static.dir/all
 	$(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/depend
 	$(MAKE) -f src/client/CMakeFiles/client_static.dir/build.make src/client/CMakeFiles/client_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=3,4 "Built target client_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=3,4 "Built target client_static"
 .PHONY : src/client/CMakeFiles/client_static.dir/all
 
 # Build rule for subdir invocation for target.
 src/client/CMakeFiles/client_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 62
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 60
 	$(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client_static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : src/client/CMakeFiles/client_static.dir/rule
 
 # Convenience name for target.
@@ -478,47 +498,20 @@ src/client/CMakeFiles/client_static.dir/clean:
 .PHONY : src/client/CMakeFiles/client_static.dir/clean
 
 #=============================================================================
-# Target rules for target src/client/CMakeFiles/generate-header-render.dir
-
-# All Build rule for target.
-src/client/CMakeFiles/generate-header-render.dir/all: extern/dia2code/CMakeFiles/dia2code.dir/all
-	$(MAKE) -f src/client/CMakeFiles/generate-header-render.dir/build.make src/client/CMakeFiles/generate-header-render.dir/depend
-	$(MAKE) -f src/client/CMakeFiles/generate-header-render.dir/build.make src/client/CMakeFiles/generate-header-render.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=18 "Built target generate-header-render"
-.PHONY : src/client/CMakeFiles/generate-header-render.dir/all
-
-# Build rule for subdir invocation for target.
-src/client/CMakeFiles/generate-header-render.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 11
-	$(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/generate-header-render.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
-.PHONY : src/client/CMakeFiles/generate-header-render.dir/rule
-
-# Convenience name for target.
-generate-header-render: src/client/CMakeFiles/generate-header-render.dir/rule
-
-.PHONY : generate-header-render
-
-# clean rule for target.
-src/client/CMakeFiles/generate-header-render.dir/clean:
-	$(MAKE) -f src/client/CMakeFiles/generate-header-render.dir/build.make src/client/CMakeFiles/generate-header-render.dir/clean
-.PHONY : src/client/CMakeFiles/generate-header-render.dir/clean
-
-#=============================================================================
 # Target rules for target src/client/CMakeFiles/generate-header-client.dir
 
 # All Build rule for target.
 src/client/CMakeFiles/generate-header-client.dir/all: extern/dia2code/CMakeFiles/dia2code.dir/all
 	$(MAKE) -f src/client/CMakeFiles/generate-header-client.dir/build.make src/client/CMakeFiles/generate-header-client.dir/depend
 	$(MAKE) -f src/client/CMakeFiles/generate-header-client.dir/build.make src/client/CMakeFiles/generate-header-client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=17 "Built target generate-header-client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=17 "Built target generate-header-client"
 .PHONY : src/client/CMakeFiles/generate-header-client.dir/all
 
 # Build rule for subdir invocation for target.
 src/client/CMakeFiles/generate-header-client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/generate-header-client.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : src/client/CMakeFiles/generate-header-client.dir/rule
 
 # Convenience name for target.
@@ -532,20 +525,74 @@ src/client/CMakeFiles/generate-header-client.dir/clean:
 .PHONY : src/client/CMakeFiles/generate-header-client.dir/clean
 
 #=============================================================================
+# Target rules for target rapport/CMakeFiles/rapport-diapdf-state.dir
+
+# All Build rule for target.
+rapport/CMakeFiles/rapport-diapdf-state.dir/all:
+	$(MAKE) -f rapport/CMakeFiles/rapport-diapdf-state.dir/build.make rapport/CMakeFiles/rapport-diapdf-state.dir/depend
+	$(MAKE) -f rapport/CMakeFiles/rapport-diapdf-state.dir/build.make rapport/CMakeFiles/rapport-diapdf-state.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=20 "Built target rapport-diapdf-state"
+.PHONY : rapport/CMakeFiles/rapport-diapdf-state.dir/all
+
+# Build rule for subdir invocation for target.
+rapport/CMakeFiles/rapport-diapdf-state.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 rapport/CMakeFiles/rapport-diapdf-state.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
+.PHONY : rapport/CMakeFiles/rapport-diapdf-state.dir/rule
+
+# Convenience name for target.
+rapport-diapdf-state: rapport/CMakeFiles/rapport-diapdf-state.dir/rule
+
+.PHONY : rapport-diapdf-state
+
+# clean rule for target.
+rapport/CMakeFiles/rapport-diapdf-state.dir/clean:
+	$(MAKE) -f rapport/CMakeFiles/rapport-diapdf-state.dir/build.make rapport/CMakeFiles/rapport-diapdf-state.dir/clean
+.PHONY : rapport/CMakeFiles/rapport-diapdf-state.dir/clean
+
+#=============================================================================
+# Target rules for target rapport/CMakeFiles/rapport.dir
+
+# All Build rule for target.
+rapport/CMakeFiles/rapport.dir/all: rapport/CMakeFiles/rapport-diapdf-state.dir/all
+	$(MAKE) -f rapport/CMakeFiles/rapport.dir/build.make rapport/CMakeFiles/rapport.dir/depend
+	$(MAKE) -f rapport/CMakeFiles/rapport.dir/build.make rapport/CMakeFiles/rapport.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num= "Built target rapport"
+.PHONY : rapport/CMakeFiles/rapport.dir/all
+
+# Build rule for subdir invocation for target.
+rapport/CMakeFiles/rapport.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 rapport/CMakeFiles/rapport.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
+.PHONY : rapport/CMakeFiles/rapport.dir/rule
+
+# Convenience name for target.
+rapport: rapport/CMakeFiles/rapport.dir/rule
+
+.PHONY : rapport
+
+# clean rule for target.
+rapport/CMakeFiles/rapport.dir/clean:
+	$(MAKE) -f rapport/CMakeFiles/rapport.dir/build.make rapport/CMakeFiles/rapport.dir/clean
+.PHONY : rapport/CMakeFiles/rapport.dir/clean
+
+#=============================================================================
 # Target rules for target test/CMakeFiles/unittest.dir
 
 # All Build rule for target.
 test/CMakeFiles/unittest.dir/all: test/CMakeFiles/check.dir/all
 	$(MAKE) -f test/CMakeFiles/unittest.dir/build.make test/CMakeFiles/unittest.dir/depend
 	$(MAKE) -f test/CMakeFiles/unittest.dir/build.make test/CMakeFiles/unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num= "Built target unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num= "Built target unittest"
 .PHONY : test/CMakeFiles/unittest.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/unittest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/unittest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/unittest.dir/rule
 
 # Convenience name for target.
@@ -565,14 +612,14 @@ test/CMakeFiles/unittest.dir/clean:
 test/CMakeFiles/check.dir/all:
 	$(MAKE) -f test/CMakeFiles/check.dir/build.make test/CMakeFiles/check.dir/depend
 	$(MAKE) -f test/CMakeFiles/check.dir/build.make test/CMakeFiles/check.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num= "Built target check"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num= "Built target check"
 .PHONY : test/CMakeFiles/check.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/check.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/check.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/check.dir/rule
 
 # Convenience name for target.
@@ -594,14 +641,14 @@ test/shared/CMakeFiles/test_shared_dummy.dir/all: src/shared/CMakeFiles/shared_s
 test/shared/CMakeFiles/test_shared_dummy.dir/all: src/client/CMakeFiles/client_static.dir/all
 	$(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/depend
 	$(MAKE) -f test/shared/CMakeFiles/test_shared_dummy.dir/build.make test/shared/CMakeFiles/test_shared_dummy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=69,70 "Built target test_shared_dummy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=68,69 "Built target test_shared_dummy"
 .PHONY : test/shared/CMakeFiles/test_shared_dummy.dir/all
 
 # Build rule for subdir invocation for target.
 test/shared/CMakeFiles/test_shared_dummy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 64
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 62
 	$(MAKE) -f CMakeFiles/Makefile2 test/shared/CMakeFiles/test_shared_dummy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : test/shared/CMakeFiles/test_shared_dummy.dir/rule
 
 # Convenience name for target.
@@ -623,14 +670,14 @@ test/client/CMakeFiles/test_client_dummy.dir/all: src/shared/CMakeFiles/shared_s
 test/client/CMakeFiles/test_client_dummy.dir/all: src/client/CMakeFiles/client_static.dir/all
 	$(MAKE) -f test/client/CMakeFiles/test_client_dummy.dir/build.make test/client/CMakeFiles/test_client_dummy.dir/depend
 	$(MAKE) -f test/client/CMakeFiles/test_client_dummy.dir/build.make test/client/CMakeFiles/test_client_dummy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=67,68 "Built target test_client_dummy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=66,67 "Built target test_client_dummy"
 .PHONY : test/client/CMakeFiles/test_client_dummy.dir/all
 
 # Build rule for subdir invocation for target.
 test/client/CMakeFiles/test_client_dummy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 64
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 62
 	$(MAKE) -f CMakeFiles/Makefile2 test/client/CMakeFiles/test_client_dummy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
 .PHONY : test/client/CMakeFiles/test_client_dummy.dir/rule
 
 # Convenience name for target.
