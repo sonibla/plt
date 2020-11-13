@@ -1,4 +1,4 @@
-# Install script for directory: /home/maxime/projetcs/plt/src/shared
+# Install script for directory: /home/maxime/projects/plt/src/shared
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

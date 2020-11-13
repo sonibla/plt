@@ -21,6 +21,10 @@ state/Mana.h
 ../src/shared/state/Mana.h
 state/Cost.h
 ../src/shared/state/Cost.h
+state/IObserver.h
+../src/shared/state/IObserver.h
+state/IObservable.h
+../src/shared/state/IObservable.h
 state/GameElement.h
 ../src/shared/state/GameElement.h
 state/PlayableGameElement.h
@@ -155,8 +159,12 @@ turn/Turn.h
 ../src/shared/state/turn/Turn.h
 Player.h
 ../src/shared/state/Player.h
+IObservable.h
+../src/shared/state/IObservable.h
 
 ../src/shared/state/GameElement.h
+IObservable.h
+../src/shared/state/IObservable.h
 
 ../src/shared/state/Graveyard.h
 CardZone.h
@@ -169,6 +177,14 @@ CardZone.h
 ../src/shared/state/CardZone.h
 Player.h
 ../src/shared/state/Player.h
+
+../src/shared/state/IObservable.h
+vector
+-
+IObserver.h
+../src/shared/state/IObserver.h
+
+../src/shared/state/IObserver.h
 
 ../src/shared/state/Library.h
 CardZone.h
@@ -198,6 +214,8 @@ Mana.h
 map
 -
 list
+-
+string
 -
 TriggeredAbility.h
 ../src/shared/state/TriggeredAbility.h
@@ -263,6 +281,8 @@ Ability.h
 ../src/shared/state/Ability.h
 
 ../src/shared/state/Zone.h
+IObservable.h
+../src/shared/state/IObservable.h
 
 ../src/shared/turn/Phase.h
 vector
@@ -288,7 +308,7 @@ Phase.h
 state/Player.h
 ../src/shared/turn/state/Player.h
 
-/home/maxime/projetcs/plt/src/client/main.cpp
+/home/maxime/projects/plt/src/client/main.cpp
 iostream
 -
 SFML/Graphics.hpp

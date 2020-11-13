@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
+CMAKE_SOURCE_DIR = /home/maxime/projects/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
 
 # Utility rule file for generate-header-state.
 
@@ -57,11 +57,11 @@ src/shared/CMakeFiles/generate-header-state: generate_header_state.stamp
 
 
 generate_header_state.stamp: ../src/state.dia
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../generate_header_state.stamp"
-	cd /home/maxime/projetcs/plt/build/src/shared && rm -vf /home/maxime/projetcs/plt/src/*/state.h
-	cd /home/maxime/projetcs/plt/build/src/shared && rm -vf /home/maxime/projetcs/plt/src/*/state/*.h
-	cd /home/maxime/projetcs/plt/build/src/shared && ../../../bin/dia2code -ns state -d /home/maxime/projetcs/plt/src/shared -t cpp /home/maxime/projetcs/plt/src/shared/../state.dia
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/cmake -E touch /home/maxime/projetcs/plt/build/generate_header_state.stamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../generate_header_state.stamp"
+	cd /home/maxime/projects/plt/build/src/shared && rm -vf /home/maxime/projects/plt/src/*/state.h
+	cd /home/maxime/projects/plt/build/src/shared && rm -vf /home/maxime/projects/plt/src/*/state/*.h
+	cd /home/maxime/projects/plt/build/src/shared && ../../../bin/dia2code -ns state -d /home/maxime/projects/plt/src/shared -t cpp /home/maxime/projects/plt/src/shared/../state.dia
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/cmake -E touch /home/maxime/projects/plt/build/generate_header_state.stamp
 
 generate-header-state: src/shared/CMakeFiles/generate-header-state
 generate-header-state: generate_header_state.stamp
@@ -75,10 +75,10 @@ src/shared/CMakeFiles/generate-header-state.dir/build: generate-header-state
 .PHONY : src/shared/CMakeFiles/generate-header-state.dir/build
 
 src/shared/CMakeFiles/generate-header-state.dir/clean:
-	cd /home/maxime/projetcs/plt/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/generate-header-state.dir/cmake_clean.cmake
+	cd /home/maxime/projects/plt/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/generate-header-state.dir/cmake_clean.cmake
 .PHONY : src/shared/CMakeFiles/generate-header-state.dir/clean
 
 src/shared/CMakeFiles/generate-header-state.dir/depend:
-	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projetcs/plt /home/maxime/projetcs/plt/src/shared /home/maxime/projetcs/plt/build /home/maxime/projetcs/plt/build/src/shared /home/maxime/projetcs/plt/build/src/shared/CMakeFiles/generate-header-state.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projects/plt /home/maxime/projects/plt/src/shared /home/maxime/projects/plt/build /home/maxime/projects/plt/build/src/shared /home/maxime/projects/plt/build/src/shared/CMakeFiles/generate-header-state.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/shared/CMakeFiles/generate-header-state.dir/depend
 

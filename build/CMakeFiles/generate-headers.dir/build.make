@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
+CMAKE_SOURCE_DIR = /home/maxime/projects/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
 
 # Utility rule file for generate-headers.
 
@@ -67,6 +67,6 @@ CMakeFiles/generate-headers.dir/clean:
 .PHONY : CMakeFiles/generate-headers.dir/clean
 
 CMakeFiles/generate-headers.dir/depend:
-	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projetcs/plt /home/maxime/projetcs/plt /home/maxime/projetcs/plt/build /home/maxime/projetcs/plt/build /home/maxime/projetcs/plt/build/CMakeFiles/generate-headers.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projects/plt /home/maxime/projects/plt /home/maxime/projects/plt/build /home/maxime/projects/plt/build /home/maxime/projects/plt/build/CMakeFiles/generate-headers.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/generate-headers.dir/depend
 

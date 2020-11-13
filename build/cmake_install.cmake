@@ -1,4 +1,4 @@
-# Install script for directory: /home/maxime/projetcs/plt
+# Install script for directory: /home/maxime/projects/plt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,11 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/maxime/projetcs/plt/build/extern/dia2code/cmake_install.cmake")
-  include("/home/maxime/projetcs/plt/build/src/shared/cmake_install.cmake")
-  include("/home/maxime/projetcs/plt/build/src/client/cmake_install.cmake")
-  include("/home/maxime/projetcs/plt/build/rapport/cmake_install.cmake")
-  include("/home/maxime/projetcs/plt/build/test/cmake_install.cmake")
+  include("/home/maxime/projects/plt/build/extern/dia2code/cmake_install.cmake")
+  include("/home/maxime/projects/plt/build/src/shared/cmake_install.cmake")
+  include("/home/maxime/projects/plt/build/src/client/cmake_install.cmake")
+  include("/home/maxime/projects/plt/build/test/cmake_install.cmake")
 
 endif()
 
@@ -55,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/maxime/projetcs/plt/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/maxime/projects/plt/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
