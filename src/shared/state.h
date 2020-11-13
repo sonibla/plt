@@ -5,6 +5,8 @@
 #include "state/ManaPool.h"
 #include "state/Mana.h"
 #include "state/Cost.h"
+#include "state/IObserver.h"
+#include "state/IObservable.h"
 #include "state/GameElement.h"
 #include "state/PlayableGameElement.h"
 #include "state/Zone.h"

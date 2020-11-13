@@ -4,6 +4,7 @@
 
 #include <map>
 #include <list>
+#include <string>
 
 namespace state {
   class TriggeredAbility;
@@ -30,6 +31,7 @@ namespace state {
     bool tapped     = false;
     int strength     = 0;
     int toughness     = 0;
+    std::string image_uri;
     // Operations
   public:
     bool Tap ();

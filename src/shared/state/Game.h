@@ -17,6 +17,7 @@ namespace turn {
 };
 namespace state {
   class Player;
+  class IObservable;
 }
 
 #include "Battlefield.h"
@@ -25,11 +26,12 @@ namespace state {
 #include "Command.h"
 #include "turn/Turn.h"
 #include "Player.h"
+#include "IObservable.h"
 
 namespace state {
 
   /// class Game - 
-  class Game {
+  class Game : public state::IObservable {
     // Attributes
   private:
     static std::shared_ptr<Game> instance;
