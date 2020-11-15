@@ -59,11 +59,22 @@ void Test::state(){
 
 void Test::render(){
 
+    // Declare and load a font
+    sf::Font font;
+    font.loadFromFile("../res/fonts/arial.ttf");
+
 	
-    int numPlayerHand = 1;
+    int numPlayerHand = 7;
     int numOpponentHand = 3;
-    int numPlayerPermanent = 3;
-    int numOpponentPermanent = 2;
+
+    int numPlayerPermanent = 5;
+    int numOpponentPermanent = 4;
+
+    int numPlayerLand = 3;
+    int numOpponentLand = 2 ;
+
+    int PlayerHP = 4;
+    int OpponentHP = 3;
 
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering");
@@ -80,6 +91,14 @@ void Test::render(){
 
     sf::Texture bf_texture;
     bf_texture.loadFromFile("../res/textures/concrete_wall.png");
+
+    sf::Texture bg_texture;
+    bg_texture.loadFromFile("../res/textures/dark-honeycomb.png");
+
+    // Background Sprite
+    sf::Sprite Background(bg_texture);
+    Background.setPosition(0,0);
+    Background.setScale(1000/Background.getLocalBounds().width,1000/Background.getLocalBounds().height);
     
     // Card Sprite
     sf::Sprite sprite(texture);
@@ -89,6 +108,11 @@ void Test::render(){
     sf::Sprite PlayerHub(hub_texture);
     PlayerHub.setPosition(10,690);
     PlayerHub.setScale(150/PlayerHub.getLocalBounds().width,300/PlayerHub.getLocalBounds().height);
+
+    std::string PlayerString = std::string("Player \nHP :") + std::to_string(PlayerHP);
+    sf::Text PlayerHubText(PlayerString, font);
+    PlayerHubText.setCharacterSize(30);
+    PlayerHubText.setPosition(20,710);
 
     sf::Sprite PlayerExile(texture);
     PlayerExile.setPosition(186,778);
@@ -112,6 +136,11 @@ void Test::render(){
     OpponentHub.setPosition(10,10);
     OpponentHub.setScale(150/OpponentHub.getLocalBounds().width,300/OpponentHub.getLocalBounds().height);
 
+    std::string OpponentString = std::string("Opponent \nHP :") + std::to_string(OpponentHP);
+    sf::Text OpponentHubText(OpponentString, font);
+    OpponentHubText.setCharacterSize(30);
+    OpponentHubText.setPosition(20,20);
+
     sf::Sprite OpponentExile(texture);
     OpponentExile.setPosition(916,122);
     OpponentExile.setScale(73/OpponentExile.getLocalBounds().width,100/OpponentExile.getLocalBounds().height);
@@ -131,21 +160,62 @@ void Test::render(){
 
     //Setting the Battlefield
     sf::Sprite Battlefield(bf_texture);
-    Battlefield.setPosition(272,320);
-    Battlefield.setScale(631/Battlefield.getLocalBounds().width,360/Battlefield.getLocalBounds().height);
+    Battlefield.setPosition(272,220);
+    Battlefield.setScale(631/Battlefield.getLocalBounds().width,560/Battlefield.getLocalBounds().height);
 
 
     //Setting the cards drawing
 
+    sf::Sprite HandCardBuffer(texture);
+    HandCardBuffer.setScale(73/HandCardBuffer.getLocalBounds().width,100/HandCardBuffer.getLocalBounds().height);
+
+    sf::Sprite PermanentBuffer(texture);
+    PermanentBuffer.setScale(73/PermanentBuffer.getLocalBounds().width,100/PermanentBuffer.getLocalBounds().height);
+
     // Draw Player Hand
-    std::vector<sf::Sprite> HandCardVect;
-    sf::Sprite CardBuffer(texture);
-    CardBuffer.setScale(146/CardBuffer.getLocalBounds().width,200/CardBuffer.getLocalBounds().height);
-	int CardCenter = 73;
+    std::vector<sf::Sprite> PlayerHandCardVect;
 	for (int i = 0; i < numPlayerHand; i++){
-            HandCardVect.push_back(CardBuffer);
-            HandCardVect[i].setPosition(272 + (i+1)*(631/numPlayerHand+1) - CardCenter, 790);
+            PlayerHandCardVect.push_back(HandCardBuffer);
+            PlayerHandCardVect[i].setPosition(10 + 272 + i*90, 800);
         }
+
+
+    // Draw Opponent Hand
+    std::vector<sf::Sprite> OpponentHandCardVect;
+	for (int i = 0; i < numOpponentHand; i++){
+            OpponentHandCardVect.push_back(HandCardBuffer);
+            OpponentHandCardVect[i].setPosition(10 + 272 + i*90, 100);
+        }
+
+    // Draw Player Permanent
+    std::vector<sf::Sprite> PlayerPermanentVect;
+	for (int i = 0; i < numPlayerPermanent; i++){
+            PlayerPermanentVect.push_back(PermanentBuffer);
+            PlayerPermanentVect[i].setPosition(10 + 272 + i*90, 525);
+        }
+
+    // Draw Opponent Permanent
+    std::vector<sf::Sprite> OpponentPermanentVect;
+	for (int i = 0; i < numOpponentPermanent; i++){
+            OpponentPermanentVect.push_back(PermanentBuffer);
+            OpponentPermanentVect[i].setPosition(10 + 272 + i*90, 375);
+        }
+
+    // Draw Player Land
+    std::vector<sf::Sprite> PlayerLandVect;
+	for (int i = 0; i < numPlayerLand; i++){
+            PlayerLandVect.push_back(PermanentBuffer);
+            PlayerLandVect[i].setPosition(10 + 272 + i*90, 645);
+        }
+
+    // Draw Opponent Land
+    std::vector<sf::Sprite> OpponentLandVect;
+	for (int i = 0; i < numOpponentLand; i++){
+            OpponentLandVect.push_back(PermanentBuffer);
+            OpponentLandVect[i].setPosition(10 + 272 + i*90, 255);
+        }
+
+
     
     // Start the game loop
     while (window.isOpen())
@@ -161,16 +231,20 @@ void Test::render(){
         // Clear screen
         window.clear();
         // Draw the sprite
+        window.draw(Background);
+
         window.draw(PlayerLibrary);
         window.draw(PlayerExile);
         window.draw(PlayerGraveyard);
         window.draw(PlayerHub);
+        window.draw(PlayerHubText);
         window.draw(PlayerHand);
 
         window.draw(OpponentLibrary);
         window.draw(OpponentExile);
         window.draw(OpponentGraveyard);
         window.draw(OpponentHub);
+	window.draw(OpponentHubText);
         window.draw(OpponentHand);
 
 	window.draw(Battlefield);
@@ -178,11 +252,36 @@ void Test::render(){
 
         // Draw Cards
 
-/*
+        //Hand Player Cards
 	for (int i = 0; i < numPlayerHand; i++){
-            window.draw(HandCardVect[i]);
+            window.draw(PlayerHandCardVect[i]);
         }
-*/
+
+        //Hand Opponent Cards
+	for (int i = 0; i < numOpponentHand; i++){
+            window.draw(OpponentHandCardVect[i]);
+        }
+
+        //Permanent Player Cards
+	for (int i = 0; i < numPlayerPermanent; i++){
+            window.draw(PlayerPermanentVect[i]);
+        }
+
+        //Permanent Opponent Cards
+	for (int i = 0; i < numOpponentPermanent; i++){
+            window.draw(OpponentPermanentVect[i]);
+        }
+
+        //Land Player Cards
+	for (int i = 0; i < numPlayerLand; i++){
+            window.draw(PlayerLandVect[i]);
+        }
+
+        //Land Opponent Cards
+	for (int i = 0; i < numOpponentLand; i++){
+            window.draw(OpponentLandVect[i]);
+        }
+
         // Update the window
         window.display();
     }
