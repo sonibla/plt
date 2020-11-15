@@ -1,4 +1,4 @@
-# Install script for directory: /home/maxime/projetcs/plt/extern/dia2code
+# Install script for directory: /home/maxime/projects/plt/extern/dia2code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

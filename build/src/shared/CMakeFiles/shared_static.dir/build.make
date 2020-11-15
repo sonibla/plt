@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
+CMAKE_SOURCE_DIR = /home/maxime/projects/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
 
 # Include any dependencies generated for this target.
 include src/shared/CMakeFiles/shared_static.dir/depend.make
@@ -59,575 +59,588 @@ include src/shared/CMakeFiles/shared_static.dir/flags.make
 
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o: ../src/shared/state/Ability.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Ability.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Ability.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Ability.cpp.o -c /home/maxime/projects/plt/src/shared/state/Ability.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Ability.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Ability.cpp > CMakeFiles/shared_static.dir/state/Ability.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Ability.cpp > CMakeFiles/shared_static.dir/state/Ability.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Ability.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Ability.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Ability.cpp -o CMakeFiles/shared_static.dir/state/Ability.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Ability.cpp -o CMakeFiles/shared_static.dir/state/Ability.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o: ../src/shared/state/ActivatedAbility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/ActivatedAbility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.o -c /home/maxime/projects/plt/src/shared/state/ActivatedAbility.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/ActivatedAbility.cpp > CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/ActivatedAbility.cpp > CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/ActivatedAbility.cpp -o CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/ActivatedAbility.cpp -o CMakeFiles/shared_static.dir/state/ActivatedAbility.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o: ../src/shared/state/Battlefield.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Battlefield.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Battlefield.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Battlefield.cpp.o -c /home/maxime/projects/plt/src/shared/state/Battlefield.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Battlefield.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Battlefield.cpp > CMakeFiles/shared_static.dir/state/Battlefield.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Battlefield.cpp > CMakeFiles/shared_static.dir/state/Battlefield.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Battlefield.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Battlefield.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Battlefield.cpp -o CMakeFiles/shared_static.dir/state/Battlefield.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Battlefield.cpp -o CMakeFiles/shared_static.dir/state/Battlefield.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o: ../src/shared/state/Card.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Card.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Card.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Card.cpp.o -c /home/maxime/projects/plt/src/shared/state/Card.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Card.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Card.cpp > CMakeFiles/shared_static.dir/state/Card.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Card.cpp > CMakeFiles/shared_static.dir/state/Card.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Card.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Card.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Card.cpp -o CMakeFiles/shared_static.dir/state/Card.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Card.cpp -o CMakeFiles/shared_static.dir/state/Card.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o: ../src/shared/state/CardPermanent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/CardPermanent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/CardPermanent.cpp.o -c /home/maxime/projects/plt/src/shared/state/CardPermanent.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/CardPermanent.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/CardPermanent.cpp > CMakeFiles/shared_static.dir/state/CardPermanent.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/CardPermanent.cpp > CMakeFiles/shared_static.dir/state/CardPermanent.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/CardPermanent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/CardPermanent.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/CardPermanent.cpp -o CMakeFiles/shared_static.dir/state/CardPermanent.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/CardPermanent.cpp -o CMakeFiles/shared_static.dir/state/CardPermanent.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o: ../src/shared/state/CardZone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/CardZone.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/CardZone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/CardZone.cpp.o -c /home/maxime/projects/plt/src/shared/state/CardZone.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/CardZone.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/CardZone.cpp > CMakeFiles/shared_static.dir/state/CardZone.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/CardZone.cpp > CMakeFiles/shared_static.dir/state/CardZone.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/CardZone.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/CardZone.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/CardZone.cpp -o CMakeFiles/shared_static.dir/state/CardZone.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/CardZone.cpp -o CMakeFiles/shared_static.dir/state/CardZone.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o: ../src/shared/state/Command.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Command.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Command.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Command.cpp.o -c /home/maxime/projects/plt/src/shared/state/Command.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Command.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Command.cpp > CMakeFiles/shared_static.dir/state/Command.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Command.cpp > CMakeFiles/shared_static.dir/state/Command.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Command.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Command.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Command.cpp -o CMakeFiles/shared_static.dir/state/Command.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Command.cpp -o CMakeFiles/shared_static.dir/state/Command.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.o: ../src/shared/state/Cost.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Cost.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Cost.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Cost.cpp.o -c /home/maxime/projects/plt/src/shared/state/Cost.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Cost.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Cost.cpp > CMakeFiles/shared_static.dir/state/Cost.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Cost.cpp > CMakeFiles/shared_static.dir/state/Cost.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Cost.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Cost.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Cost.cpp -o CMakeFiles/shared_static.dir/state/Cost.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Cost.cpp -o CMakeFiles/shared_static.dir/state/Cost.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o: ../src/shared/state/Exile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Exile.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Exile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Exile.cpp.o -c /home/maxime/projects/plt/src/shared/state/Exile.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Exile.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Exile.cpp > CMakeFiles/shared_static.dir/state/Exile.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Exile.cpp > CMakeFiles/shared_static.dir/state/Exile.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Exile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Exile.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Exile.cpp -o CMakeFiles/shared_static.dir/state/Exile.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Exile.cpp -o CMakeFiles/shared_static.dir/state/Exile.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o: ../src/shared/state/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Game.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Game.cpp.o -c /home/maxime/projects/plt/src/shared/state/Game.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Game.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Game.cpp > CMakeFiles/shared_static.dir/state/Game.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Game.cpp > CMakeFiles/shared_static.dir/state/Game.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Game.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Game.cpp -o CMakeFiles/shared_static.dir/state/Game.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Game.cpp -o CMakeFiles/shared_static.dir/state/Game.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o: ../src/shared/state/GameElement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/GameElement.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/GameElement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/GameElement.cpp.o -c /home/maxime/projects/plt/src/shared/state/GameElement.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/GameElement.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/GameElement.cpp > CMakeFiles/shared_static.dir/state/GameElement.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/GameElement.cpp > CMakeFiles/shared_static.dir/state/GameElement.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/GameElement.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/GameElement.cpp -o CMakeFiles/shared_static.dir/state/GameElement.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/GameElement.cpp -o CMakeFiles/shared_static.dir/state/GameElement.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o: ../src/shared/state/Graveyard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Graveyard.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Graveyard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Graveyard.cpp.o -c /home/maxime/projects/plt/src/shared/state/Graveyard.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Graveyard.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Graveyard.cpp > CMakeFiles/shared_static.dir/state/Graveyard.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Graveyard.cpp > CMakeFiles/shared_static.dir/state/Graveyard.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Graveyard.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Graveyard.cpp -o CMakeFiles/shared_static.dir/state/Graveyard.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Graveyard.cpp -o CMakeFiles/shared_static.dir/state/Graveyard.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o: ../src/shared/state/Hand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Hand.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Hand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Hand.cpp.o -c /home/maxime/projects/plt/src/shared/state/Hand.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Hand.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Hand.cpp > CMakeFiles/shared_static.dir/state/Hand.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Hand.cpp > CMakeFiles/shared_static.dir/state/Hand.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Hand.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Hand.cpp -o CMakeFiles/shared_static.dir/state/Hand.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Hand.cpp -o CMakeFiles/shared_static.dir/state/Hand.cpp.s
+
+src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
+src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.o: ../src/shared/state/IObservable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/IObservable.cpp.o -c /home/maxime/projects/plt/src/shared/state/IObservable.cpp
+
+src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/IObservable.cpp.i"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/IObservable.cpp > CMakeFiles/shared_static.dir/state/IObservable.cpp.i
+
+src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/IObservable.cpp.s"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/IObservable.cpp -o CMakeFiles/shared_static.dir/state/IObservable.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o: ../src/shared/state/Library.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Library.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Library.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Library.cpp.o -c /home/maxime/projects/plt/src/shared/state/Library.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Library.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Library.cpp > CMakeFiles/shared_static.dir/state/Library.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Library.cpp > CMakeFiles/shared_static.dir/state/Library.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Library.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Library.cpp -o CMakeFiles/shared_static.dir/state/Library.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Library.cpp -o CMakeFiles/shared_static.dir/state/Library.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.o: ../src/shared/state/Mana.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Mana.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Mana.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Mana.cpp.o -c /home/maxime/projects/plt/src/shared/state/Mana.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Mana.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Mana.cpp > CMakeFiles/shared_static.dir/state/Mana.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Mana.cpp > CMakeFiles/shared_static.dir/state/Mana.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Mana.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Mana.cpp -o CMakeFiles/shared_static.dir/state/Mana.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Mana.cpp -o CMakeFiles/shared_static.dir/state/Mana.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o: ../src/shared/state/ManaAbility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/ManaAbility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o -c /home/maxime/projects/plt/src/shared/state/ManaAbility.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/ManaAbility.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/ManaAbility.cpp > CMakeFiles/shared_static.dir/state/ManaAbility.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/ManaAbility.cpp > CMakeFiles/shared_static.dir/state/ManaAbility.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/ManaAbility.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/ManaAbility.cpp -o CMakeFiles/shared_static.dir/state/ManaAbility.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/ManaAbility.cpp -o CMakeFiles/shared_static.dir/state/ManaAbility.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.o: ../src/shared/state/ManaPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/ManaPool.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/ManaPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/ManaPool.cpp.o -c /home/maxime/projects/plt/src/shared/state/ManaPool.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/ManaPool.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/ManaPool.cpp > CMakeFiles/shared_static.dir/state/ManaPool.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/ManaPool.cpp > CMakeFiles/shared_static.dir/state/ManaPool.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/ManaPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/ManaPool.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/ManaPool.cpp -o CMakeFiles/shared_static.dir/state/ManaPool.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/ManaPool.cpp -o CMakeFiles/shared_static.dir/state/ManaPool.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o: ../src/shared/state/Permanent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Permanent.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Permanent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Permanent.cpp.o -c /home/maxime/projects/plt/src/shared/state/Permanent.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Permanent.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Permanent.cpp > CMakeFiles/shared_static.dir/state/Permanent.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Permanent.cpp > CMakeFiles/shared_static.dir/state/Permanent.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Permanent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Permanent.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Permanent.cpp -o CMakeFiles/shared_static.dir/state/Permanent.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Permanent.cpp -o CMakeFiles/shared_static.dir/state/Permanent.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o: ../src/shared/state/PlayableGameElement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/PlayableGameElement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.o -c /home/maxime/projects/plt/src/shared/state/PlayableGameElement.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/PlayableGameElement.cpp > CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/PlayableGameElement.cpp > CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/PlayableGameElement.cpp -o CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/PlayableGameElement.cpp -o CMakeFiles/shared_static.dir/state/PlayableGameElement.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o: ../src/shared/state/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Player.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Player.cpp.o -c /home/maxime/projects/plt/src/shared/state/Player.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Player.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Player.cpp > CMakeFiles/shared_static.dir/state/Player.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Player.cpp > CMakeFiles/shared_static.dir/state/Player.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Player.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Player.cpp -o CMakeFiles/shared_static.dir/state/Player.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Player.cpp -o CMakeFiles/shared_static.dir/state/Player.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o: ../src/shared/state/Spell.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Spell.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Spell.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Spell.cpp.o -c /home/maxime/projects/plt/src/shared/state/Spell.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Spell.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Spell.cpp > CMakeFiles/shared_static.dir/state/Spell.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Spell.cpp > CMakeFiles/shared_static.dir/state/Spell.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Spell.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Spell.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Spell.cpp -o CMakeFiles/shared_static.dir/state/Spell.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Spell.cpp -o CMakeFiles/shared_static.dir/state/Spell.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o: ../src/shared/state/Stack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Stack.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Stack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Stack.cpp.o -c /home/maxime/projects/plt/src/shared/state/Stack.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Stack.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Stack.cpp > CMakeFiles/shared_static.dir/state/Stack.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Stack.cpp > CMakeFiles/shared_static.dir/state/Stack.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Stack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Stack.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Stack.cpp -o CMakeFiles/shared_static.dir/state/Stack.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Stack.cpp -o CMakeFiles/shared_static.dir/state/Stack.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o: ../src/shared/state/Token.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Token.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Token.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Token.cpp.o -c /home/maxime/projects/plt/src/shared/state/Token.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Token.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Token.cpp > CMakeFiles/shared_static.dir/state/Token.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Token.cpp > CMakeFiles/shared_static.dir/state/Token.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Token.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Token.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Token.cpp -o CMakeFiles/shared_static.dir/state/Token.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Token.cpp -o CMakeFiles/shared_static.dir/state/Token.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o: ../src/shared/state/TriggeredAbility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/TriggeredAbility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.o -c /home/maxime/projects/plt/src/shared/state/TriggeredAbility.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/TriggeredAbility.cpp > CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/TriggeredAbility.cpp > CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/TriggeredAbility.cpp -o CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/TriggeredAbility.cpp -o CMakeFiles/shared_static.dir/state/TriggeredAbility.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o: ../src/shared/state/Zone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Zone.cpp.o -c /home/maxime/projetcs/plt/src/shared/state/Zone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/state/Zone.cpp.o -c /home/maxime/projects/plt/src/shared/state/Zone.cpp
 
 src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/state/Zone.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/state/Zone.cpp > CMakeFiles/shared_static.dir/state/Zone.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/state/Zone.cpp > CMakeFiles/shared_static.dir/state/Zone.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/state/Zone.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/state/Zone.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/state/Zone.cpp -o CMakeFiles/shared_static.dir/state/Zone.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/state/Zone.cpp -o CMakeFiles/shared_static.dir/state/Zone.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o: ../src/shared/turn/BeginningOfCombatStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/BeginningOfCombatStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/BeginningOfCombatStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/BeginningOfCombatStep.cpp > CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/BeginningOfCombatStep.cpp > CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/BeginningOfCombatStep.cpp -o CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/BeginningOfCombatStep.cpp -o CMakeFiles/shared_static.dir/turn/BeginningOfCombatStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o: ../src/shared/turn/BeginningPhase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/BeginningPhase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.o -c /home/maxime/projects/plt/src/shared/turn/BeginningPhase.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/BeginningPhase.cpp > CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/BeginningPhase.cpp > CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/BeginningPhase.cpp -o CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/BeginningPhase.cpp -o CMakeFiles/shared_static.dir/turn/BeginningPhase.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o: ../src/shared/turn/CleanupStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/CleanupStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/CleanupStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/CleanupStep.cpp > CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/CleanupStep.cpp > CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/CleanupStep.cpp -o CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/CleanupStep.cpp -o CMakeFiles/shared_static.dir/turn/CleanupStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o: ../src/shared/turn/CombatDamageStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/CombatDamageStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/CombatDamageStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/CombatDamageStep.cpp > CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/CombatDamageStep.cpp > CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/CombatDamageStep.cpp -o CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/CombatDamageStep.cpp -o CMakeFiles/shared_static.dir/turn/CombatDamageStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o: ../src/shared/turn/CombatPhase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/CombatPhase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.o -c /home/maxime/projects/plt/src/shared/turn/CombatPhase.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/CombatPhase.cpp > CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/CombatPhase.cpp > CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/CombatPhase.cpp -o CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/CombatPhase.cpp -o CMakeFiles/shared_static.dir/turn/CombatPhase.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o: ../src/shared/turn/DeclareAttackersStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/DeclareAttackersStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/DeclareAttackersStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/DeclareAttackersStep.cpp > CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/DeclareAttackersStep.cpp > CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/DeclareAttackersStep.cpp -o CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/DeclareAttackersStep.cpp -o CMakeFiles/shared_static.dir/turn/DeclareAttackersStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o: ../src/shared/turn/DeclareBlockersStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/DeclareBlockersStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/DeclareBlockersStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/DeclareBlockersStep.cpp > CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/DeclareBlockersStep.cpp > CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/DeclareBlockersStep.cpp -o CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/DeclareBlockersStep.cpp -o CMakeFiles/shared_static.dir/turn/DeclareBlockersStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o: ../src/shared/turn/DrawStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/DrawStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/DrawStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/DrawStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/DrawStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/DrawStep.cpp > CMakeFiles/shared_static.dir/turn/DrawStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/DrawStep.cpp > CMakeFiles/shared_static.dir/turn/DrawStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/DrawStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/DrawStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/DrawStep.cpp -o CMakeFiles/shared_static.dir/turn/DrawStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/DrawStep.cpp -o CMakeFiles/shared_static.dir/turn/DrawStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o: ../src/shared/turn/EndOfCombatStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/EndOfCombatStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/EndOfCombatStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/EndOfCombatStep.cpp > CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/EndOfCombatStep.cpp > CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/EndOfCombatStep.cpp -o CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/EndOfCombatStep.cpp -o CMakeFiles/shared_static.dir/turn/EndOfCombatStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o: ../src/shared/turn/EndStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/EndStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/EndStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/EndStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/EndStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/EndStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/EndStep.cpp > CMakeFiles/shared_static.dir/turn/EndStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/EndStep.cpp > CMakeFiles/shared_static.dir/turn/EndStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/EndStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/EndStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/EndStep.cpp -o CMakeFiles/shared_static.dir/turn/EndStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/EndStep.cpp -o CMakeFiles/shared_static.dir/turn/EndStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o: ../src/shared/turn/EndingPhase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/EndingPhase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.o -c /home/maxime/projects/plt/src/shared/turn/EndingPhase.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/EndingPhase.cpp > CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/EndingPhase.cpp > CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/EndingPhase.cpp -o CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/EndingPhase.cpp -o CMakeFiles/shared_static.dir/turn/EndingPhase.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o: ../src/shared/turn/FirstStrikeCombatDamageStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/FirstStrikeCombatDamageStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/FirstStrikeCombatDamageStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/FirstStrikeCombatDamageStep.cpp > CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/FirstStrikeCombatDamageStep.cpp > CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/FirstStrikeCombatDamageStep.cpp -o CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/FirstStrikeCombatDamageStep.cpp -o CMakeFiles/shared_static.dir/turn/FirstStrikeCombatDamageStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o: ../src/shared/turn/Phase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/Phase.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/Phase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/Phase.cpp.o -c /home/maxime/projects/plt/src/shared/turn/Phase.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/Phase.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/Phase.cpp > CMakeFiles/shared_static.dir/turn/Phase.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/Phase.cpp > CMakeFiles/shared_static.dir/turn/Phase.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/Phase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/Phase.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/Phase.cpp -o CMakeFiles/shared_static.dir/turn/Phase.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/Phase.cpp -o CMakeFiles/shared_static.dir/turn/Phase.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o: ../src/shared/turn/PostcombatMainPhase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/PostcombatMainPhase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.o -c /home/maxime/projects/plt/src/shared/turn/PostcombatMainPhase.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/PostcombatMainPhase.cpp > CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/PostcombatMainPhase.cpp > CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/PostcombatMainPhase.cpp -o CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/PostcombatMainPhase.cpp -o CMakeFiles/shared_static.dir/turn/PostcombatMainPhase.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o: ../src/shared/turn/PrecombatMainPhase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/PrecombatMainPhase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.o -c /home/maxime/projects/plt/src/shared/turn/PrecombatMainPhase.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/PrecombatMainPhase.cpp > CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/PrecombatMainPhase.cpp > CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/PrecombatMainPhase.cpp -o CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/PrecombatMainPhase.cpp -o CMakeFiles/shared_static.dir/turn/PrecombatMainPhase.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o: ../src/shared/turn/Step.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/Step.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/Step.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/Step.cpp.o -c /home/maxime/projects/plt/src/shared/turn/Step.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/Step.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/Step.cpp > CMakeFiles/shared_static.dir/turn/Step.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/Step.cpp > CMakeFiles/shared_static.dir/turn/Step.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/Step.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/Step.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/Step.cpp -o CMakeFiles/shared_static.dir/turn/Step.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/Step.cpp -o CMakeFiles/shared_static.dir/turn/Step.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o: ../src/shared/turn/Turn.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/Turn.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/Turn.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/Turn.cpp.o -c /home/maxime/projects/plt/src/shared/turn/Turn.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/Turn.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/Turn.cpp > CMakeFiles/shared_static.dir/turn/Turn.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/Turn.cpp > CMakeFiles/shared_static.dir/turn/Turn.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/Turn.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/Turn.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/Turn.cpp -o CMakeFiles/shared_static.dir/turn/Turn.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/Turn.cpp -o CMakeFiles/shared_static.dir/turn/Turn.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o: ../src/shared/turn/UntapStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/UntapStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/UntapStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/UntapStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/UntapStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/UntapStep.cpp > CMakeFiles/shared_static.dir/turn/UntapStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/UntapStep.cpp > CMakeFiles/shared_static.dir/turn/UntapStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/UntapStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/UntapStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/UntapStep.cpp -o CMakeFiles/shared_static.dir/turn/UntapStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/UntapStep.cpp -o CMakeFiles/shared_static.dir/turn/UntapStep.cpp.s
 
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: src/shared/CMakeFiles/shared_static.dir/flags.make
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o: ../src/shared/turn/UpkeepStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o -c /home/maxime/projetcs/plt/src/shared/turn/UpkeepStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o"
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o -c /home/maxime/projects/plt/src/shared/turn/UpkeepStep.cpp
 
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.i"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projetcs/plt/src/shared/turn/UpkeepStep.cpp > CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.i
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maxime/projects/plt/src/shared/turn/UpkeepStep.cpp > CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.i
 
 src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.s"
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projetcs/plt/src/shared/turn/UpkeepStep.cpp -o CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.s
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maxime/projects/plt/src/shared/turn/UpkeepStep.cpp -o CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.s
 
 # Object files for target shared_static
 shared_static_OBJECTS = \
@@ -644,6 +657,7 @@ shared_static_OBJECTS = \
 "CMakeFiles/shared_static.dir/state/GameElement.cpp.o" \
 "CMakeFiles/shared_static.dir/state/Graveyard.cpp.o" \
 "CMakeFiles/shared_static.dir/state/Hand.cpp.o" \
+"CMakeFiles/shared_static.dir/state/IObservable.cpp.o" \
 "CMakeFiles/shared_static.dir/state/Library.cpp.o" \
 "CMakeFiles/shared_static.dir/state/Mana.cpp.o" \
 "CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o" \
@@ -692,6 +706,7 @@ src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/state/Gam
 src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/state/GameElement.cpp.o
 src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/state/Graveyard.cpp.o
 src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/state/Hand.cpp.o
+src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/state/IObservable.cpp.o
 src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/state/Library.cpp.o
 src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/state/Mana.cpp.o
 src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/state/ManaAbility.cpp.o
@@ -725,9 +740,9 @@ src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/turn/Unta
 src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/turn/UpkeepStep.cpp.o
 src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/build.make
 src/shared/libshared_static.a: src/shared/CMakeFiles/shared_static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX static library libshared_static.a"
-	cd /home/maxime/projetcs/plt/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/shared_static.dir/cmake_clean_target.cmake
-	cd /home/maxime/projetcs/plt/build/src/shared && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/shared_static.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking CXX static library libshared_static.a"
+	cd /home/maxime/projects/plt/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/shared_static.dir/cmake_clean_target.cmake
+	cd /home/maxime/projects/plt/build/src/shared && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/shared_static.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/shared/CMakeFiles/shared_static.dir/build: src/shared/libshared_static.a
@@ -735,10 +750,10 @@ src/shared/CMakeFiles/shared_static.dir/build: src/shared/libshared_static.a
 .PHONY : src/shared/CMakeFiles/shared_static.dir/build
 
 src/shared/CMakeFiles/shared_static.dir/clean:
-	cd /home/maxime/projetcs/plt/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/shared_static.dir/cmake_clean.cmake
+	cd /home/maxime/projects/plt/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/shared_static.dir/cmake_clean.cmake
 .PHONY : src/shared/CMakeFiles/shared_static.dir/clean
 
 src/shared/CMakeFiles/shared_static.dir/depend:
-	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projetcs/plt /home/maxime/projetcs/plt/src/shared /home/maxime/projetcs/plt/build /home/maxime/projetcs/plt/build/src/shared /home/maxime/projetcs/plt/build/src/shared/CMakeFiles/shared_static.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projects/plt /home/maxime/projects/plt/src/shared /home/maxime/projects/plt/build /home/maxime/projects/plt/build/src/shared /home/maxime/projects/plt/build/src/shared/CMakeFiles/shared_static.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/shared/CMakeFiles/shared_static.dir/depend
 

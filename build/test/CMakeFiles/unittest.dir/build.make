@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
+CMAKE_SOURCE_DIR = /home/maxime/projects/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
 
 # Utility rule file for unittest.
 
@@ -67,10 +67,10 @@ test/CMakeFiles/unittest.dir/build: unittest
 .PHONY : test/CMakeFiles/unittest.dir/build
 
 test/CMakeFiles/unittest.dir/clean:
-	cd /home/maxime/projetcs/plt/build/test && $(CMAKE_COMMAND) -P CMakeFiles/unittest.dir/cmake_clean.cmake
+	cd /home/maxime/projects/plt/build/test && $(CMAKE_COMMAND) -P CMakeFiles/unittest.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/unittest.dir/clean
 
 test/CMakeFiles/unittest.dir/depend:
-	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projetcs/plt /home/maxime/projetcs/plt/test /home/maxime/projetcs/plt/build /home/maxime/projetcs/plt/build/test /home/maxime/projetcs/plt/build/test/CMakeFiles/unittest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projects/plt /home/maxime/projects/plt/test /home/maxime/projects/plt/build /home/maxime/projects/plt/build/test /home/maxime/projects/plt/build/test/CMakeFiles/unittest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/unittest.dir/depend
 

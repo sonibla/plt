@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
+CMAKE_SOURCE_DIR = /home/maxime/projects/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
 
 # Utility rule file for generate-header-turn.
 
@@ -57,11 +57,11 @@ src/shared/CMakeFiles/generate-header-turn: generate_header_turn.stamp
 
 
 generate_header_turn.stamp: ../src/turn.dia
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../generate_header_turn.stamp"
-	cd /home/maxime/projetcs/plt/build/src/shared && rm -vf /home/maxime/projetcs/plt/src/*/turn.h
-	cd /home/maxime/projetcs/plt/build/src/shared && rm -vf /home/maxime/projetcs/plt/src/*/turn/*.h
-	cd /home/maxime/projetcs/plt/build/src/shared && ../../../bin/dia2code -ns turn -d /home/maxime/projetcs/plt/src/shared -t cpp /home/maxime/projetcs/plt/src/shared/../turn.dia
-	cd /home/maxime/projetcs/plt/build/src/shared && /usr/bin/cmake -E touch /home/maxime/projetcs/plt/build/generate_header_turn.stamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../generate_header_turn.stamp"
+	cd /home/maxime/projects/plt/build/src/shared && rm -vf /home/maxime/projects/plt/src/*/turn.h
+	cd /home/maxime/projects/plt/build/src/shared && rm -vf /home/maxime/projects/plt/src/*/turn/*.h
+	cd /home/maxime/projects/plt/build/src/shared && ../../../bin/dia2code -ns turn -d /home/maxime/projects/plt/src/shared -t cpp /home/maxime/projects/plt/src/shared/../turn.dia
+	cd /home/maxime/projects/plt/build/src/shared && /usr/bin/cmake -E touch /home/maxime/projects/plt/build/generate_header_turn.stamp
 
 generate-header-turn: src/shared/CMakeFiles/generate-header-turn
 generate-header-turn: generate_header_turn.stamp
@@ -75,10 +75,10 @@ src/shared/CMakeFiles/generate-header-turn.dir/build: generate-header-turn
 .PHONY : src/shared/CMakeFiles/generate-header-turn.dir/build
 
 src/shared/CMakeFiles/generate-header-turn.dir/clean:
-	cd /home/maxime/projetcs/plt/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/generate-header-turn.dir/cmake_clean.cmake
+	cd /home/maxime/projects/plt/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/generate-header-turn.dir/cmake_clean.cmake
 .PHONY : src/shared/CMakeFiles/generate-header-turn.dir/clean
 
 src/shared/CMakeFiles/generate-header-turn.dir/depend:
-	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projetcs/plt /home/maxime/projetcs/plt/src/shared /home/maxime/projetcs/plt/build /home/maxime/projetcs/plt/build/src/shared /home/maxime/projetcs/plt/build/src/shared/CMakeFiles/generate-header-turn.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projects/plt /home/maxime/projects/plt/src/shared /home/maxime/projects/plt/build /home/maxime/projects/plt/build/src/shared /home/maxime/projects/plt/build/src/shared/CMakeFiles/generate-header-turn.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/shared/CMakeFiles/generate-header-turn.dir/depend
 

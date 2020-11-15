@@ -4,6 +4,18 @@
 src/client/CMakeFiles/client.dir/main.cpp.o
  ../src/client/client.h
  ../src/client/client/Test.h
+ ../src/client/render/AbilityRenderer.h
+ ../src/client/render/BattlefieldRenderer.h
+ ../src/client/render/CardRenderer.h
+ ../src/client/render/ExileRenderer.h
+ ../src/client/render/GraveyardRenderer.h
+ ../src/client/render/HandRenderer.h
+ ../src/client/render/LibraryRenderer.h
+ ../src/client/render/PermanentRenderer.h
+ ../src/client/render/PlayerRenderer.h
+ ../src/client/render/RenderingManager.h
+ ../src/client/render/StackRenderer.h
+ ../src/client/render/ZoneRenderer.h
  ../src/shared/state.h
  ../src/shared/state/Ability.h
  ../src/shared/state/ActivatedAbility.h
@@ -18,6 +30,8 @@ src/client/CMakeFiles/client.dir/main.cpp.o
  ../src/shared/state/GameElement.h
  ../src/shared/state/Graveyard.h
  ../src/shared/state/Hand.h
+ ../src/shared/state/IObservable.h
+ ../src/shared/state/IObserver.h
  ../src/shared/state/Library.h
  ../src/shared/state/Mana.h
  ../src/shared/state/ManaAbility.h
@@ -33,4 +47,4 @@ src/client/CMakeFiles/client.dir/main.cpp.o
  ../src/shared/turn/Phase.h
  ../src/shared/turn/Step.h
  ../src/shared/turn/Turn.h
- /home/maxime/projetcs/plt/src/client/main.cpp
+ /home/maxime/projects/plt/src/client/main.cpp

@@ -3,6 +3,18 @@
 
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/client.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/client/Test.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/AbilityRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/BattlefieldRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/CardRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/ExileRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/GraveyardRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/HandRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/LibraryRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/PermanentRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/PlayerRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/RenderingManager.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/StackRenderer.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/client/render/ZoneRenderer.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/Ability.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/ActivatedAbility.h
@@ -17,6 +29,8 @@ src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/Game.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/GameElement.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/Graveyard.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/Hand.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/IObservable.h
+src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/IObserver.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/Library.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/Mana.h
 src/client/CMakeFiles/client.dir/main.cpp.o: ../src/shared/state/ManaAbility.h

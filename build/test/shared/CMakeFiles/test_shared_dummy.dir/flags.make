@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -std=c++11 -pthread -g -g --coverage -fprofile-arcs -ftest-co
 
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_TEST_DYN_LINK -DBOOST_TEST_MAIN -DBOOST_TEST_MODULE=shared_dummy -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK
 
-CXX_INCLUDES = -I/home/maxime/projetcs/plt/src/shared -I/home/maxime/projetcs/plt/src/client 
+CXX_INCLUDES = -I/home/maxime/projects/plt/src/shared -I/home/maxime/projects/plt/src/client 
 

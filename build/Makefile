@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
+CMAKE_SOURCE_DIR = /home/maxime/projects/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles /home/maxime/projetcs/plt/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles /home/maxime/projects/plt/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -241,6 +241,19 @@ client_static/fast:
 .PHONY : client_static/fast
 
 #=============================================================================
+# Target rules for targets named generate-header-render
+
+# Build rule for target.
+generate-header-render: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 generate-header-render
+.PHONY : generate-header-render
+
+# fast build rule for target.
+generate-header-render/fast:
+	$(MAKE) -f src/client/CMakeFiles/generate-header-render.dir/build.make src/client/CMakeFiles/generate-header-render.dir/build
+.PHONY : generate-header-render/fast
+
+#=============================================================================
 # Target rules for targets named generate-header-client
 
 # Build rule for target.
@@ -252,32 +265,6 @@ generate-header-client: cmake_check_build_system
 generate-header-client/fast:
 	$(MAKE) -f src/client/CMakeFiles/generate-header-client.dir/build.make src/client/CMakeFiles/generate-header-client.dir/build
 .PHONY : generate-header-client/fast
-
-#=============================================================================
-# Target rules for targets named rapport-diapdf-state
-
-# Build rule for target.
-rapport-diapdf-state: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rapport-diapdf-state
-.PHONY : rapport-diapdf-state
-
-# fast build rule for target.
-rapport-diapdf-state/fast:
-	$(MAKE) -f rapport/CMakeFiles/rapport-diapdf-state.dir/build.make rapport/CMakeFiles/rapport-diapdf-state.dir/build
-.PHONY : rapport-diapdf-state/fast
-
-#=============================================================================
-# Target rules for targets named rapport
-
-# Build rule for target.
-rapport: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rapport
-.PHONY : rapport
-
-# fast build rule for target.
-rapport/fast:
-	$(MAKE) -f rapport/CMakeFiles/rapport.dir/build.make rapport/CMakeFiles/rapport.dir/build
-.PHONY : rapport/fast
 
 #=============================================================================
 # Target rules for targets named unittest
@@ -349,9 +336,8 @@ help:
 	@echo "... generate-header-state"
 	@echo "... client"
 	@echo "... client_static"
+	@echo "... generate-header-render"
 	@echo "... generate-header-client"
-	@echo "... rapport-diapdf-state"
-	@echo "... rapport"
 	@echo "... unittest"
 	@echo "... check"
 	@echo "... test_shared_dummy"

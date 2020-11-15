@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
+CMAKE_SOURCE_DIR = /home/maxime/projects/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles /home/maxime/projetcs/plt/build/test/CMakeFiles/progress.marks
-	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projetcs/plt/build/CMakeFiles 0
+	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles /home/maxime/projects/plt/build/test/CMakeFiles/progress.marks
+	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxime/projects/plt/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/clean
+	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/unittest.dir/rule:
-	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/unittest.dir/rule
+	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/unittest.dir/rule
 .PHONY : test/CMakeFiles/unittest.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ unittest: test/CMakeFiles/unittest.dir/rule
 
 # fast build rule for target.
 unittest/fast:
-	cd /home/maxime/projetcs/plt/build && $(MAKE) -f test/CMakeFiles/unittest.dir/build.make test/CMakeFiles/unittest.dir/build
+	cd /home/maxime/projects/plt/build && $(MAKE) -f test/CMakeFiles/unittest.dir/build.make test/CMakeFiles/unittest.dir/build
 .PHONY : unittest/fast
 
 # Convenience name for target.
 test/CMakeFiles/check.dir/rule:
-	cd /home/maxime/projetcs/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/check.dir/rule
+	cd /home/maxime/projects/plt/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/check.dir/rule
 .PHONY : test/CMakeFiles/check.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ check: test/CMakeFiles/check.dir/rule
 
 # fast build rule for target.
 check/fast:
-	cd /home/maxime/projetcs/plt/build && $(MAKE) -f test/CMakeFiles/check.dir/build.make test/CMakeFiles/check.dir/build
+	cd /home/maxime/projects/plt/build && $(MAKE) -f test/CMakeFiles/check.dir/build.make test/CMakeFiles/check.dir/build
 .PHONY : check/fast
 
 # Help Target
@@ -161,6 +161,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

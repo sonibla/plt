@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maxime/projetcs/plt
+CMAKE_SOURCE_DIR = /home/maxime/projects/plt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
+CMAKE_BINARY_DIR = /home/maxime/projects/plt/build
 
 # Utility rule file for code-coverage-gcov.
 
@@ -54,9 +54,9 @@ CMAKE_BINARY_DIR = /home/maxime/projetcs/plt/build
 include CMakeFiles/code-coverage-gcov.dir/progress.make
 
 CMakeFiles/code-coverage-gcov: run_test.sh
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maxime/projetcs/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running gcovr to produce Cobertura code coverage report."
-	sh /home/maxime/projetcs/plt/build/run_test.sh
-	/usr/bin/gcovr --xml -r /home/maxime/projetcs/plt -e /usr/ -e /home/maxime/projetcs/plt/test/ -e /home/maxime/projetcs/plt/extern/ --object-directory=/home/maxime/projetcs/plt/build -o code-coverage-gcov.xml
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/maxime/projects/plt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running gcovr to produce Cobertura code coverage report."
+	sh /home/maxime/projects/plt/build/run_test.sh
+	/usr/bin/gcovr --xml -r /home/maxime/projects/plt -e /usr/ -e /home/maxime/projects/plt/test/ -e /home/maxime/projects/plt/extern/ --object-directory=/home/maxime/projects/plt/build -o code-coverage-gcov.xml
 
 code-coverage-gcov: CMakeFiles/code-coverage-gcov
 code-coverage-gcov: CMakeFiles/code-coverage-gcov.dir/build.make
@@ -73,6 +73,6 @@ CMakeFiles/code-coverage-gcov.dir/clean:
 .PHONY : CMakeFiles/code-coverage-gcov.dir/clean
 
 CMakeFiles/code-coverage-gcov.dir/depend:
-	cd /home/maxime/projetcs/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projetcs/plt /home/maxime/projetcs/plt /home/maxime/projetcs/plt/build /home/maxime/projetcs/plt/build /home/maxime/projetcs/plt/build/CMakeFiles/code-coverage-gcov.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/maxime/projects/plt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maxime/projects/plt /home/maxime/projects/plt /home/maxime/projects/plt/build /home/maxime/projects/plt/build /home/maxime/projects/plt/build/CMakeFiles/code-coverage-gcov.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/code-coverage-gcov.dir/depend
 

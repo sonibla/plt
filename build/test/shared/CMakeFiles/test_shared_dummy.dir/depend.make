@@ -18,6 +18,8 @@ test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o: ../src/sha
 test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o: ../src/shared/state/GameElement.h
 test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o: ../src/shared/state/Graveyard.h
 test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o: ../src/shared/state/Hand.h
+test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o: ../src/shared/state/IObservable.h
+test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o: ../src/shared/state/IObserver.h
 test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o: ../src/shared/state/Library.h
 test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o: ../src/shared/state/Mana.h
 test/shared/CMakeFiles/test_shared_dummy.dir/test_shared_dummy.cpp.o: ../src/shared/state/ManaAbility.h
