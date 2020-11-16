@@ -18,7 +18,7 @@ std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
     for(int i =0; i<6;i++){
         std::shared_ptr<Card> _card = std::make_shared<Card>();
         //art of a black lotus
-        _card->image_uri = "https://c1.scryfall.com/file/scryfall-cards/large/front/b/a/bad6b494-d773-4f7d-ac39-85d82e1d3015.jpg";
+        _card->image_location = "../res/textures/card.png";
         _card->name = "Place Holder";
         _cards.push_back(_card);
     }
