@@ -8,7 +8,7 @@ HandRenderer::~HandRenderer () {}
 
 HandRenderer::update (state::IObservable* obj) {
 	this->cards = obj->cards;
-	std::weak_ptr<RenderingManager> manager = RenderingManager.GetInstance();
+	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
 	manager->update();
 }
 
