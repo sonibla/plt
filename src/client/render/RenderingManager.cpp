@@ -24,5 +24,13 @@ RenderingManager::RenderingManager(){
     zoneRenderers.push_back(std::unique_ptr<ZoneRenderer>(new BattlefieldRenderer(_game->GetBattlefield())));
     zoneRenderers.push_back(std::unique_ptr<ZoneRenderer>(new ExileRenderer(_game->GetExile())));
     zoneRenderers.push_back(std::unique_ptr<ZoneRenderer>(new StackRenderer(_game->GetStack())));
-
 }
+
+void RenderingManager::update (){
+    window.clear();
+    for(std::size_t i =0;i<zoneRenderers.size();i++){
+        window.draw(*(zoneRenderers[i]));
+    }
+    window.display(); 
+}
+
