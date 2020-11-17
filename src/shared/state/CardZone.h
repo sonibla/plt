@@ -26,6 +26,7 @@ namespace state {
     void PutOnTheBattlefield (std::weak_ptr<Card> card);
     std::weak_ptr<Card> GetCard (int position);
     std::vector<std::weak_ptr<Card>> GetCards ();
+    void SetCards (std::vector<std::shared_ptr<Card>> cards);
     // Setters and Getters
   };
 

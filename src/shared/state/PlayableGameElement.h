@@ -4,14 +4,11 @@
 
 #include <string>
 #include <set>
-#include <memory>
 
 namespace state {
-  class Zone;
   class GameElement;
 }
 
-#include "Zone.h"
 #include "GameElement.h"
 
 namespace state {
@@ -24,9 +21,6 @@ namespace state {
     std::string color;
     int cmc;
     std::set<std::string> types;
-    // Operations
-  public:
-    virtual void MoveTo (std::weak_ptr<Zone> zone) = 0;
     // Setters and Getters
   };
 
