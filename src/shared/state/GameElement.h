@@ -4,10 +4,16 @@
 
 
 namespace state {
+  class IObservable;
+}
+
+#include "IObservable.h"
+
+namespace state {
 
   // "Interface"
   /// class GameElement - things that can be targetted
-  class GameElement {
+  class GameElement : public state::IObservable {
     // Setters and Getters
   };
 

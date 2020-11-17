@@ -224,15 +224,26 @@ Le diagramme des classes pour les états est présenté en Figure
 
 \subsection{Stratégie de rendu d'un état}
 
+Notre stratégie de rendu d'un état se base sur l'utilisation de l'interface SFML qui s'appuie sur OpenGL afin de générer un rendu en 2D..
+
+Notre affichage sera distribué entre différents objets, objets qui ont pour tache d'afficher une partie du state , ces objets seront appelés Renderers et seront gérés par le RenderingManager qui comme le Game ( dans state) est un singleton.
+
+L'idée est que les Renderers vont être mis à jour lorsque les éléments de state changent ( cf : https://en.wikipedia.org/wiki/Observer\_pattern ) et une fois mis à jour vont appeler le RenderingManager pour que celui ci redessine le contenu de la fenêtre.
 
 \subsection{Conception logiciel}
 
-%\begin{landscape}
-%\begin{figure}[p]
-%\includegraphics[width=0.9\paperheight]{render.pdf}
-%\caption{\label{uml:render}Diagramme des classes de rendu.} 
-%\end{figure}
-%\end{landscape}
+Notre RenderingManager sera le propriétaire de notre sf::RenderWindow sur la laquelle les Renderer seront dessinés.
+
+Notre RenderingManager va créer dans son constructeur les Renderers pour afficher un state et vas ensuite stocker des références vers ceux ci pour pouvoir les dessiner au moment venu.
+
+Nos Renderers héritent de sf::Drawable et redéfinissent la méthode draw pour pouvoir être dessiné sur une sf::RenderWindow, certains Renderers n'ont pas besoin de redéfinir cette méthode,dans ce cas ils héritent directement de sf::Sprite.
+
+\begin{landscape}
+\begin{figure}[p]
+\includegraphics[width=0.9\paperheight, trim=200 900 200 700, clip]{render.pdf}
+\caption{\label{uml:render}Diagramme des classes de rendu.} 
+\end{figure}
+\end{landscape}
 
 \clearpage
 \section{Règles de changement d'états et moteur de jeu}

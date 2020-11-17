@@ -9,7 +9,6 @@ namespace state {
   class Graveyard;
   class Library;
   class Hand;
-  class ManaPool;
   class Card;
   class PlayableGameElement;
   class GameElement;
@@ -19,7 +18,6 @@ namespace state {
 #include "Graveyard.h"
 #include "Library.h"
 #include "Hand.h"
-#include "ManaPool.h"
 #include "Card.h"
 #include "PlayableGameElement.h"
 #include "GameElement.h"
@@ -35,9 +33,10 @@ namespace state {
     std::shared_ptr<Graveyard> graveyard;
     std::shared_ptr<Library> library;
     std::shared_ptr<Hand> hand;
-    std::shared_ptr<ManaPool> manaPool;
     // Operations
   public:
+    int mana ();
+    int manaMax ();
     bool Cast (std::weak_ptr<Card> card);
     bool Play (std::weak_ptr<Card> card);
     bool ActivateAbility (std::weak_ptr<PlayableGameElement> source);
@@ -50,7 +49,6 @@ namespace state {
     std::weak_ptr<Graveyard> GetGraveyard ();
     std::weak_ptr<Library> GetLibrary ();
     std::weak_ptr<Hand> GetHand ();
-    std::weak_ptr<ManaPool> GetManaPool ();
     Player ();
     ~Player ();
     // Setters and Getters

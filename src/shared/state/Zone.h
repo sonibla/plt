@@ -4,10 +4,16 @@
 
 
 namespace state {
+  class IObservable;
+}
+
+#include "IObservable.h"
+
+namespace state {
 
   // "Interface"
   /// class Zone - 
-  class Zone {
+  class Zone : public state::IObservable {
     // Setters and Getters
   };
 
