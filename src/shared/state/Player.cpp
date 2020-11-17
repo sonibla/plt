@@ -26,14 +26,10 @@ std::weak_ptr<Library> Player::GetLibrary(){
 std::weak_ptr<Hand> Player::GetHand(){
     return hand;
 }
-std::weak_ptr<ManaPool> Player::GetManaPool(){
-    return manaPool;
-}
 Player::Player(){
     graveyard = make_shared<Graveyard>();
     library = make_shared<Library>();
     hand = make_shared<Hand>();
-    manaPool = make_shared<ManaPool>();
 }
 Player::~Player(){}
 
