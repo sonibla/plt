@@ -15,7 +15,7 @@ GraveyardRenderer::update (state::IObservable* obj) {
 GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
 	for (size_t i = 0; i < this->cards.size(); i++){
 		// Draw cards
-		target.draw (cards[i], states);
+		target.draw ((this->cards)[i], states);
     }
 }
 
