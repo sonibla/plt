@@ -5,12 +5,10 @@
 #include <string>
 
 namespace state {
-  class Cost;
   class PlayableGameElement;
   class CardZone;
 }
 
-#include "Cost.h"
 #include "PlayableGameElement.h"
 #include "CardZone.h"
 
@@ -22,7 +20,8 @@ namespace state {
     // Attributes
   public:
     std::string name;
-    Cost cost;
+    int manaCost;
+    std::string image_location;
     // Operations
   public:
     Card ();

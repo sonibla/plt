@@ -10,33 +10,32 @@ namespace state {
   class Battlefield;
   class Stack;
   class Exile;
-  class Command;
 };
 namespace turn {
   class Turn;
 };
 namespace state {
   class Player;
+  class IObservable;
 }
 
 #include "Battlefield.h"
 #include "Stack.h"
 #include "Exile.h"
-#include "Command.h"
 #include "turn/Turn.h"
 #include "Player.h"
+#include "IObservable.h"
 
 namespace state {
 
   /// class Game - 
-  class Game {
+  class Game : public state::IObservable {
     // Attributes
   private:
     static std::shared_ptr<Game> instance;
     std::shared_ptr<Battlefield> battlefield;
     std::shared_ptr<Stack> stack;
     std::shared_ptr<Exile> exile;
-    std::shared_ptr<Command> command;
     std::unique_ptr<turn::Turn> turn;
     /// Si possible renvoyer les joueurs en mettant le joueur actif a l'index 0
     std::vector<std::shared_ptr<Player>> players;
@@ -47,7 +46,6 @@ namespace state {
     std::weak_ptr<Battlefield> GetBattlefield ();
     std::weak_ptr<Stack> GetStack ();
     std::weak_ptr<Exile> GetExile ();
-    std::weak_ptr<Command> GetCommand ();
     std::vector<std::weak_ptr<Player>> GetPlayers ();
     void SetPlayers ( std::vector<std::shared_ptr<Player>> players);
     Game ();

@@ -25,7 +25,7 @@ int main(int argc,char* argv[])
         }else if (strcmp(argv[1], "state") == 0) {
             test.state();
         }else if (strcmp(argv[1], "render") == 0) {
-            //test.render();
+            test.render();
         } else if (strcmp(argv[1], "engine") == 0) {
             //test.engine();
         } else if (strcmp(argv[1], "random_ai") == 0) {

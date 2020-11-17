@@ -3,10 +3,14 @@
 #define CLIENT__TEST__H
 
 
+namespace render {
+  class RenderingManager;
+};
 namespace state {
   class Game;
 }
 
+#include "render/RenderingManager.h"
 #include "state/Game.h"
 
 namespace client {
