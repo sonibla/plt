@@ -12,4 +12,9 @@ ExileRenderer::update (state::IObservable* obj) {
 	manager->update();
 }
 
-ExileRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {}
+ExileRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
+	for (size_t i = 0; i < this->cards.size(); i++){
+		// Draw cards
+		target.draw (cards[i], states);
+    }
+}
