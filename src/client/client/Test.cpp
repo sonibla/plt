@@ -59,6 +59,58 @@ void Test::state(){
 
 void Test::render(){
 
+    sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering Test");
+
+    std::shared_ptr<Player> _player = create_player_placeholder();
+    
+    
+    std::weak_ptr<Card> _card =_player->GetHand().lock()->GetCard(0);
+    render::CardRenderer _cardR(_card);
+
+
+
+    sf::Texture texture;
+
+    texture.loadFromFile("../res/textures/card.png");
+
+    sf::Sprite _cardS(texture); 
+    _cardS.setScale(73/_cardS.getLocalBounds().width,100/_cardS.getLocalBounds().height);
+    _cardS.setPosition(0,0);
+
+    /*
+
+    render::HandRenderer _handR(_player->GetHand());
+
+
+    render::GraveyardRenderer _graveyardR(_player->GetGraveyard());
+
+    render::LibraryRenderer _libraryR(_player->GetLibrary());
+
+    */
+
+
+    while (window.isOpen())
+    {
+        // Process events
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            // Close window: exit
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+        window.clear();
+        window.draw(_cardR);
+        /*
+        window.draw(_handR);
+        window.draw(_graveyardR);
+        window.draw(_libraryR);
+
+        */
+       window.display();
+    }
+   
+    /*
     // Declare and load a font
     sf::Font font;
     font.loadFromFile("../res/fonts/arial.ttf");
@@ -173,7 +225,7 @@ void Test::render(){
     PermanentBuffer.setScale(73/PermanentBuffer.getLocalBounds().width,100/PermanentBuffer.getLocalBounds().height);
 
     // Draw Player Hand
-    std::vector<sf::Sprite> PlayerHandCardVect;
+    std::vector<sf::CardRenderer> PlayerHandCardVect;
 	for (int i = 0; i < numPlayerHand; i++){
             PlayerHandCardVect.push_back(HandCardBuffer);
             PlayerHandCardVect[i].setPosition(10 + 272 + i*90, 800);
@@ -285,6 +337,6 @@ void Test::render(){
         // Update the window
         window.display();
     }
-
+    */
 
 }

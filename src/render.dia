@@ -2752,10 +2752,10 @@
       <dia:attribute name="attributes">
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#image_location#</dia:string>
+            <dia:string>#texture#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#std::string#</dia:string>
+            <dia:string>#sf::Texture#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
             <dia:string>##</dia:string>
@@ -3315,7 +3315,7 @@
         <dia:point val="-78.3787,-17.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-79.2288,-17.65;58.0425,7.05"/>
+        <dia:rectangle val="-79.2287,-17.65;58.0425,7.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -3515,7 +3515,7 @@
         <dia:point val="-78.3787,-17.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-79.2288,-17.65;15.155,28.05"/>
+        <dia:rectangle val="-79.2287,-17.65;15.155,28.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -6466,7 +6466,7 @@
         <dia:point val="-78.3787,-17.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-79.2288,-17.65;88.8875,20.05"/>
+        <dia:rectangle val="-79.2287,-17.65;88.8875,20.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -7960,7 +7960,7 @@
         <dia:point val="6,28.7"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-65.22,27.95;6.75,34.3"/>
+        <dia:rectangle val="-65.22,27.95;6.75,33.555"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
