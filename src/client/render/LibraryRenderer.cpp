@@ -1,11 +1,14 @@
 #include "LibraryRenderer.h"
 
+using namespace std;
+using namespace render;
+
 LibraryRenderer::LibraryRenderer (std::weak_ptr<state::Library> library) {
 	this->library = library;
 }
 
 LibraryRenderer::~LibraryRenderer () {}
-
+/*
 LibraryRenderer::update (state::IObservable* obj) {
 	this->cards = obj->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
@@ -18,3 +21,4 @@ LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const 
 		target.draw ((this->cards)[i], states);
     }
 }
+*/
