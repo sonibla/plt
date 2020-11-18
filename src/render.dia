@@ -5916,7 +5916,7 @@
         <dia:point val="-46.8525,-4"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-46.9232,-18.05;-43.1237,-3.14497"/>
+        <dia:rectangle val="-46.9232,-18.05;-43.1237,-3.145"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -6459,6 +6459,7 @@
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="templates"/>
+      <dia:childnode parent="O3"/>
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O55">
       <dia:attribute name="obj_pos">
@@ -6827,7 +6828,7 @@
         <dia:point val="37.1475,4.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="36.3975,3.85;46.05,8.55503"/>
+        <dia:rectangle val="36.3975,3.85;46.05,8.555"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -6983,7 +6984,7 @@
         <dia:point val="-65.17,32.7"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-65.92,-4.04497;-59.95,33.555"/>
+        <dia:rectangle val="-65.92,-4.045;-59.95,33.555"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -7063,7 +7064,7 @@
         <dia:point val="-65.17,32.7"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-65.92,3.95503;-45.95,33.555"/>
+        <dia:rectangle val="-65.92,3.955;-45.95,33.555"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -7303,7 +7304,7 @@
         <dia:point val="-65.17,32.7"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-65.92,-2.04497;24.05,33.555"/>
+        <dia:rectangle val="-65.92,-2.045;24.05,33.555"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -7674,6 +7675,7 @@
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="templates"/>
+      <dia:childnode parent="O3"/>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O70">
       <dia:attribute name="obj_pos">
