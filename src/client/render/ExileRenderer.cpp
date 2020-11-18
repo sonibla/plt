@@ -14,8 +14,6 @@ void ExileRenderer::update (state::IObservable* obj) {
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
 	manager->update();
 }
-
-
  
 void ExileRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
 	for (size_t i = 0; i < this->cards.size(); i++){

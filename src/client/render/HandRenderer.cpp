@@ -9,16 +9,16 @@ HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand) {
 
 HandRenderer::~HandRenderer () {}
 /*
-HandRenderer::update (state::IObservable* obj) {
+void HandRenderer::update (state::IObservable* obj) {
 	this->cards = obj->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
 	manager->update();
 }
 
-HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
+void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
 	for (size_t i = 0; i < this->cards.size(); i++){
 		// Draw cards
-		target.draw ((this->cards)[i], states);
+		target.draw (this->cards[i], states);
     }
 }
 */
