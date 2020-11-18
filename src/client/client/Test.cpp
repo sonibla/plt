@@ -25,6 +25,17 @@ std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
     return _cards;
 }
 
+std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(){
+    std::vector<std::shared_ptr<Permanent>> _permanents;
+    for(int i =0; i<6;i++){
+        std::shared_ptr<Permanent> _permanent = std::make_shared<Permanent>();
+        //art of a black lotus
+        _permanent->image_location = "../res/textures/card.png";
+        _permanents.push_back(_permanent);
+    }
+    return _permanents;
+}
+
 std::shared_ptr<Player> create_player_placeholder(){
 
     std::shared_ptr<Player> _player = std::make_shared<Player>();
@@ -50,6 +61,10 @@ void Test::state(){
     _game->GetExile().lock()->SetCards(create_cards_placeholder());
     _game->SetPlayers(_players);
 
+
+    std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
+    _battlefield->SetPermanents(create_permanents_placeholder());
+
     std::cout << _game->GetPlayers().size() << std::endl;
 }
 
@@ -59,6 +74,31 @@ void Test::state(){
 
 void Test::render(){
 
+    sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering Test");
+
+    std::shared_ptr<Player> _player = create_player_placeholder();
+
+    auto _game = Game::GetInstance().lock();
+    
+    std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
+    std::shared_ptr<state::Permanent> _permanent = _battlefield->GetPermanents()[0].lock();
+
+    while (window.isOpen())
+    {
+        // Process events
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            // Close window: exit
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+        window.clear();
+        window.draw(_permanent);
+        //window.draw(_battlefield);
+       window.display();
+    }
+    /*
     // Declare and load a font
     sf::Font font;
     font.loadFromFile("../res/fonts/arial.ttf");
@@ -286,5 +326,5 @@ void Test::render(){
         window.display();
     }
 
-
+    */
 }
