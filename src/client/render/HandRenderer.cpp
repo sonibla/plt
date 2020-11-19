@@ -6,12 +6,16 @@ using namespace render;
 
 HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand) {
 	this->hand = hand;
+	this->hand.lock()->addObserver(this);
+	this->update((state::IObservable*) this->hand.lock().get());
 }
 
-HandRenderer::~HandRenderer () {}
-/*
+HandRenderer::~HandRenderer () {
+	this->hand.lock()->removeObserver(this);
+}
+
 void HandRenderer::update (state::IObservable* obj) {
-	this->cards = obj->cards;
+	this->cards = this->hand->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
 	manager->update();
 }
@@ -21,5 +25,5 @@ void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) cons
 	for (size_t i = 0; i < max(this->cards.size(), 7); i++){
 		target.draw (this->cards[i], states);
     }
-}*/
+}
 
