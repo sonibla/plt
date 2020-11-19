@@ -91,10 +91,9 @@ void Test::render(){
 
     std::string path;
     path = "../res/textures/card.png";
-    _permanent->image_location;
+    _permanent->image_location = path;
 
     render::PermanentRenderer _permanentrenderer(_permanent);
-    _permanentrenderer.setTexture(texture);
 
 
     while (window.isOpen())
