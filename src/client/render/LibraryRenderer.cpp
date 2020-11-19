@@ -19,7 +19,7 @@ void LibraryRenderer::update (state::IObservable* obj) {
 	this->cards.clear();
 	for (size_t i = 0; i<this->library.lock()->cards.size(); i++) {
 		// Create unique pointers for every card in the zone
-		unique_ptr<CardRenderer> newRenderer (new CardRenderer(weak_ptr<Card>(this->library.lock()->cards.at(i))));
+		shared_ptr<CardRenderer> newRenderer (new CardRenderer(weak_ptr<Card>(this->library.lock()->cards.at(i))));
 		this->cards.push_back(newRenderer);
 	}
 	
