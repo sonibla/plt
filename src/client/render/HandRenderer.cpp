@@ -15,7 +15,7 @@ HandRenderer::~HandRenderer () {
 }
 
 void HandRenderer::update (state::IObservable* obj) {
-	this->cards = this->hand->cards;
+	this->cards = this->hand.lock()->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
 	manager->update();
 }

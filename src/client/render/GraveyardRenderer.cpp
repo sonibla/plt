@@ -14,7 +14,7 @@ GraveyardRenderer::~GraveyardRenderer () {
 }
 
 void GraveyardRenderer::update (state::IObservable* obj) {
-	this->cards = this->graveyard->cards;
+	this->cards = this->graveyard.lock()->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
 	manager->update();
 }

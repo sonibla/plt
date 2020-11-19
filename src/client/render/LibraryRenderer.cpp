@@ -14,7 +14,7 @@ LibraryRenderer::~LibraryRenderer () {
 }
 
 void LibraryRenderer::update (state::IObservable* obj) {
-	this->cards = this->library->cards;
+	this->cards = this->library.lock()->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
 	manager->update();
 }

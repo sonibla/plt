@@ -14,7 +14,7 @@ ExileRenderer::~ExileRenderer () {
 }
 
 void ExileRenderer::update (state::IObservable* obj) {
-	this->cards = this->exile->cards;
+	this->cards = this->exile.lock()->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
 	manager->update();
 }
