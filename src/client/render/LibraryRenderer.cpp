@@ -23,8 +23,7 @@ void LibraryRenderer::update (state::IObservable* obj) {
 		this->cards.push_back(newRenderer);
 	}
 	
-	std::shared_ptr<RenderingManager> manager = RenderingManager::GetInstance().lock();
-	manager->update();
+	this->notify(); // Indirect call to RenderingManager
 }
 
 void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
