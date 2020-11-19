@@ -2,6 +2,7 @@
 
 using namespace std;
 using namespace render;
+using namespace state;
 
 LibraryRenderer::LibraryRenderer (std::weak_ptr<state::Library> library) {
 	this->library = library;

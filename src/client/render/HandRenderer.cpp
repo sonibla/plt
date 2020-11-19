@@ -2,6 +2,7 @@
 
 using namespace std;
 using namespace render;
+using namespace state;
 #include <algorithm>
 
 HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand) {

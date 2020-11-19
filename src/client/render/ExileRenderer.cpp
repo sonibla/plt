@@ -2,6 +2,7 @@
 
 using namespace std;
 using namespace render;
+using namespace state;
 
 ExileRenderer::ExileRenderer (std::weak_ptr<state::Exile> exile) {
 	this->exile = exile;

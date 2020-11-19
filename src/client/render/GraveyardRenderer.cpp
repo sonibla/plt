@@ -2,6 +2,7 @@
 
 using namespace std;
 using namespace render;
+using namespace state;
 
 GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard) {
 	this->graveyard = graveyard;
