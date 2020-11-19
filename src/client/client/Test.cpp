@@ -58,7 +58,8 @@ void Test::state(){
 
 
 void Test::render(){
-
+    
+    /*
     // Declare and load a font
     sf::Font font;
     font.loadFromFile("../res/fonts/arial.ttf");
@@ -285,6 +286,6 @@ void Test::render(){
         // Update the window
         window.display();
     }
-
+    */
 
 }
