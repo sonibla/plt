@@ -82,13 +82,20 @@ void Test::render(){
     auto _game = Game::GetInstance().lock();
     
     std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
-    std::shared_ptr<state::Permanent> _permanent;
+    std::shared_ptr<state::Permanent> _permanent = std::make_shared<Permanent>();
+
+    //Test
+    sf::Texture texture;
+    texture.loadFromFile("../res/textures/card.png");   
+    sf::Sprite HandCardBuffer(texture);
 
     std::string path;
     path = "../res/textures/card.png";
     _permanent->image_location;
 
-    //render::PermanentRenderer _permanentrenderer(_permanent);
+    render::PermanentRenderer _permanentrenderer(_permanent);
+    _permanentrenderer.setTexture(texture);
+
 
     while (window.isOpen())
     {
@@ -101,7 +108,7 @@ void Test::render(){
                 window.close();
         }
         window.clear();
-        //window.draw(_permanentrenderer);
+        window.draw(_permanentrenderer);
         //window.draw(_battlefield);
        window.display();
     }
