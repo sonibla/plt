@@ -3,7 +3,6 @@
 using namespace std;
 using namespace render;
 using namespace state;
-#include <algorithm>
 
 HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand) {
 	this->hand = hand;
@@ -28,8 +27,8 @@ void HandRenderer::update (state::IObservable* obj) {
 }
 
 void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
-	// Draw at most 7 cards
-	for (size_t i = 0; i < max(this->cards.size(), 7); i++){
+	// Draw cards
+	for (size_t i = 0; i < this->cards.size(); i++){
 		target.draw(*(this->cards.at(this->cards.size()-1).get()), states);
     }
 }
