@@ -83,7 +83,10 @@ void Test::render(){
     
     std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
     std::shared_ptr<state::Permanent> _permanent;
-    _permanent->image_location = "../res/textures/card.png";
+
+    std::string path;
+    path = "../res/textures/card.png";
+    std::string test = _permanent->image_location;
 
     //render::PermanentRenderer _permanentrenderer(_permanent);
 
