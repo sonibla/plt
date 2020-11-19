@@ -1,3 +1,4 @@
+/*
 #include "BattlefieldRenderer.h"
 
 using namespace std;
@@ -17,13 +18,14 @@ BattlefieldRenderer::BattlefieldRenderer (std::weak_ptr<state::Battlefield> batt
 void BattlefieldRenderer::update(state::IObservable* obj){
 
 
-    std::shared_ptr<state::Battlefield> _battlefield = this.battlefield->lock();
+    std::shared_ptr<state::Battlefield> _battlefield = this->battlefield.lock();
 
-    std::vector<std::weak_ptr<Permanent>> list_permanents = _battlefield->GetPermanents();
+    std::vector<std::weak_ptr<state::Permanent>> list_permanents = _battlefield->GetPermanents();
 
     for (size_t i=0; i<list_permanents.size();i++){
-        std::weak_ptr<Permanent> weakpointer_topermanent = list_permanents[i]
-        this.permanents->push_back(list_permanents[i])
-        this.permanents->push_back(PermanentRenderer::PermanentRenderer(_battlefield->battlefieldContent))
+        render::PermanentRenderer rendered_permanent(list_permanents[i]);
+        std::unique_ptr<PermanentRenderer> _rendered_permanent;
+        this->permanents.push_back(_rendered_permanent);
     }
 }
+*/
