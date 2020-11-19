@@ -8,7 +8,7 @@ ExileRenderer::ExileRenderer (std::weak_ptr<state::Exile> exile) {
 }
 
 ExileRenderer::~ExileRenderer () {}
-
+/*
 void ExileRenderer::update (state::IObservable* obj) {
 	this->cards = obj->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
@@ -19,4 +19,4 @@ void ExileRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) con
 	// Only draw top card :
 	target.draw(this->cards.at(this->cards.size()-1), states);
 }
-
+*/

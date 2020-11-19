@@ -8,7 +8,7 @@ GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard)
 }
 
 GraveyardRenderer::~GraveyardRenderer () {}
-
+/*
 void GraveyardRenderer::update (state::IObservable* obj) {
 	this->cards = obj->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
@@ -19,3 +19,4 @@ void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states)
 	// Only draw top card :
 	target.draw(this->cards.at(this->cards.size()-1), states);
 }
+*/

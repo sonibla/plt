@@ -9,7 +9,7 @@ HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand) {
 }
 
 HandRenderer::~HandRenderer () {}
-
+/*
 void HandRenderer::update (state::IObservable* obj) {
 	this->cards = obj->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
@@ -21,5 +21,5 @@ void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) cons
 	for (size_t i = 0; i < max(this->cards.size(), 7); i++){
 		target.draw (this->cards[i], states);
     }
-}
+}*/
 
