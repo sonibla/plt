@@ -1,4 +1,3 @@
-/*
 #include "BattlefieldRenderer.h"
 
 using namespace std;
@@ -28,4 +27,3 @@ void BattlefieldRenderer::update(state::IObservable* obj){
         this->permanents.push_back(_rendered_permanent);
     }
 }
-*/
