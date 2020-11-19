@@ -8,7 +8,7 @@ LibraryRenderer::LibraryRenderer (std::weak_ptr<state::Library> library) {
 }
 
 LibraryRenderer::~LibraryRenderer () {}
-/*
+
 void LibraryRenderer::update (state::IObservable* obj) {
 	this->cards = obj->cards;
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
@@ -16,9 +16,6 @@ void LibraryRenderer::update (state::IObservable* obj) {
 }
 
 void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
-	for (size_t i = 0; i < this->cards.size(); i++){
-		// Draw cards
-		target.draw (this->cards[i], states);
-    }
+	// Only draw top card :
+	target.draw(this->cards.at(this->cards.size()-1), states);
 }
-*/
