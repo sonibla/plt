@@ -12,6 +12,7 @@
 
 using namespace client;
 using namespace state;
+using namespace render;
 
 std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
     std::vector<std::shared_ptr<Card>> _cards;
@@ -81,7 +82,10 @@ void Test::render(){
     auto _game = Game::GetInstance().lock();
     
     std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
-    std::shared_ptr<state::Permanent> _permanent = _battlefield->GetPermanents()[0].lock();
+    std::shared_ptr<state::Permanent> _permanent;
+    _permanent->image_location = "../res/textures/card.png";
+
+    //render::PermanentRenderer _permanentrenderer(_permanent);
 
     while (window.isOpen())
     {
@@ -94,7 +98,7 @@ void Test::render(){
                 window.close();
         }
         window.clear();
-        window.draw(_permanent);
+        //window.draw(_permanentrenderer);
         //window.draw(_battlefield);
        window.display();
     }
