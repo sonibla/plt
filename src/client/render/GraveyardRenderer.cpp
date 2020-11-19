@@ -29,6 +29,6 @@ void GraveyardRenderer::update (state::IObservable* obj) {
 
 void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
 	// Only draw top card :
-	target.draw(this->cards.at(this->cards.size()-1), states);
+	target.draw(*(this->cards.at(this->cards.size()-1).get()), states);
 }
 

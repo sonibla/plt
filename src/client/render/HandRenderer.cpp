@@ -31,7 +31,7 @@ void HandRenderer::update (state::IObservable* obj) {
 void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
 	// Draw at most 7 cards
 	for (size_t i = 0; i < max(this->cards.size(), 7); i++){
-		target.draw (this->cards[i], states);
+		target.draw(*(this->cards.at(this->cards.size()-1).get()), states);
     }
 }
 
