@@ -11,11 +11,18 @@ HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand) {
 }
 
 HandRenderer::~HandRenderer () {
+	this->cards.clear();
 	this->hand.lock()->removeObserver(this);
 }
 
 void HandRenderer::update (state::IObservable* obj) {
-	this->cards = this->hand.lock()->cards;
+	this->cards.clear();
+	for (size_t i = 0; i<this->hand.lock()->cards.size(); i++) {
+		// Create unique pointers for every card in the zone
+		unique_ptr<CardRenderer> newRenderer (new CardRenderer(weak_ptr<Card>(this->hand.lock()->cards.at(i)));
+		this->cards.push_back(newRenderer);
+	}
+	
 	std::shared_ptr<RenderingManager> manager = RenderingManager.GetInstance().lock();
 	manager->update();
 }
