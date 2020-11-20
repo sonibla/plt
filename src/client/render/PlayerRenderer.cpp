@@ -7,10 +7,18 @@ using namespace std;
 PlayerRenderer::PlayerRenderer(std::weak_ptr<state::Player> player){
     this->player=player;
     this->texture.loadFromFile("../res/textures/denim.png");
-    this->sprite.setTexture(this->texture);
 
-    this->manaText;
-    this->lifeText;
+    this->sprite.setTexture(this->texture);
+    this->sprite.setScale(150/this->sprite.getLocalBounds().width,300/this->sprite.getLocalBounds().height);
+    this->sprite.setPosition(10,690);
+
+    this->font.loadFromFile("../res/fonts/arial.ttf");
+
+    this->manaText.setCharacterSize(30);
+    this->manaText.setFont(this->font);
+    this->lifeText.setCharacterSize(30);
+    this->lifeText.setFont(this->font);
+    
 }
 PlayerRenderer::~PlayerRenderer (){
 
