@@ -5,7 +5,12 @@ using namespace std;
 
 
 PlayerRenderer::PlayerRenderer(std::weak_ptr<state::Player> player){
-    
+    this->player=player;
+    this->texture.loadFromFile("../res/textures/denim.png");
+    this->sprite.setTexture(this->texture);
+
+    this->manaText;
+    this->lifeText;
 }
 PlayerRenderer::~PlayerRenderer (){
 
