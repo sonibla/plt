@@ -18,9 +18,9 @@ std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
 	for(int i =0; i<6;i++){
 		std::shared_ptr<Card> _card = std::make_shared<Card>();
 		//art of a black lotus
-		card->image_location = "../res/textures/card.png";
-		card->name = "Place Holder";
-		cards.push_back(_card);
+		_card->image_location = "../res/textures/card.png";
+		_card->name = "Place Holder";
+		_cards.push_back(_card);
 	}
 	return _cards;
 }
@@ -29,11 +29,11 @@ std::shared_ptr<Player> create_player_placeholder(){
 
 	std::shared_ptr<Player> _player = std::make_shared<Player>();
 	std::weak_ptr<Graveyard> _graveyard = _player->GetGraveyard();
-	graveyard.lock()->SetCards(create_cards_placeholder());
+	_graveyard.lock()->SetCards(create_cards_placeholder());
 	std::weak_ptr<Library> _library = _player->GetLibrary();
-	library.lock()->SetCards(create_cards_placeholder());
+	_library.lock()->SetCards(create_cards_placeholder());
 	std::weak_ptr<Hand> _hand = _player->GetHand();
-	hand.lock()->SetCards(create_cards_placeholder());
+	_hand.lock()->SetCards(create_cards_placeholder());
 	return _player;
 }
 
@@ -41,14 +41,14 @@ void Test::state(){
 	std::vector<std::shared_ptr<Player>> _players;
 
 	std::shared_ptr<Player> _player = create_player_placeholder();
-	players.push_back(_player);
-	player = create_player_placeholder();
-	players.push_back(_player);
+	_players.push_back(_player);
+	_player = create_player_placeholder();
+	_players.push_back(_player);
 	
 	std::weak_ptr<Game> game = Game::GetInstance();
 	auto _game = game.lock();
-	game->GetExile().lock()->SetCards(create_cards_placeholder());
-	game->SetPlayers(_players);
+	_game->GetExile().lock()->SetCards(create_cards_placeholder());
+	_game->SetPlayers(_players);
 
 	std::cout << _game->GetPlayers().size() << std::endl;
 }
@@ -71,8 +71,8 @@ void Test::render(){
 	texture.loadFromFile("../res/textures/card.png");
 
 	sf::Sprite _cardS(texture); 
-	cardS.setScale(73/_cardS.getLocalBounds().width,100/_cardS.getLocalBounds().height);
-	cardS.setPosition(0,0);
+	_cardS.setScale(73/_cardS.getLocalBounds().width,100/_cardS.getLocalBounds().height);
+	_cardS.setPosition(0,0);
 
 	render::HandRenderer _handR(_player->GetHand());
 
