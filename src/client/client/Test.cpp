@@ -28,6 +28,10 @@ std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
 std::shared_ptr<Player> create_player_placeholder(){
 
     std::shared_ptr<Player> _player = std::make_shared<Player>();
+    _player->life = 19;
+    _player->mana =7;
+    _player->manaMax =7;
+
     std::weak_ptr<Graveyard> _graveyard = _player->GetGraveyard();
     _graveyard.lock()->SetCards(create_cards_placeholder());
     std::weak_ptr<Library> _library = _player->GetLibrary();
@@ -53,12 +57,33 @@ void Test::state(){
     std::cout << _game->GetPlayers().size() << std::endl;
 }
 
-
-//Test Render
+PlayerHub
 
 
 void Test::render(){
+    std::shared_ptr<state::Player> _player = create_player_placeholder();
+    render::PlayerRenderer _playerRenderer((std::weak_ptr<state::Player>)_player);
+
+    sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering");
+
     
+
+    while (window.isOpen())
+    {
+        // Process events
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            // Close window: exit
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+        window.clear();
+        window.draw(_playerRenderer);
+
+        window.display();
+    }
+
     /*
     // Declare and load a font
     sf::Font font;
