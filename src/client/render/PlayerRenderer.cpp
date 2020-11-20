@@ -5,7 +5,7 @@ using namespace std;
 
 
 PlayerRenderer::PlayerRenderer(std::weak_ptr<state::Player> player){
-    this->setPosition(sf::Vector2f(10,690));
+        this->setPosition(sf::Vector2f(10,690));
     sf::Vector2f position = this->getPosition();
     std::shared_ptr<state::Player> _player = player.lock();
 
@@ -18,14 +18,10 @@ PlayerRenderer::PlayerRenderer(std::weak_ptr<state::Player> player){
 
     this->font.loadFromFile("../res/fonts/arial.ttf");
 
-    this->manaText.setCharacterSize(30);
-    this->manaText.setFont(this->font);
-    this->lifeText.setCharacterSize(30);
-    this->lifeText.setPosition(position.x+10,position.y);
-    this->lifeText.setFont(this->font);
-
-    int PlayerHP = 4;
-    this->lifeText.setString(std::string("Player \nHP :") + std::to_string(PlayerHP));
+    this->text.setCharacterSize(30);
+    this->text.setPosition(position.x+10,position.y);
+    this->text.setFont(this->font);
+    this->text.setString(std::string("Player \nLife :") + std::to_string(_player->life) + std::string("\nMana :") + std::to_string(_player->mana) + std::string("/")+std::to_string(_player->manaMax));
 
     this->update((state::IObservable*) _player.get());
 }
@@ -58,6 +54,6 @@ void PlayerRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) co
     PlayerHubText.setPosition(20,710);
 
     target.draw(this->sprite);
-    target.draw(this->lifeText);
+    target.draw(this->text);
 
 }
