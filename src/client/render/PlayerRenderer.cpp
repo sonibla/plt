@@ -35,6 +35,7 @@ PlayerRenderer::~PlayerRenderer (){
 
 void PlayerRenderer::update (state::IObservable* obj){
 
+    std::shared_ptr<state::Player> _player = player.lock();
     this->text.setString(std::string("Player \nLife :") + std::to_string(_player->life) + std::string("\nMana :") + std::to_string(_player->mana) + std::string("/")+std::to_string(_player->manaMax));
     this->notify();
 }
