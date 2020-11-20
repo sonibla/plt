@@ -27,7 +27,20 @@ void GraveyardRenderer::update (state::IObservable* obj) {
 }
 
 void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
+	// Create a sprite with background texture :
+	sf::Texture texture;
+	texture.loadFromFile("../res/textures/denim.png");
+	sf::Sprite SpriteGraveyard(texture);
+	SpriteGraveyard.setPosition(0,0); // Position relatively to this. Relatively to the window : (186,890)
+	// Cf. Test.cpp for the magic numbers
+	SpriteGraveyard.setScale(73/SpriteGraveyard.getLocalBounds().width,100/SpriteGraveyard.getLocalBounds().height);
+	
 	// Only draw top card :
-	target.draw(*(this->cards.at(this->cards.size()-1).get()), states);
+	CardRenderer * renderer = (this->cards.at(this->cards.size()-1).get());
+	target.draw(*renderer, states);
+	
+	// Card's relative position and scale :
+	renderer->setPosition(20,20);
+	renderer->setScale(73/_renderer.getLocalBounds().width,100/_renderer.getLocalBounds().height);
 }
 
