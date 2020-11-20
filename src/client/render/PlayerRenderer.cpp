@@ -5,20 +5,29 @@ using namespace std;
 
 
 PlayerRenderer::PlayerRenderer(std::weak_ptr<state::Player> player){
+    this->setPosition(sf::Vector2f(10,690));
+    sf::Vector2f position = this->getPosition();
+    std::shared_ptr<state::Player> _player = player.lock();
+
     this->player=player;
     this->texture.loadFromFile("../res/textures/denim.png");
 
     this->sprite.setTexture(this->texture);
     this->sprite.setScale(150/this->sprite.getLocalBounds().width,300/this->sprite.getLocalBounds().height);
-    this->sprite.setPosition(10,690);
+    this->sprite.setPosition(position.x,position.y);
 
     this->font.loadFromFile("../res/fonts/arial.ttf");
 
     this->manaText.setCharacterSize(30);
     this->manaText.setFont(this->font);
     this->lifeText.setCharacterSize(30);
+    this->lifeText.setPosition(position.x+10,position.y);
     this->lifeText.setFont(this->font);
-    
+
+    int PlayerHP = 4;
+    this->lifeText.setString(std::string("Player \nHP :") + std::to_string(PlayerHP));
+
+    this->update((state::IObservable*) _player.get());
 }
 PlayerRenderer::~PlayerRenderer (){
 
@@ -48,7 +57,7 @@ void PlayerRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) co
     PlayerHubText.setCharacterSize(30);
     PlayerHubText.setPosition(20,710);
 
-    target.draw(PlayerHub);
-    target.draw(PlayerHubText);
+    target.draw(this->sprite);
+    target.draw(this->lifeText);
 
 }
