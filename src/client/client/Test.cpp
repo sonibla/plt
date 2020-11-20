@@ -57,7 +57,6 @@ void Test::state(){
     std::cout << _game->GetPlayers().size() << std::endl;
 }
 
-PlayerHub
 
 
 void Test::render(){

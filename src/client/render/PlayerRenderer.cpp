@@ -5,7 +5,7 @@ using namespace std;
 
 
 PlayerRenderer::PlayerRenderer(std::weak_ptr<state::Player> player){
-
+    
 }
 PlayerRenderer::~PlayerRenderer (){
 
