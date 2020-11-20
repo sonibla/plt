@@ -76,6 +76,7 @@ void Test::state(){
 void Test::render(){
 
     sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering Test");
+    sf::RenderStates states();
 
     std::shared_ptr<Player> _player = create_player_placeholder();
 
@@ -93,6 +94,17 @@ void Test::render(){
     path = "../res/textures/card.png";
     _permanent->image_location = path;
 
+    std::vector<std::shared_ptr<Permanent>> list_permanents;
+
+    for (int i = 0; i<3; i++){
+        list_permanents.push_back(_permanent);
+    }
+
+    _battlefield->SetPermanents(list_permanents);
+    std::cout << list_permanents.size();
+    std::cout << _battlefield->GetPermanents().size();
+
+    render::BattlefieldRenderer _battlefieldrenderer(_battlefield);
     render::PermanentRenderer _permanentrenderer(_permanent);
 
 
@@ -107,10 +119,12 @@ void Test::render(){
                 window.close();
         }
         window.clear();
-        window.draw(_permanentrenderer);
-        //window.draw(_battlefield);
+        window.draw(_battlefieldrenderer);
+        //window.draw(_permanentrenderer);
+        
        window.display();
     }
+    
     /*
     // Declare and load a font
     sf::Font font;

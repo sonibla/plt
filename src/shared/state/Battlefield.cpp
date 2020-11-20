@@ -16,5 +16,5 @@ std::vector<std::weak_ptr<Permanent>> Battlefield::GetPermanents (){
 }
 
 void Battlefield::SetPermanents (std::vector<std::shared_ptr<Permanent>> permanents){
-    permanents = permanents;
+    this->permanents = permanents;
 };
