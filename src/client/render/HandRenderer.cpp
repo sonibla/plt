@@ -41,7 +41,7 @@ void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) cons
 		
 		// Card's relative position and scale :
 		_renderer->setPosition(10 + i*90, 0);
-		_renderer->setScale(73/_renderer.getLocalBounds().width,100/_renderer.getLocalBounds().height);
+		_renderer->setScale(73/_renderer->getLocalBounds().width,100/_renderer->getLocalBounds().height);
 		
 		target.draw(*_renderer, states);
     }
