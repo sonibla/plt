@@ -19,8 +19,8 @@ void HandRenderer::update (state::IObservable* obj) {
 	this->cards.clear();
 	for (size_t i = 0; i<this->hand.lock()->cards.size(); i++) {
 		// Create unique pointers for every card in the zone
-		shared_ptr<CardRenderer> newRenderer (new CardRenderer(weak_ptr<Card>(this->hand.lock()->cards.at(i))));
-		this->cards.push_back(newRenderer);
+		shared_ptr<CardRenderer> _newRenderer (new CardRenderer(weak_ptr<Card>(this->hand.lock()->cards.at(i))));
+		this->cards.push_back(_newRenderer);
 	}
 	
 	this->notify(); // Indirect call to RenderingManager
@@ -28,22 +28,22 @@ void HandRenderer::update (state::IObservable* obj) {
 
 void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
 	// Create a sprite with background texture :
-	sf::Texture texture;
-	texture.loadFromFile("../res/textures/denim.png");
-	sf::Sprite SpriteHand(texture);
-	SpriteHand.setPosition(0,0); // Position relatively to this. Relatively to the window : (272,790)
+	sf::Texture _texture;
+	_texture.loadFromFile("../res/textures/denim.png");
+	sf::Sprite _SpriteHand(_texture);
+	_SpriteHand.setPosition(0,0); // Position relatively to this. Relatively to the window : (272,790)
 	// Cf. Test.cpp for the magic numbers
-	SpriteHand.setScale(631/SpriteHand.getLocalBounds().width,200/SpriteHand.getLocalBounds().height);
+	_SpriteHand.setScale(631/_SpriteHand.getLocalBounds().width,200/_SpriteHand.getLocalBounds().height);
 	
 	// Draw cards
 	for (size_t i = 0; i < this->cards.size(); i++){
-		CardRenderer * renderer = (this->cards.at(i).get());
+		CardRenderer * _renderer = (this->cards.at(i).get());
 		
 		// Card's relative position and scale :
-		renderer->setPosition(10 + i*90, 0);
-		renderer->setScale(73/_renderer.getLocalBounds().width,100/_renderer.getLocalBounds().height);
+		_renderer->setPosition(10 + i*90, 0);
+		_renderer->setScale(73/_renderer.getLocalBounds().width,100/_renderer.getLocalBounds().height);
 		
-		target.draw(*renderer, states);
+		target.draw(*_renderer, states);
     }
 }
 
