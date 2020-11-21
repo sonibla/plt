@@ -40,7 +40,7 @@ void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) c
 	
 	// Card's relative position and scale :
 	_renderer->setPosition(20,20);
-	_renderer->setScale(73/__renderer->getLocalBounds().width,100/__renderer->getLocalBounds().height);
+	_renderer->setScale(73/_renderer->getLocalBounds().width,100/_renderer->getLocalBounds().height);
 	
 	target.draw(*_renderer, states);
 }
