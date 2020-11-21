@@ -27,9 +27,23 @@ void HandRenderer::update (state::IObservable* obj) {
 }
 
 void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
+	// Create a sprite with background texture :
+	sf::Texture texture;
+	texture.loadFromFile("../res/textures/denim.png");
+	sf::Sprite SpriteHand(texture);
+	SpriteHand.setPosition(0,0); // Position relatively to this. Relatively to the window : (272,790)
+	// Cf. Test.cpp for the magic numbers
+	SpriteHand.setScale(631/SpriteHand.getLocalBounds().width,200/SpriteHand.getLocalBounds().height);
+	
 	// Draw cards
 	for (size_t i = 0; i < this->cards.size(); i++){
-		target.draw(*(this->cards.at(this->cards.size()-1).get()), states);
+		CardRenderer * renderer = (this->cards.at(i).get());
+		
+		// Card's relative position and scale :
+		renderer->setPosition(10 + i*90, 0);
+		renderer->setScale(73/_renderer.getLocalBounds().width,100/_renderer.getLocalBounds().height);
+		
+		target.draw(*renderer, states);
     }
 }
 
