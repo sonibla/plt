@@ -27,7 +27,20 @@ void LibraryRenderer::update (state::IObservable* obj) {
 }
 
 void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
+	// Create a sprite with background texture :
+	sf::Texture texture;
+	texture.loadFromFile("../res/textures/denim.png");
+	sf::Sprite SpriteLibrary(texture);
+	SpriteLibrary.setPosition(0,0); // Position relatively to this. Relatively to the window : (916,890)
+	// Cf. Test.cpp for the magic numbers
+	SpriteLibrary.setScale(73/SpriteLibrary.getLocalBounds().width,100/SpriteLibrary.getLocalBounds().height);
+	
 	// Only draw top card :
-	target.draw(*(this->cards.at(this->cards.size()-1).get()), states);
+	CardRenderer * renderer = (this->cards.at(this->cards.size()-1).get());
+	target.draw(*renderer, states);
+	
+	// Card's relative position and scale :
+	renderer->setPosition(20,20);
+	renderer->setScale(73/_renderer.getLocalBounds().width,100/_renderer.getLocalBounds().height);
 }
 
