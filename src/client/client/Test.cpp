@@ -91,13 +91,12 @@ void Test::render(){
 				window.close();
 		}
 		window.clear();
+		
 		window.draw(_cardR);
-		/*
 		window.draw(_handR);
 		window.draw(_graveyardR);
 		window.draw(_libraryR);
 
-		*/
 	   window.display();
 	}
    
