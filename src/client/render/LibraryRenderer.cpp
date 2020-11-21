@@ -37,10 +37,11 @@ void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) c
 	
 	// Only draw top card :
 	CardRenderer * renderer = (this->cards.at(this->cards.size()-1).get());
-	target.draw(*renderer, states);
 	
 	// Card's relative position and scale :
 	renderer->setPosition(20,20);
 	renderer->setScale(73/_renderer.getLocalBounds().width,100/_renderer.getLocalBounds().height);
+	
+	target.draw(*renderer, states);
 }
 
