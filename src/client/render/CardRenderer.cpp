@@ -9,6 +9,7 @@ CardRenderer::CardRenderer (std::weak_ptr<state::Card> card) {
 
     std::string _image_location = _card->image_location;
     
+    sf::Texture _texture;
     _texture.loadFromFile(_image_location);
     this->setTexture(_texture);
     this->setScale(73/this->getLocalBounds().width, 100/this->getLocalBounds().height);
