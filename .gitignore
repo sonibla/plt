@@ -1,7 +1,13 @@
-*~
-build
-bin
-nbproject
-src/*/*.h
-src/*/*/*.h
+#*~
+#src/*/*.h
+#src/*/*/*.h
 .idea
+nbproject
+
+# "bin","build", ".h under src", both the directory itself and its contents will be ignored (Bares-38)
+[bB]uild/
+[bB]in/
+
+# ignore files with ".h" extension in under "src"
+src/*.h
+
