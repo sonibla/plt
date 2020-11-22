@@ -1,6 +1,6 @@
 #*~
-#src/*/*.h
-#src/*/*/*.h
+src/*/*.h
+src/*/*/*.h
 .idea
 nbproject
 
