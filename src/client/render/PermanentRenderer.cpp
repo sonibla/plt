@@ -12,7 +12,7 @@ PermanentRenderer::PermanentRenderer (std::weak_ptr<state::Permanent> permanent)
     this->texture = texture_load;
     this->setTexture(this->texture);
     if (_permanent->tapped){
-        this->setRotation(90);
+        this->setRotation(270);
     }
     else{
         this->setRotation(0);

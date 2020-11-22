@@ -84,8 +84,14 @@ void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates state
 
         std::shared_ptr<PermanentRenderer> _drawed_permanent = this->permanents[i];
 
-        _drawed_permanent->setPosition(bf_postion.x + i*90 + 10, bf_postion.y + 10);
-        _drawed_permanent->setScale(73/_drawed_permanent->getLocalBounds().width,100/_drawed_permanent->getLocalBounds().height);
+        if (_drawed_permanent->getRotation() == 0){ //Checking if the permanent is not tapped
+            _drawed_permanent->setPosition(bf_postion.x + i*90 + 10, bf_postion.y + 10);
+            _drawed_permanent->setScale(73/_drawed_permanent->getLocalBounds().width,100/_drawed_permanent->getLocalBounds().height);
+        }
+        else {
+             _drawed_permanent->setPosition(bf_postion.x + i*90 + 10 - 8, bf_postion.y + 10 + 100); //Adding the tapped offset in the x and y axis
+            _drawed_permanent->setScale(73/_drawed_permanent->getLocalBounds().width,100/_drawed_permanent->getLocalBounds().height);
+        }
         target.draw(*_drawed_permanent);
     }
 }

@@ -100,6 +100,12 @@ void Test::render(){
         list_permanents.push_back(_permanent);
     }
 
+    //Creating the tapped permanent
+    std::shared_ptr<state::Permanent> _tappedpermanent = std::make_shared<Permanent>();
+    _tappedpermanent->image_location = path;
+    _tappedpermanent->tapped = true;
+    list_permanents.push_back(_tappedpermanent);
+
     _battlefield->SetPermanents(list_permanents);
     std::cout << list_permanents.size();
     std::cout << _battlefield->GetPermanents().size();
