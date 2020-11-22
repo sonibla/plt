@@ -12,6 +12,7 @@
 
 using namespace client;
 using namespace state;
+using namespace render;
 
 std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
 	std::vector<std::shared_ptr<Card>> _cards;
@@ -23,6 +24,17 @@ std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
 		_cards.push_back(_card);
 	}
 	return _cards;
+}
+
+std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(){
+    std::vector<std::shared_ptr<Permanent>> _permanents;
+    for(int i =0; i<6;i++){
+        std::shared_ptr<Permanent> _permanent = std::make_shared<Permanent>();
+        //art of a black lotus
+        _permanent->image_location = "../res/textures/card.png";
+        _permanents.push_back(_permanent);
+    }
+    return _permanents;
 }
 
 std::shared_ptr<Player> create_player_placeholder(){
@@ -54,7 +66,11 @@ void Test::state(){
 	_game->GetExile().lock()->SetCards(create_cards_placeholder());
 	_game->SetPlayers(_players);
 
-	std::cout << _game->GetPlayers().size() << std::endl;
+
+    std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
+    _battlefield->SetPermanents(create_permanents_placeholder());
+
+    std::cout << _game->GetPlayers().size() << std::endl;
 }
 
 
@@ -287,6 +303,11 @@ void Test::render(){
         // Update the window
         window.display();
     }
+<<<<<<< HEAD
     */
 
+=======
+
+    */
+>>>>>>> origin/render_permanentrenderer
 }
