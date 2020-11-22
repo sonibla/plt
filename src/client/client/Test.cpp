@@ -303,11 +303,6 @@ void Test::render(){
         // Update the window
         window.display();
     }
-<<<<<<< HEAD
     */
 
-=======
-
-    */
->>>>>>> origin/render_permanentrenderer
 }
