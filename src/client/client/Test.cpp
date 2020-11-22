@@ -94,7 +94,6 @@ void Test::render(){
                 window.close();
         }
         window.clear();
-        window.draw(_playerRenderer);
 
         window.display();
     }
