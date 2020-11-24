@@ -8,6 +8,7 @@ GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard,
 	this->graveyard = graveyard;
 	this->graveyard.lock()->addObserver(this);
 	this->setPosition(position);
+	this->texture.loadFromFile("../res/textures/denim.png");
 	this->update((state::IObservable*) this->graveyard.lock().get());
 }
 
@@ -35,9 +36,7 @@ void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states)
 	sf::Vector2f _card_position(20.f, 20.f);
 	
 	// Create a sprite with background texture :
-	sf::Texture _texture;
-	_texture.loadFromFile("../res/textures/denim.png");
-	sf::Sprite _SpriteGraveyard(_texture);
+	sf::Sprite _SpriteGraveyard(this->texture);
 	_SpriteGraveyard.setPosition(_position);
 	
 	// Cf. Test.cpp for the magic numbers

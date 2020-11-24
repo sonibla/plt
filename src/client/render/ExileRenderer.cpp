@@ -8,6 +8,7 @@ ExileRenderer::ExileRenderer (std::weak_ptr<state::Exile> exile, sf::Vector2f po
 	this->exile = exile;
 	this->exile.lock()->addObserver(this);
 	this->setPosition(position);
+	this->texture.loadFromFile("../res/textures/denim.png");
 	this->update((state::IObservable*) this->exile.lock().get());
 }
 
@@ -35,9 +36,7 @@ void ExileRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) con
 	sf::Vector2f _card_position(20.f, 20.f);
 	
 	// Create a sprite with background texture :
-	sf::Texture _texture;
-	_texture.loadFromFile("../res/textures/denim.png");
-	sf::Sprite _SpriteExile(texture);
+	sf::Sprite _SpriteExile(this->texture);
 	_SpriteExile.setPosition(_position);
 	
 	// Cf. Test.cpp for the magic numbers

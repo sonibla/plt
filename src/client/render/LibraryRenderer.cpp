@@ -8,6 +8,7 @@ LibraryRenderer::LibraryRenderer (std::weak_ptr<state::Library> library, sf::Vec
 	this->library = library;
 	this->library.lock()->addObserver(this);
 	this->setPosition(position);
+	this->texture.loadFromFile("../res/textures/denim.png");
 	this->update((state::IObservable*) this->library.lock().get());
 }
 
@@ -35,10 +36,9 @@ void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) c
 	sf::Vector2f _card_position(20.f, 20.f);
 	
 	// Create a sprite with background texture :
-	sf::Texture _texture;
-	_texture.loadFromFile("../res/textures/denim.png");
-	sf::Sprite _SpriteLibrary(_texture);
-	_SpriteLibrary.setPosition(_position); // Position relatively to this. Relatively to the window : (916,890)
+	sf::Sprite _SpriteLibrary(this->texture);
+	_SpriteLibrary.setPosition(_position);
+	
 	// Cf. Test.cpp for the magic numbers
 	_SpriteLibrary.setScale(73/_SpriteLibrary.getLocalBounds().width,100/_SpriteLibrary.getLocalBounds().height);
 	

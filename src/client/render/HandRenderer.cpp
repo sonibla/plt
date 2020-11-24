@@ -8,6 +8,7 @@ HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand, sf::Vector2f positi
 	this->hand = hand;
 	this->hand.lock()->addObserver(this);
 	this->setPosition(position);
+	this->texture.loadFromFile("../res/textures/denim.png");
 	this->update((state::IObservable*) this->hand.lock().get());
 }
 
@@ -32,9 +33,7 @@ void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) cons
 	sf::Vector2f _position = this->getPosition();
 	
 	// Create a sprite with background texture :
-	sf::Texture _texture;
-	_texture.loadFromFile("../res/textures/denim.png");
-	sf::Sprite _SpriteHand(_texture);
+	sf::Sprite _SpriteHand(this->texture);
 	_SpriteHand.setPosition(_position);
 	
 	// Cf. Test.cpp for the magic numbers
