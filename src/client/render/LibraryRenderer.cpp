@@ -52,6 +52,6 @@ void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) c
 	target.draw(*_renderer);
     
     // Draw background
-	target.draw(_SpriteHand);
+	target.draw(_SpriteLibrary);
 }
 

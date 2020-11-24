@@ -52,5 +52,5 @@ void ExileRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) con
 	target.draw(*_renderer);
     
     // Draw background
-	target.draw(_SpriteHand);
+	target.draw(_SpriteExile);
 }

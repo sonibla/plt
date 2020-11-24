@@ -52,6 +52,6 @@ void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states)
 	target.draw(*_renderer);
     
     // Draw background
-	target.draw(_SpriteHand);
+	target.draw(_SpriteGraveyard);
 }
 
