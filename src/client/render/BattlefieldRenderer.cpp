@@ -19,24 +19,16 @@ void BattlefieldRenderer::update(state::IObservable* obj){
 }
 
 
-BattlefieldRenderer::BattlefieldRenderer (std::weak_ptr<state::Battlefield> battlefield){
+BattlefieldRenderer::BattlefieldRenderer (std::weak_ptr<state::Battlefield> battlefield, sf::Vector2f position){
     this->battlefield = battlefield;
     std::shared_ptr<state::Battlefield> _battlefield = battlefield.lock();
     _battlefield->addObserver(this);
 
-    //Initialising position and dimensions
-    float x_pos = 272;
-    float y_pos = 220;
-    float x_length = 631;
-    float y_length = 560;
-    this->setPosition(x_pos, y_pos);
+    //Initialising position
+    this->setPosition(position);
 
     //Loading the BF background
     this->texture.loadFromFile("../res/textures/concrete_wall.png");
-    this->sprite = sf::Sprite(this->texture);
-
-    this->sprite.setPosition(x_pos, y_pos);
-    this->sprite.setScale(x_length/this->sprite.getLocalBounds().width,y_length/this->sprite.getLocalBounds().height);
 
     this->update(_battlefield.get());
 }
@@ -77,8 +69,15 @@ void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates state
 
 void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
 
-    target.draw(this->sprite);
     sf::Vector2f bf_postion = this->getPosition();
+    float x_length = 631;
+    float y_length = 560;
+
+    sf::Sprite bg_battlefield(this->texture);
+    bg_battlefield.setPosition(bf_postion);
+    bg_battlefield.setScale(x_length/bg_battlefield.getLocalBounds().width,y_length/bg_battlefield.getLocalBounds().height);
+
+    target.draw(bg_battlefield);
 
     for (size_t i=0; i<this->permanents.size(); i++){
 

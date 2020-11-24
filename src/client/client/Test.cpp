@@ -110,7 +110,7 @@ void Test::render(){
     std::cout << list_permanents.size();
     std::cout << _battlefield->GetPermanents().size();
 
-    render::BattlefieldRenderer _battlefieldrenderer(_battlefield);
+    render::BattlefieldRenderer _battlefieldrenderer(_battlefield, sf::Vector2f(272,220));
     render::PermanentRenderer _permanentrenderer(_permanent);
 
 
