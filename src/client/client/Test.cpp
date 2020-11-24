@@ -60,28 +60,47 @@ void Test::state(){
 
 
 void Test::render(){
-    std::shared_ptr<state::Player> _player = create_player_placeholder();
-    render::PlayerRenderer _playerRenderer((std::weak_ptr<state::Player>)_player);
+    sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering Test");
 
-    sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering");
+	std::shared_ptr<Player> _player = create_player_placeholder();
 
-    
+	std::weak_ptr<Card> _card =_player->GetHand().lock()->GetCard(0);
+	render::CardRenderer _cardR(_card);
 
-    while (window.isOpen())
-    {
-        // Process events
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            // Close window: exit
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-        window.clear();
-        window.draw(_playerRenderer);
+	sf::Texture texture;
+	
+	texture.loadFromFile("../res/textures/card.png");
 
-        window.display();
-    }
+	sf::Sprite _cardS(texture); 
+	_cardS.setScale(73/_cardS.getLocalBounds().width,100/_cardS.getLocalBounds().height);
+	_cardS.setPosition(0,0);
+	
+	render::HandRenderer _handR(_player->GetHand(), sf::Vector2f(272.f, 790.f));
+
+	render::GraveyardRenderer _graveyardR(_player->GetGraveyard(), sf::Vector2f(186.f, 890.f));
+
+	render::LibraryRenderer _libraryR(_player->GetLibrary(), sf::Vector2f(916.f, 890.f));
+
+	while (window.isOpen())
+	{
+		// Process events
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			// Close window: exit
+			if (event.type == sf::Event::Closed)
+				window.close();
+		}
+		window.clear();
+		
+		window.draw(_cardR);
+		window.draw(_handR);
+		window.draw(_graveyardR);
+		window.draw(_libraryR);
+
+	   window.display();
+	}
+
 
     /*
     // Declare and load a font

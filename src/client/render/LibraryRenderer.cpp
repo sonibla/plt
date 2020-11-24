@@ -7,18 +7,7 @@ using namespace state;
 LibraryRenderer::LibraryRenderer (std::weak_ptr<state::Library> library, sf::Vector2f position) {
 	this->library = library;
 	this->library.lock()->addObserver(this);
-	
-	sf::Vector2f _default_position(916.f, 890.f);
-	if ((position.x == -1) && (position.y == -1))
-	{
-		// Default position
-		this->setPosition(_default_position);
-	}
-	else
-	{
-		this->setPosition(position);
-	}
-	
+	this->setPosition(position);
 	this->update((state::IObservable*) this->library.lock().get());
 }
 

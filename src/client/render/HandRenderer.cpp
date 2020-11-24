@@ -7,18 +7,7 @@ using namespace state;
 HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand, sf::Vector2f position) {
 	this->hand = hand;
 	this->hand.lock()->addObserver(this);
-	
-	sf::Vector2f _default_position(272.f, 790.f);
-	if ((position.x == -1) && (position.y == -1))
-	{
-		// Default position
-		this->setPosition(_default_position);
-	}
-	else
-	{
-		this->setPosition(position);
-	}
-	
+	this->setPosition(position);
 	this->update((state::IObservable*) this->hand.lock().get());
 }
 

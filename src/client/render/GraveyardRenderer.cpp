@@ -7,18 +7,7 @@ using namespace state;
 GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard, sf::Vector2f position) {
 	this->graveyard = graveyard;
 	this->graveyard.lock()->addObserver(this);
-
-	sf::Vector2f _default_position(186.f, 890.f);
-	if ((position.x == -1) && (position.y == -1))
-	{
-		// Default position
-		this->setPosition(_default_position);
-	}
-	else
-	{
-		this->setPosition(position);
-	}
-	
+	this->setPosition(position);
 	this->update((state::IObservable*) this->graveyard.lock().get());
 }
 

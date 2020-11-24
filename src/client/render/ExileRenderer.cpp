@@ -7,18 +7,7 @@ using namespace state;
 ExileRenderer::ExileRenderer (std::weak_ptr<state::Exile> exile, sf::Vector2f position) {
 	this->exile = exile;
 	this->exile.lock()->addObserver(this);
-	
-	sf::Vector2f _default_position(186.f, 778.f);
-	if ((position.x == -1) && (position.y == -1))
-	{
-		// Default position
-		this->setPosition(_default_position);
-	}
-	else
-	{
-		this->setPosition(position);
-	}
-	
+	this->setPosition(position);
 	this->update((state::IObservable*) this->exile.lock().get());
 }
 
