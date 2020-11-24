@@ -4,12 +4,11 @@ using namespace std;
 using namespace render;
 using namespace state;
 
-sf::Vector2f _default_position(186.f, 890.f);
-
 GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard, sf::Vector2f position) {
 	this->graveyard = graveyard;
 	this->graveyard.lock()->addObserver(this);
-	
+
+	sf::Vector2f _default_position(186.f, 890.f);
 	if ((position.x == -1) && (position.y == -1))
 	{
 		// Default position

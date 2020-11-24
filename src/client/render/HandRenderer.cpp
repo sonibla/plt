@@ -4,12 +4,11 @@ using namespace std;
 using namespace render;
 using namespace state;
 
-sf::Vector2f _default_position(272.f, 790.f);
-
 HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand, sf::Vector2f position) {
 	this->hand = hand;
 	this->hand.lock()->addObserver(this);
 	
+	sf::Vector2f _default_position(272.f, 790.f);
 	if ((position.x == -1) && (position.y == -1))
 	{
 		// Default position
