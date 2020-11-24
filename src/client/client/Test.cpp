@@ -61,7 +61,7 @@ void Test::state(){
 
 void Test::render(){
     std::shared_ptr<state::Player> _player = create_player_placeholder();
-    render::PlayerRenderer _playerRenderer((std::weak_ptr<state::Player>)_player);
+    render::PlayerRenderer _playerRenderer((std::weak_ptr<state::Player>)_player,sf::Vector2f(0,0));
 
     sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering");
 
