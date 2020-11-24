@@ -2765,7 +2765,7 @@
         </dia:composite>
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#owner#</dia:string>
+            <dia:string>#controller#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#std::weak_ptr&lt;state::Player&gt;#</dia:string>
