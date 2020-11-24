@@ -4273,7 +4273,7 @@
             <dia:string>#types#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#std::Vector&lt;std::string&gt;#</dia:string>
+            <dia:string>#std::vector&lt;std::string&gt;#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
             <dia:string>##</dia:string>
