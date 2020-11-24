@@ -11,6 +11,7 @@ PermanentRenderer::PermanentRenderer (std::weak_ptr<state::Permanent> permanent)
     texture_load.loadFromFile(_permanent->image_location);
     this->texture = texture_load;
     this->setTexture(this->texture);
+    this->controller = _permanent->controller;
     if (_permanent->tapped){
         this->setRotation(270);
     }
