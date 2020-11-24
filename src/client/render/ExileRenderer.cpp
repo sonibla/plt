@@ -4,10 +4,22 @@ using namespace std;
 using namespace render;
 using namespace state;
 
+sf::Vector2f _default_position(186.f, 778.f);
+
 ExileRenderer::ExileRenderer (std::weak_ptr<state::Exile> exile, sf::Vector2f position) {
 	this->exile = exile;
 	this->exile.lock()->addObserver(this);
-	this->setPosition(position);
+	
+	if (position.x == -1) && (position.y == -1)
+	{
+		// Default position
+		this->setPosition(_default_position);
+	}
+	else
+	{
+		this->setPosition(position);
+	}
+	
 	this->update((state::IObservable*) this->exile.lock().get());
 }
 
@@ -38,7 +50,8 @@ void ExileRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) con
 	sf::Texture _texture;
 	_texture.loadFromFile("../res/textures/denim.png");
 	sf::Sprite _SpriteExile(texture);
-	_SpriteExile.setPosition(_position); // Position relatively to this. Relatively to the window : (186,778)
+	_SpriteExile.setPosition(_position);
+	
 	// Cf. Test.cpp for the magic numbers
 	_SpriteExile.setScale(73/_SpriteExile.getLocalBounds().width,100/_SpriteExile.getLocalBounds().height);
 	

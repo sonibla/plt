@@ -4,10 +4,22 @@ using namespace std;
 using namespace render;
 using namespace state;
 
+sf::Vector2f _default_position(272.f, 790.f);
+
 HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand, sf::Vector2f position) {
 	this->hand = hand;
 	this->hand.lock()->addObserver(this);
-	this->setPosition(position);
+	
+	if (position.x == -1) && (position.y == -1)
+	{
+		// Default position
+		this->setPosition(_default_position);
+	}
+	else
+	{
+		this->setPosition(position);
+	}
+	
 	this->update((state::IObservable*) this->hand.lock().get());
 }
 
@@ -35,7 +47,8 @@ void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) cons
 	sf::Texture _texture;
 	_texture.loadFromFile("../res/textures/denim.png");
 	sf::Sprite _SpriteHand(_texture);
-	_SpriteHand.setPosition(_position); // Position relatively to this. Relatively to the window : (272,790)
+	_SpriteHand.setPosition(_position);
+	
 	// Cf. Test.cpp for the magic numbers
 	_SpriteHand.setScale(631/_SpriteHand.getLocalBounds().width,200/_SpriteHand.getLocalBounds().height);
 	

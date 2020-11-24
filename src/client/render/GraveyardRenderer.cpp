@@ -4,10 +4,22 @@ using namespace std;
 using namespace render;
 using namespace state;
 
+sf::Vector2f _default_position(186.f, 890.f);
+
 GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard, sf::Vector2f position) {
 	this->graveyard = graveyard;
 	this->graveyard.lock()->addObserver(this);
-	this->setPosition(position);
+	
+	if (position.x == -1) && (position.y == -1)
+	{
+		// Default position
+		this->setPosition(_default_position);
+	}
+	else
+	{
+		this->setPosition(position);
+	}
+	
 	this->update((state::IObservable*) this->graveyard.lock().get());
 }
 
@@ -38,7 +50,8 @@ void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states)
 	sf::Texture _texture;
 	_texture.loadFromFile("../res/textures/denim.png");
 	sf::Sprite _SpriteGraveyard(_texture);
-	_SpriteGraveyard.setPosition(_position); // Position relatively to this. Relatively to the window : (186,890)
+	_SpriteGraveyard.setPosition(_position);
+	
 	// Cf. Test.cpp for the magic numbers
 	_SpriteGraveyard.setScale(73/_SpriteGraveyard.getLocalBounds().width,100/_SpriteGraveyard.getLocalBounds().height);
 	
