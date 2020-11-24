@@ -49,9 +49,10 @@ void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states)
 	_renderer->setPosition(_card_position + _position);
 	_renderer->setScale(73/_renderer->getLocalBounds().width,100/_renderer->getLocalBounds().height);
 	
-	target.draw(*_renderer);
-    
     // Draw background
 	target.draw(_SpriteGraveyard);
+	
+	// Draw card
+	target.draw(*_renderer);
 }
 

@@ -39,6 +39,9 @@ void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) cons
 	// Cf. Test.cpp for the magic numbers
 	_SpriteHand.setScale(631/_SpriteHand.getLocalBounds().width,200/_SpriteHand.getLocalBounds().height);
 	
+    // Draw background
+	target.draw(_SpriteHand);
+	
 	// Draw cards
 	for (size_t i = 0; i < this->cards.size(); i++){
 		CardRenderer * _renderer = (this->cards.at(i).get());
@@ -49,8 +52,5 @@ void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) cons
 		
 		target.draw(*_renderer);
     }
-    
-    // Draw background
-	target.draw(_SpriteHand);
 }
 
