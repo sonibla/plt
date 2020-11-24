@@ -4,7 +4,7 @@ using namespace std;
 using namespace render;
 using namespace state;
 
-GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard) {
+GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard, sf::Vector2f position) {
 	this->graveyard = graveyard;
 	this->graveyard.lock()->addObserver(this);
 	this->update((state::IObservable*) this->graveyard.lock().get());

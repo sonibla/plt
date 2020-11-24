@@ -4,7 +4,7 @@ using namespace std;
 using namespace render;
 using namespace state;
 
-HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand) {
+HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand, sf::Vector2f position) {
 	this->hand = hand;
 	this->hand.lock()->addObserver(this);
 	this->update((state::IObservable*) this->hand.lock().get());

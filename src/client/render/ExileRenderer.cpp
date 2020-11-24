@@ -4,7 +4,7 @@ using namespace std;
 using namespace render;
 using namespace state;
 
-ExileRenderer::ExileRenderer (std::weak_ptr<state::Exile> exile) {
+ExileRenderer::ExileRenderer (std::weak_ptr<state::Exile> exile, sf::Vector2f position) {
 	this->exile = exile;
 	this->exile.lock()->addObserver(this);
 	this->update((state::IObservable*) this->exile.lock().get());

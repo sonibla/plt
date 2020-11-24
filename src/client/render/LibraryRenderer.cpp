@@ -4,7 +4,7 @@ using namespace std;
 using namespace render;
 using namespace state;
 
-LibraryRenderer::LibraryRenderer (std::weak_ptr<state::Library> library) {
+LibraryRenderer::LibraryRenderer (std::weak_ptr<state::Library> library, sf::Vector2f position) {
 	this->library = library;
 	this->library.lock()->addObserver(this);
 	this->update((state::IObservable*) this->library.lock().get());
