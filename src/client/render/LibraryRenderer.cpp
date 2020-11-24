@@ -49,6 +49,9 @@ void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) c
 	_renderer->setPosition(_card_position + _position);
 	_renderer->setScale(73/_renderer->getLocalBounds().width,100/_renderer->getLocalBounds().height);
 	
-	target.draw(*_renderer, states);
+	target.draw(*_renderer);
+    
+    // Draw background
+	target.draw(_SpriteHand);
 }
 

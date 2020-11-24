@@ -47,7 +47,10 @@ void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) cons
 		_renderer->setPosition(_position.x + 10 + i*90, _position.y);
 		_renderer->setScale(73/_renderer->getLocalBounds().width,100/_renderer->getLocalBounds().height);
 		
-		target.draw(*_renderer, states);
+		target.draw(*_renderer);
     }
+    
+    // Draw background
+	target.draw(_SpriteHand);
 }
 
