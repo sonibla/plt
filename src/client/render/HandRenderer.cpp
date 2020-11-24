@@ -10,7 +10,7 @@ HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand, sf::Vector2f positi
 	this->hand = hand;
 	this->hand.lock()->addObserver(this);
 	
-	if (position.x == -1) && (position.y == -1)
+	if ((position.x == -1) && (position.y == -1))
 	{
 		// Default position
 		this->setPosition(_default_position);

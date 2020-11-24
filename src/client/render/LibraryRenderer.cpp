@@ -10,7 +10,7 @@ LibraryRenderer::LibraryRenderer (std::weak_ptr<state::Library> library, sf::Vec
 	this->library = library;
 	this->library.lock()->addObserver(this);
 	
-	if (position.x == -1) && (position.y == -1)
+	if ((position.x == -1) && (position.y == -1))
 	{
 		// Default position
 		this->setPosition(_default_position);

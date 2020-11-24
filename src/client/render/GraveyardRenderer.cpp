@@ -10,7 +10,7 @@ GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard,
 	this->graveyard = graveyard;
 	this->graveyard.lock()->addObserver(this);
 	
-	if (position.x == -1) && (position.y == -1)
+	if ((position.x == -1) && (position.y == -1))
 	{
 		// Default position
 		this->setPosition(_default_position);

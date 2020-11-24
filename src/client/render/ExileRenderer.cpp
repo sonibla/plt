@@ -10,7 +10,7 @@ ExileRenderer::ExileRenderer (std::weak_ptr<state::Exile> exile, sf::Vector2f po
 	this->exile = exile;
 	this->exile.lock()->addObserver(this);
 	
-	if (position.x == -1) && (position.y == -1)
+	if ((position.x == -1) && (position.y == -1))
 	{
 		// Default position
 		this->setPosition(_default_position);
