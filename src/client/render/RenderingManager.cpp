@@ -7,7 +7,7 @@ using namespace std;
 using namespace render;
 
 RenderingManager::RenderingManager(){
-    window.create(sf::VideoMode(1000, 1000), "Rendering");
+    this->window.create(sf::VideoMode(1000, 1000), "Rendering");
     std::shared_ptr<state::Game> _game = state::Game::GetInstance().lock();
 
     std::vector<std::weak_ptr<state::Player>> _players = _game->GetPlayers();
@@ -27,11 +27,10 @@ RenderingManager::RenderingManager(){
 }
 
 void RenderingManager::update (state::IObservable* state){
-    /*window.clear();
+    this->window.clear();
     for(std::size_t i =0;i<zoneRenderers.size();i++){
-        window.draw(*(zoneRenderers[i]));
+        this->window.draw(*(zoneRenderers[i]));
     }
-    window.display(); 
-    */
+    this->window.display(); 
 }
 
