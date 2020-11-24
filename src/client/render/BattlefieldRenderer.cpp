@@ -72,6 +72,7 @@ void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates state
     sf::Vector2f bf_postion = this->getPosition();
     float x_length = 631;
     float y_length = 560;
+    float _playeroffset = 0;  
 
     sf::Sprite bg_battlefield(this->texture);
     bg_battlefield.setPosition(bf_postion);
@@ -83,12 +84,18 @@ void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates state
 
         std::shared_ptr<PermanentRenderer> _drawed_permanent = this->permanents[i];
 
+        if(_drawed_permanent->owner = opponent){
+            _playeroffset = 0;
+        }else{
+            _playeroffset = 450;
+        }
+
         if (_drawed_permanent->getRotation() == 0){ //Checking if the permanent is not tapped
-            _drawed_permanent->setPosition(bf_postion.x + i*90 + 10, bf_postion.y + 10);
+            _drawed_permanent->setPosition(bf_postion.x + i*90 + 10, bf_postion.y + 10 +_playeroffset);
             _drawed_permanent->setScale(73/_drawed_permanent->getLocalBounds().width,100/_drawed_permanent->getLocalBounds().height);
         }
         else {
-             _drawed_permanent->setPosition(bf_postion.x + i*90 + 10 - 8, bf_postion.y + 10 + 100); //Adding the tapped offset in the x and y axis
+             _drawed_permanent->setPosition(bf_postion.x + i*90 + 10 - 8, bf_postion.y + 10 + 100 + _playeroffset); //Adding the tapped offset in the x and y axis
             _drawed_permanent->setScale(73/_drawed_permanent->getLocalBounds().width,100/_drawed_permanent->getLocalBounds().height);
         }
         target.draw(*_drawed_permanent);
