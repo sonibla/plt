@@ -2,7 +2,7 @@
 
 using namespace std;
 using namespace render;
-
+#include <iostream>
 
 
 void BattlefieldRenderer::update(state::IObservable* obj){
@@ -19,24 +19,16 @@ void BattlefieldRenderer::update(state::IObservable* obj){
 }
 
 
-BattlefieldRenderer::BattlefieldRenderer (std::weak_ptr<state::Battlefield> battlefield){
+BattlefieldRenderer::BattlefieldRenderer (std::weak_ptr<state::Battlefield> battlefield, sf::Vector2f position){
     this->battlefield = battlefield;
     std::shared_ptr<state::Battlefield> _battlefield = battlefield.lock();
     _battlefield->addObserver(this);
 
-    //Initialising position and dimensions
-    float x_pos = 272;
-    float y_pos = 220;
-    float x_length = 631;
-    float y_length = 560;
-    this->setPosition(x_pos, y_pos);
+    //Initialising position
+    this->setPosition(position);
 
     //Loading the BF background
     this->texture.loadFromFile("../res/textures/concrete_wall.png");
-    this->sprite = sf::Sprite(this->texture);
-
-    this->sprite.setPosition(x_pos, y_pos);
-    this->sprite.setScale(x_length/this->sprite.getLocalBounds().width,y_length/this->sprite.getLocalBounds().height);
 
     this->update(_battlefield.get());
 }
@@ -45,47 +37,54 @@ BattlefieldRenderer::~BattlefieldRenderer (){
 
 }
 
-/*
-void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
-
-    target.draw(this->sprite);
-
-    for (size_t i=0; i<this->permanents.size(); i++){
-
-        //Testing dummy permanent
-        std::weak_ptr<state::Permanent> permanent;
-        std::shared_ptr<state::Permanent> _permanent = permanent.lock();
-            //Test
-        sf::Texture texture;
-        texture.loadFromFile("../res/textures/card.png");   
-        sf::Sprite HandCardBuffer(texture);
-        std::string path;
-        path = "../res/textures/card.png";
-        _permanent->image_location = path;
-        //End dummy test
-
-        //std::shared_ptr<PermanentRenderer> _drawed_permanent = this->permanents[i];
-        std::shared_ptr<PermanentRenderer> _drawed_permanent = std::make_shared<PermanentRenderer>(_permanent);
-
-        _drawed_permanent->setPosition(10, i*90);
-        _drawed_permanent->setScale(73/_drawed_permanent->getLocalBounds().width,100/_drawed_permanent->getLocalBounds().height);
-        target.draw(*_drawed_permanent);
-    }
-}
-*/
-
 
 void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
-
-    target.draw(this->sprite);
+    
     sf::Vector2f bf_postion = this->getPosition();
+    float x_length = 631;
+    float y_length = 560;
+    float controlleroffset = 440;  
+    int playercount = 0;
+    int opponentcount = 0;
 
+    sf::Sprite bg_battlefield(this->texture);
+    bg_battlefield.setPosition(bf_postion);
+    bg_battlefield.setScale(x_length/bg_battlefield.getLocalBounds().width,y_length/bg_battlefield.getLocalBounds().height);
+
+    target.draw(bg_battlefield);
+    
     for (size_t i=0; i<this->permanents.size(); i++){
 
-        std::shared_ptr<PermanentRenderer> _drawed_permanent = this->permanents[i];
+        std::shared_ptr<PermanentRenderer> _permanent = this->permanents[i];
+        std::shared_ptr<state::Player> _controller = _permanent->controller.lock();
 
-        _drawed_permanent->setPosition(bf_postion.x + i*90 + 10, bf_postion.y + 10);
-        _drawed_permanent->setScale(73/_drawed_permanent->getLocalBounds().width,100/_drawed_permanent->getLocalBounds().height);
-        target.draw(*_drawed_permanent);
+        
+        if(_controller->id != 0){ //If the permanent is controlled by the opponent
+        
+            if (_permanent->getRotation() == 0){ //Checking if the permanent is not tapped
+                _permanent->setPosition(bf_postion.x + opponentcount*90 + 10, bf_postion.y + 10);
+                _permanent->setScale(73/_permanent->getLocalBounds().width,100/_permanent->getLocalBounds().height);
+            }
+            else {
+            _permanent->setPosition(bf_postion.x + opponentcount*90 + 10 - 8, bf_postion.y + 10 + 100); //Adding the tapped offset in the x and y axis
+            _permanent->setScale(73/_permanent->getLocalBounds().width,100/_permanent->getLocalBounds().height);
+            }
+            opponentcount++;
+        }
+        else{ //If the permanent is controlled by the player
+            
+            if (_permanent->getRotation() == 0){ //Checking if the permanent is not tapped
+                _permanent->setPosition(bf_postion.x + playercount*90 + 10, bf_postion.y + 10 +controlleroffset);
+                _permanent->setScale(73/_permanent->getLocalBounds().width,100/_permanent->getLocalBounds().height);
+            }
+            else {
+                _permanent->setPosition(bf_postion.x + playercount*90 + 10 - 8, bf_postion.y + 10 + 100 + controlleroffset); //Adding the tapped offset in the x and y axis
+                _permanent->setScale(73/_permanent->getLocalBounds().width,100/_permanent->getLocalBounds().height);
+            }
+            playercount++;
+        }
+        target.draw(*_permanent);
+        
     }
+    
 }

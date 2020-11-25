@@ -40,10 +40,6 @@ std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(){
 std::shared_ptr<Player> create_player_placeholder(){
 
     std::shared_ptr<Player> _player = std::make_shared<Player>();
-    _player->life = 19;
-    _player->mana =7;
-    _player->manaMax =7;
-
     std::weak_ptr<Graveyard> _graveyard = _player->GetGraveyard();
     _graveyard.lock()->SetCards(create_cards_placeholder());
     std::weak_ptr<Library> _library = _player->GetLibrary();
@@ -66,6 +62,7 @@ void Test::state(){
     _game->GetExile().lock()->SetCards(create_cards_placeholder());
     _game->SetPlayers(_players);
 
+
     std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
     _battlefield->SetPermanents(create_permanents_placeholder());
 
@@ -73,14 +70,74 @@ void Test::state(){
 }
 
 
+//Test Render
+
 
 void Test::render(){
+
+
     std::shared_ptr<state::Player> _player = create_player_placeholder();
+    std::shared_ptr<state::Player> _opponent = create_player_placeholder();
+
+    _player->id = 0;
+    _opponent->id = 1;
+
     render::PlayerRenderer _playerRenderer((std::weak_ptr<state::Player>)_player,sf::Vector2f(0,0));
 
-    sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering");
 
+    sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering Test");
+    sf::RenderStates states();
+
+    auto _game = Game::GetInstance().lock();
     
+    //Creating the battlefield
+    std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
+
+    //Creating the permanents that will be added
+    std::shared_ptr<state::Permanent> _permanent_player = std::make_shared<Permanent>();
+    std::shared_ptr<state::Permanent> _permanent_opponent = std::make_shared<Permanent>();
+
+    //Setting the permanents' attributes
+    std::string path;
+    std::string path2;
+    path = "../res/textures/card0.png";
+    path2 = "../res/textures/card1.png";
+    _permanent_player->image_location = path;
+    _permanent_opponent->image_location = path2;
+    _permanent_player->controller = (std::weak_ptr<state::Player>)_player;
+    _permanent_opponent->controller = (std::weak_ptr<state::Player>)_opponent;
+
+    //Creating the tapped permanents
+    std::shared_ptr<state::Permanent> _tappedpermanent_player = std::make_shared<Permanent>();
+    std::shared_ptr<state::Permanent> _tappedpermanent_opponent = std::make_shared<Permanent>();
+
+    //Setting the tapped permanents' attributes
+    _tappedpermanent_player->image_location = path;
+    _tappedpermanent_opponent->image_location = path2;
+    _tappedpermanent_player->tapped = true;
+    _tappedpermanent_opponent->tapped = true;
+    _tappedpermanent_player->controller = (std::weak_ptr<state::Player>)_player;
+    _tappedpermanent_opponent->controller = (std::weak_ptr<state::Player>)_opponent;
+
+    //Creating the permanents' list to add to the state::Battlefield
+    std::vector<std::shared_ptr<Permanent>> list_permanents;
+
+    //Setting the list_permanent_player
+    for (int i = 0; i<3; i++){
+        list_permanents.push_back(_permanent_player);
+    }
+    list_permanents.push_back(_tappedpermanent_player);
+
+    list_permanents.push_back(_tappedpermanent_opponent);
+    for (int i = 0; i<2; i++){
+        list_permanents.push_back(_permanent_opponent);
+    }
+    list_permanents.push_back(_tappedpermanent_opponent);
+
+    _battlefield->SetPermanents(list_permanents);
+
+    render::BattlefieldRenderer _battlefieldrenderer(_battlefield, sf::Vector2f(272,220));
+
 
     while (window.isOpen())
     {
@@ -93,10 +150,11 @@ void Test::render(){
                 window.close();
         }
         window.clear();
-
-        window.display();
+        window.draw(_battlefieldrenderer);
+        
+       window.display();
     }
-
+    
     /*
     // Declare and load a font
     sf::Font font;
@@ -318,13 +376,12 @@ void Test::render(){
 
         //Land Opponent Cards
 	for (int i = 0; i < numOpponentLand; i++){
-		OpponentLandVect.push_back(PermanentBuffer);
-		OpponentLandVect[i].setPosition(10 + 272 + i*90, 255);
-	}
+            window.draw(OpponentLandVect[i]);
+        }
 
         // Update the window
         window.display();
     }
-    */
 
+    */
 }
