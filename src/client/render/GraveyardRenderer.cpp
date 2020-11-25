@@ -4,9 +4,11 @@ using namespace std;
 using namespace render;
 using namespace state;
 
-GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard) {
+GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard, sf::Vector2f position) {
 	this->graveyard = graveyard;
 	this->graveyard.lock()->addObserver(this);
+	this->setPosition(position);
+	this->texture.loadFromFile("../res/textures/denim.png");
 	this->update((state::IObservable*) this->graveyard.lock().get());
 }
 
@@ -27,11 +29,16 @@ void GraveyardRenderer::update (state::IObservable* obj) {
 }
 
 void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
+	// Get my position:
+	sf::Vector2f _position = this->getPosition();
+	
+	// Card's relative position:
+	sf::Vector2f _card_position(20.f, 20.f);
+	
 	// Create a sprite with background texture :
-	sf::Texture _texture;
-	_texture.loadFromFile("../res/textures/denim.png");
-	sf::Sprite _SpriteGraveyard(_texture);
-	_SpriteGraveyard.setPosition(0,0); // Position relatively to this. Relatively to the window : (186,890)
+	sf::Sprite _SpriteGraveyard(this->texture);
+	_SpriteGraveyard.setPosition(_position);
+	
 	// Cf. Test.cpp for the magic numbers
 	_SpriteGraveyard.setScale(73/_SpriteGraveyard.getLocalBounds().width,100/_SpriteGraveyard.getLocalBounds().height);
 	
@@ -39,9 +46,13 @@ void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states)
 	CardRenderer * _renderer = (this->cards.at(this->cards.size()-1).get());
 	
 	// Card's relative position and scale :
-	_renderer->setPosition(20,20);
+	_renderer->setPosition(_card_position + _position);
 	_renderer->setScale(73/_renderer->getLocalBounds().width,100/_renderer->getLocalBounds().height);
 	
-	target.draw(*_renderer, states);
+    // Draw background
+	target.draw(_SpriteGraveyard);
+	
+	// Draw card
+	target.draw(*_renderer);
 }
 

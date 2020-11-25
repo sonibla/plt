@@ -20,10 +20,11 @@ RenderingManager::RenderingManager(){
         zoneRenderers.push_back(std::unique_ptr<ZoneRenderer>(new HandRenderer(_player->GetHand(), sf::Vector2f(272, 790))));
         zoneRenderers.push_back(std::unique_ptr<ZoneRenderer>(new LibraryRenderer(_player->GetLibrary(), sf::Vector2f(916, 890))));
     }
-
+    
     zoneRenderers.push_back(std::unique_ptr<ZoneRenderer>(new BattlefieldRenderer(_game->GetBattlefield(), sf::Vector2f(272, 220))));
     zoneRenderers.push_back(std::unique_ptr<ZoneRenderer>(new ExileRenderer(_game->GetExile(), sf::Vector2f(186, 778))));
     //zoneRenderers.push_back(std::unique_ptr<ZoneRenderer>(new StackRenderer(_game->GetStack(), sf::Vector2f(, )))); // A placer par dessus le battlefield
+
 }
 
 void RenderingManager::update (state::IObservable* state){
