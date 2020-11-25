@@ -4,9 +4,11 @@ using namespace std;
 using namespace render;
 using namespace state;
 
-HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand) {
+HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand, sf::Vector2f position) {
 	this->hand = hand;
 	this->hand.lock()->addObserver(this);
+	this->setPosition(position);
+	this->texture.loadFromFile("../res/textures/denim.png");
 	this->update((state::IObservable*) this->hand.lock().get());
 }
 
@@ -27,23 +29,28 @@ void HandRenderer::update (state::IObservable* obj) {
 }
 
 void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
+	// Get my position:
+	sf::Vector2f _position = this->getPosition();
+	
 	// Create a sprite with background texture :
-	sf::Texture _texture;
-	_texture.loadFromFile("../res/textures/denim.png");
-	sf::Sprite _SpriteHand(_texture);
-	_SpriteHand.setPosition(0,0); // Position relatively to this. Relatively to the window : (272,790)
+	sf::Sprite _SpriteHand(this->texture);
+	_SpriteHand.setPosition(_position);
+	
 	// Cf. Test.cpp for the magic numbers
 	_SpriteHand.setScale(631/_SpriteHand.getLocalBounds().width,200/_SpriteHand.getLocalBounds().height);
+	
+    // Draw background
+	target.draw(_SpriteHand);
 	
 	// Draw cards
 	for (size_t i = 0; i < this->cards.size(); i++){
 		CardRenderer * _renderer = (this->cards.at(i).get());
 		
 		// Card's relative position and scale :
-		_renderer->setPosition(10 + i*90, 0);
+		_renderer->setPosition(_position.x + 10 + i*90, _position.y);
 		_renderer->setScale(73/_renderer->getLocalBounds().width,100/_renderer->getLocalBounds().height);
 		
-		target.draw(*_renderer, states);
+		target.draw(*_renderer);
     }
 }
 
