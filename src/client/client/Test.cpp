@@ -66,7 +66,6 @@ void Test::state(){
     _game->GetExile().lock()->SetCards(create_cards_placeholder());
     _game->SetPlayers(_players);
 
-
     std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
     _battlefield->SetPermanents(create_permanents_placeholder());
 
