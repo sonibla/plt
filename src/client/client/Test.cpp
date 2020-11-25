@@ -77,46 +77,66 @@ void Test::render(){
 
 
     std::shared_ptr<state::Player> _player = create_player_placeholder();
+    std::shared_ptr<state::Player> _opponent = create_player_placeholder();
+
+    _player->id = 0;
+    _opponent->id = 1;
+
     render::PlayerRenderer _playerRenderer((std::weak_ptr<state::Player>)_player,sf::Vector2f(0,0));
 
 
     sf::RenderWindow window(sf::VideoMode(1000, 1000), "Rendering Test");
     sf::RenderStates states();
 
-    std::shared_ptr<Player> _player = create_player_placeholder();
-
     auto _game = Game::GetInstance().lock();
     
+    //Creating the battlefield
     std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
-    std::shared_ptr<state::Permanent> _permanent = std::make_shared<Permanent>();
 
-    //Test
-    sf::Texture texture;
-    texture.loadFromFile("../res/textures/card.png");   
-    sf::Sprite HandCardBuffer(texture);
+    //Creating the permanents that will be added
+    std::shared_ptr<state::Permanent> _permanent_player = std::make_shared<Permanent>();
+    std::shared_ptr<state::Permanent> _permanent_opponent = std::make_shared<Permanent>();
 
+    //Setting the permanents' attributes
     std::string path;
-    path = "../res/textures/card.png";
-    _permanent->image_location = path;
+    std::string path2;
+    path = "../res/textures/card0.png";
+    path2 = "../res/textures/card1.png";
+    _permanent_player->image_location = path;
+    _permanent_opponent->image_location = path2;
+    _permanent_player->controller = (std::weak_ptr<state::Player>)_player;
+    _permanent_opponent->controller = (std::weak_ptr<state::Player>)_opponent;
 
+    //Creating the tapped permanents
+    std::shared_ptr<state::Permanent> _tappedpermanent_player = std::make_shared<Permanent>();
+    std::shared_ptr<state::Permanent> _tappedpermanent_opponent = std::make_shared<Permanent>();
+
+    //Setting the tapped permanents' attributes
+    _tappedpermanent_player->image_location = path;
+    _tappedpermanent_opponent->image_location = path2;
+    _tappedpermanent_player->tapped = true;
+    _tappedpermanent_opponent->tapped = true;
+    _tappedpermanent_player->controller = (std::weak_ptr<state::Player>)_player;
+    _tappedpermanent_opponent->controller = (std::weak_ptr<state::Player>)_opponent;
+
+    //Creating the permanents' list to add to the state::Battlefield
     std::vector<std::shared_ptr<Permanent>> list_permanents;
 
+    //Setting the list_permanent_player
     for (int i = 0; i<3; i++){
-        list_permanents.push_back(_permanent);
+        list_permanents.push_back(_permanent_player);
     }
+    list_permanents.push_back(_tappedpermanent_player);
 
-    //Creating the tapped permanent
-    std::shared_ptr<state::Permanent> _tappedpermanent = std::make_shared<Permanent>();
-    _tappedpermanent->image_location = path;
-    _tappedpermanent->tapped = true;
-    list_permanents.push_back(_tappedpermanent);
+    list_permanents.push_back(_tappedpermanent_opponent);
+    for (int i = 0; i<2; i++){
+        list_permanents.push_back(_permanent_opponent);
+    }
+    list_permanents.push_back(_tappedpermanent_opponent);
 
     _battlefield->SetPermanents(list_permanents);
-    std::cout << list_permanents.size();
-    std::cout << _battlefield->GetPermanents().size();
 
     render::BattlefieldRenderer _battlefieldrenderer(_battlefield, sf::Vector2f(272,220));
-    render::PermanentRenderer _permanentrenderer(_permanent);
 
 
     while (window.isOpen())
@@ -131,7 +151,6 @@ void Test::render(){
         }
         window.clear();
         window.draw(_battlefieldrenderer);
-        //window.draw(_permanentrenderer);
         
        window.display();
     }
