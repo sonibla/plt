@@ -1843,8 +1843,8 @@
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="-24.6819,27.4926"/>
-        <dia:point val="-24.6819,29.3838"/>
-        <dia:point val="-51.9912,29.3838"/>
+        <dia:point val="-24.6819,29.3839"/>
+        <dia:point val="-51.9912,29.3839"/>
         <dia:point val="-51.9912,30.4751"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
@@ -2201,7 +2201,7 @@
         </dia:composite>
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#idPlayer#</dia:string>
+            <dia:string>#id#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#int#</dia:string>
