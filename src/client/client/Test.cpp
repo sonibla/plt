@@ -81,8 +81,18 @@ void Test::state(){
 void Test::render(){
     this->state();
     render::RenderingManager* _renderingManager = new render::RenderingManager();
-    _renderingManager->update(nullptr);
-    while(1);
+    while (_renderingManager->window.isOpen())
+    {
+        // Process events
+        sf::Event event;
+        while (_renderingManager->window.pollEvent(event))
+        {
+            // Close window: exit
+            if (event.type == sf::Event::Closed)
+                _renderingManager->window.close();
+        }
+        _renderingManager->update(nullptr);
+    }
 
     /*
     std::shared_ptr<state::Player> _player = create_player_placeholder();
