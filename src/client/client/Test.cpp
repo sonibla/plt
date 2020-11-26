@@ -58,7 +58,7 @@ void Test::state(){
 }
 
 
-
+/*
 void Test::render(){
     std::shared_ptr<state::Player> _player = create_player_placeholder();
     render::PlayerRenderer _playerRenderer((std::weak_ptr<state::Player>)_player,sf::Vector2f(0,0));
@@ -311,5 +311,26 @@ void Test::render(){
         window.display();
     }
     */
+
+//}
+
+void Test::render(){
+
+    //Checking if drawing a card works
+
+    std::shared_ptr<state::Player> _player = create_player_placeholder();
+    
+    std::shared_ptr<Library> _player_library = _player->GetLibrary().lock();
+    std::shared_ptr<Hand> _player_hand = _player->GetHand().lock();
+
+    std::cout << "number of cards in library :" << _player_library->cards.size() << "\n";
+    std::cout << "number of cards in hand :" << _player_hand->cards.size() << "\n";
+
+    std::cout << "drawing...";
+
+    _player->Draw(2);
+
+    std::cout << "number of cards in library :" << _player_library->cards.size() << "\n";
+    std::cout << "number of cards in hand :" << _player_hand->cards.size() << "\n";    
 
 }
