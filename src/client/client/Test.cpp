@@ -91,7 +91,7 @@ void Test::render(){
             if (event.type == sf::Event::Closed)
                 _renderingManager->window.close();
         }
-        _renderingManager->update(nullptr);
+        _renderingManager->update(nullptr,state::EventID::UPDATE);
     }
 
     /*

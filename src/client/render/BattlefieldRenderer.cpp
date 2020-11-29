@@ -5,7 +5,7 @@ using namespace render;
 #include <iostream>
 
 
-void BattlefieldRenderer::update(state::IObservable* obj){
+void BattlefieldRenderer::update(state::IObservable* obj,state::EventID eventID){
 
 
     std::shared_ptr<state::Battlefield> _battlefield = this->battlefield.lock();
@@ -16,6 +16,7 @@ void BattlefieldRenderer::update(state::IObservable* obj){
         std::shared_ptr<PermanentRenderer> _rendered_permanent = std::make_shared<PermanentRenderer>(list_permanents[i]);
         this->permanents.push_back(_rendered_permanent);
     }
+    this->notify(eventID);
 }
 
 
@@ -30,7 +31,7 @@ BattlefieldRenderer::BattlefieldRenderer (std::weak_ptr<state::Battlefield> batt
     //Loading the BF background
     this->texture.loadFromFile("../res/textures/concrete_wall.png");
 
-    this->update(_battlefield.get());
+    this->update(_battlefield.get(),state::EventID::UPDATE);
 }
 
 BattlefieldRenderer::~BattlefieldRenderer (){
