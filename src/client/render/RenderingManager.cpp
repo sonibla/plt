@@ -27,7 +27,7 @@ RenderingManager::RenderingManager(){
     */
 }
 
-void RenderingManager::update (state::IObservable* state){
+void RenderingManager::update (state::IObservable* state,state::EventID eventID){
     /*window.clear();
     for(std::size_t i =0;i<zoneRenderers.size();i++){
         window.draw(*(zoneRenderers[i]));
