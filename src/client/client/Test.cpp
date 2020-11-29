@@ -19,7 +19,7 @@ std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
     for(int i =0; i<6;i++){
         std::shared_ptr<Card> _card = std::make_shared<Card>();
         //art of a black lotus
-        _card->image_location = "../res/textures/card.png";
+        _card->image_location = "../res/textures/card"+std::to_string(i)+".png";
         _card->name = "Place Holder";
         _cards.push_back(_card);
     }
@@ -31,7 +31,7 @@ std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(std::weak_
     for(int i =0; i<6;i++){
         std::shared_ptr<Permanent> _permanent = std::make_shared<Permanent>();
         //art of a black lotus
-        _permanent->image_location = "../res/textures/card.png";
+        _permanent->image_location = "../res/textures/card"+std::to_string(i)+".png";
         _permanent->tapped = false;
         _permanent->controller = player;
         _permanents.push_back(_permanent);
