@@ -33,7 +33,7 @@ void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states)
 	sf::Vector2f _position = this->getPosition();
 	
 	// Card's relative position:
-	sf::Vector2f _card_position(20.f, 20.f);
+	sf::Vector2f _card_position(2.f, 2.f);
 	
 	// Create a sprite with background texture :
 	sf::Sprite _SpriteGraveyard(this->texture);
