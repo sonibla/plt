@@ -15,7 +15,7 @@ PlayerRenderer::PlayerRenderer(std::weak_ptr<state::Player> player, sf::Vector2f
 
     this->font.loadFromFile("../res/fonts/arial.ttf");
 
-    this->update((state::IObservable*) _player.get());
+    this->update((state::IObservable*) _player.get(),state::EventID::UPDATE);
 }
 
 
@@ -24,14 +24,14 @@ PlayerRenderer::~PlayerRenderer (){
 }
 
 
-void PlayerRenderer::update (state::IObservable* obj){
+void PlayerRenderer::update (state::IObservable* obj,state::EventID eventID){
 
     std::shared_ptr<state::Player> _player = player.lock();
     this->life = _player->life;
     this->mana = _player->mana;
     this->manaMax = _player->manaMax;
     
-    this->notify();
+    this->notify(eventID);
 
 }
 

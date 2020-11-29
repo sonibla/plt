@@ -12,10 +12,10 @@ void IObservable::removeObserver(state::IObserver *observer) {
     observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
 }
 
-void IObservable::notify() {
+void IObservable::notify(EventID eventID) {
     for (std::vector<IObserver *>::const_iterator iterator = observers.begin();iterator != observers.end(); ++iterator) {
         if (*iterator != 0) {
-            (*iterator)->update(this);
+            (*iterator)->update(this,eventID);
         }
     }
 }

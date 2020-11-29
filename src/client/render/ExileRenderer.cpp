@@ -9,7 +9,7 @@ ExileRenderer::ExileRenderer (std::weak_ptr<state::Exile> exile, sf::Vector2f po
 	this->exile.lock()->addObserver(this);
 	this->setPosition(position);
 	this->texture.loadFromFile("../res/textures/denim.png");
-	this->update((state::IObservable*) this->exile.lock().get());
+	this->update((state::IObservable*) this->exile.lock().get(),state::EventID::UPDATE);
 }
 
 ExileRenderer::~ExileRenderer () {
@@ -17,7 +17,7 @@ ExileRenderer::~ExileRenderer () {
 	this->exile.lock()->removeObserver(this);
 }
 
-void ExileRenderer::update (state::IObservable* obj) {
+void ExileRenderer::update (state::IObservable* obj,state::EventID eventID) {
 	this->cards.clear();
 	for (size_t i = 0; i<this->exile.lock()->cards.size(); i++) {
 		// Create unique pointers for every card in the zone
@@ -25,7 +25,7 @@ void ExileRenderer::update (state::IObservable* obj) {
 		this->cards.push_back(_newRenderer);
 	}
 	
-	this->notify(); // Indirect call to RenderingManager
+	this->notify(eventID); // Indirect call to RenderingManager
 }
  
 void ExileRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
@@ -33,7 +33,7 @@ void ExileRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) con
 	sf::Vector2f _position = this->getPosition();
 	
 	// Card's relative position:
-	sf::Vector2f _card_position(20.f, 20.f);
+	sf::Vector2f _card_position(2.f, 2.f);
 	
 	// Create a sprite with background texture :
 	sf::Sprite _SpriteExile(this->texture);
