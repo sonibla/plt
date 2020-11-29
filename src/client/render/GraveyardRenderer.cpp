@@ -9,7 +9,7 @@ GraveyardRenderer::GraveyardRenderer (std::weak_ptr<state::Graveyard> graveyard,
 	this->graveyard.lock()->addObserver(this);
 	this->setPosition(position);
 	this->texture.loadFromFile("../res/textures/denim.png");
-	this->update((state::IObservable*) this->graveyard.lock().get());
+	this->update((state::IObservable*) this->graveyard.lock().get(),state::EventID::UPDATE);
 }
 
 GraveyardRenderer::~GraveyardRenderer () {
@@ -17,7 +17,7 @@ GraveyardRenderer::~GraveyardRenderer () {
 	this->graveyard.lock()->removeObserver(this);
 }
 
-void GraveyardRenderer::update (state::IObservable* obj) {
+void GraveyardRenderer::update (state::IObservable* obj,state::EventID eventID) {
 	this->cards.clear();
 	for (size_t i = 0; i<this->graveyard.lock()->cards.size(); i++) {
 		// Create unique pointers for every card in the zone
@@ -25,7 +25,7 @@ void GraveyardRenderer::update (state::IObservable* obj) {
 		this->cards.push_back(_newRenderer);
 	}
 	
-	this->notify(); // Indirect call to RenderingManager
+	this->notify(eventID); // Indirect call to RenderingManager
 }
 
 void GraveyardRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {

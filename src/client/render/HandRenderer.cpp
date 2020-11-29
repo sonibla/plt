@@ -9,7 +9,7 @@ HandRenderer::HandRenderer (std::weak_ptr<state::Hand> hand, sf::Vector2f positi
 	this->hand.lock()->addObserver(this);
 	this->setPosition(position);
 	this->texture.loadFromFile("../res/textures/denim.png");
-	this->update((state::IObservable*) this->hand.lock().get());
+	this->update((state::IObservable*) this->hand.lock().get(),state::EventID::UPDATE);
 }
 
 HandRenderer::~HandRenderer () {
@@ -17,7 +17,7 @@ HandRenderer::~HandRenderer () {
 	this->hand.lock()->removeObserver(this);
 }
 
-void HandRenderer::update (state::IObservable* obj) {
+void HandRenderer::update (state::IObservable* obj,state::EventID eventID) {
 	this->cards.clear();
 	for (size_t i = 0; i<this->hand.lock()->cards.size(); i++) {
 		// Create unique pointers for every card in the zone
@@ -25,7 +25,7 @@ void HandRenderer::update (state::IObservable* obj) {
 		this->cards.push_back(_newRenderer);
 	}
 	
-	this->notify(); // Indirect call to RenderingManager
+	this->notify(eventID); // Indirect call to RenderingManager
 }
 
 void HandRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {

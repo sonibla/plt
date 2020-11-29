@@ -9,7 +9,7 @@ LibraryRenderer::LibraryRenderer (std::weak_ptr<state::Library> library, sf::Vec
 	this->library.lock()->addObserver(this);
 	this->setPosition(position);
 	this->texture.loadFromFile("../res/textures/denim.png");
-	this->update((state::IObservable*) this->library.lock().get());
+	this->update((state::IObservable*) this->library.lock().get(),state::EventID::UPDATE);
 }
 
 LibraryRenderer::~LibraryRenderer () {
@@ -17,7 +17,7 @@ LibraryRenderer::~LibraryRenderer () {
 	this->library.lock()->removeObserver(this);
 }
 
-void LibraryRenderer::update (state::IObservable* obj) {
+void LibraryRenderer::update (state::IObservable* obj,state::EventID eventID) {
 	this->cards.clear();
 	for (size_t i = 0; i<this->library.lock()->cards.size(); i++) {
 		// Create unique pointers for every card in the zone
@@ -25,7 +25,7 @@ void LibraryRenderer::update (state::IObservable* obj) {
 		this->cards.push_back(_newRenderer);
 	}
 	
-	this->notify(); // Indirect call to RenderingManager
+	this->notify(eventID); // Indirect call to RenderingManager
 }
 
 void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
