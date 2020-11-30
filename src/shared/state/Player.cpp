@@ -3,7 +3,7 @@
 //
 
 #include "Player.h"
-
+#include <iostream>
 using namespace state;
 using namespace std;
 
@@ -27,6 +27,7 @@ std::weak_ptr<Hand> Player::GetHand(){
     return hand;
 }
 Player::Player(){
+    std::cout << this->GetID() << std::endl;
     graveyard = make_shared<Graveyard>();
     library = make_shared<Library>();
     hand = make_shared<Hand>();

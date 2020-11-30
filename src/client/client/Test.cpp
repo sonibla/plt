@@ -55,11 +55,9 @@ void Test::state(){
     std::vector<std::shared_ptr<Player>> _players;
 
     std::shared_ptr<Player> _player = create_player_placeholder();
-    _player->id = 0;
     _players.push_back(_player);
 
     _player = create_player_placeholder();
-    _player->id = 1;
     _players.push_back(_player);
     
     std::weak_ptr<Game> game = Game::GetInstance();
@@ -71,7 +69,6 @@ void Test::state(){
     std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
     _battlefield->SetPermanents(create_permanents_placeholder(_player));
 
-    std::cout << _game->GetPlayers().size() << std::endl;
 }
 
 
