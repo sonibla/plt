@@ -28,12 +28,13 @@ void GameElement::Store(std::shared_ptr<GameElement> gameElement){
 
     GameElement::idTable[gameElement->id] = gameElement->weak_from_this();
 }
-
+std::string GameElement::type(){ 
+    return "gameElement";
+}
 
 std::shared_ptr<GameElement> GameElement::Create(){
-    std::shared_ptr<GameElement> _gameElement = make_shared<GameElement>();
+    std::shared_ptr<GameElement> _gameElement = std::make_shared<GameElement>();
 
-    _gameElement->id = GameElement::NewID();
     GameElement::Store(_gameElement);
 
     std::cout << "created :" <<_gameElement->id << std::endl;
@@ -41,6 +42,7 @@ std::shared_ptr<GameElement> GameElement::Create(){
 }
 
 GameElement::GameElement(){
+    this->id = GameElement::NewID();
 }
 
 GameElement::~GameElement(){

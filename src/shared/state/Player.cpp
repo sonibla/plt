@@ -27,10 +27,21 @@ std::weak_ptr<Hand> Player::GetHand(){
     return hand;
 }
 Player::Player(){
-    std::cout << this->GetID() << std::endl;
     graveyard = make_shared<Graveyard>();
     library = make_shared<Library>();
     hand = make_shared<Hand>();
 }
 Player::~Player(){}
 
+std::string Player::type(){
+    return "player";
+}
+
+std::shared_ptr<GameElement> Player::Create(){
+    std::shared_ptr<Player> _gameElement = std::make_shared<Player>();
+
+    GameElement::Store(_gameElement);
+
+    std::cout << "created :" <<_gameElement->id << std::endl;
+    return _gameElement;
+}
