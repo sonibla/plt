@@ -59,6 +59,8 @@ jobs:
     #    uses a compiled language
 
     - run: |
+       sudo apt update --fix-missing
+       sudo apt upgrade
        sudo apt install git dia ghostscript cmake g++ lcov gcovr libxml2-dev libsfml-dev libboost-test-dev
        mkdir build 
        cd build
