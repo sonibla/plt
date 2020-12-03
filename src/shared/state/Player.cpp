@@ -11,17 +11,18 @@ using namespace std;
 Prend la carte et supprime de la main et créer un ability qui correspond à la carte et l'ajoute dans le stack 
 */
 bool Player::Cast(std::weak_ptr<Card> card){
-    state::Spell _spell; //On a créer un nouveau ability
+    //On a créer un nouveau ability - type Spell à mettre
+    std::shared_ptr<state::Ability> _spell = std::make_shared<state::Ability>();
     std::shared_ptr<Card> _card = card.lock(); //on bloque le pointeur et on le transforme en shared
     //std::shared_ptr<state::Battlefield> _battlefield = this->battlefield.lock();
-    _spell().source = _card; //On complète la source de l'ability par la carte en entrée 
+    _spell->source = _card; //On complète la source de l'ability par la carte en entrée 
     std::weak_ptr<Game> game = Game::GetInstance();
     auto _game = game.lock();
     auto ptr_stack =  _game->GetStack().lock(); //renvoie le pointeur du stack 
     ptr_stack->stackContent.push(_spell); //Ajout de la carte dans la stack
     //boucle sur la taille main, comparaison id et enlever la carte en conséquence :
     for(int i = 0; i < this->hand->cards.size(); i++){
-        if(this->hand->cards[i]->id == _card->id){
+        if(this->hand->cards[i]->GetID () == _card->GetID ()){
             this->hand->cards.erase(this->hand->cards.begin()+i); 
         }
     } 
@@ -129,10 +130,15 @@ std::list<std::weak_ptr<GameElement>> Target (){
     return _targetedCards;
 }
 
+/*
 std::string Player::type(){
     return "player";
 }
+*/
 
+
+
+/*
 std::shared_ptr<GameElement> Player::Create(){
     std::shared_ptr<Player> _gameElement = std::make_shared<Player>();
 
@@ -141,4 +147,4 @@ std::shared_ptr<GameElement> Player::Create(){
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
 }
-
+*/

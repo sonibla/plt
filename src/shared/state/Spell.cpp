@@ -11,6 +11,7 @@ void Resolve () {}
 bool ValidTargets () {}
 void Copy () {}
 
+/*
 std::shared_ptr<GameElement> Spell::Create(){
     std::shared_ptr<Spell> _gameElement = std::make_shared<Spell>();
 
@@ -19,3 +20,4 @@ std::shared_ptr<GameElement> Spell::Create(){
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
 }
+*/

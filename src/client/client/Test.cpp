@@ -13,6 +13,9 @@ using namespace client;
 using namespace state;
 using namespace render;
 
+
+/*
+
 std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
     std::vector<std::shared_ptr<Card>> _cards;
     for(int i =0; i<6;i++){
@@ -422,6 +425,8 @@ void Test::render(){
 
 */
 
+
+/*
 void Test::render(){
 
     //Checking if drawing a card works
@@ -443,3 +448,7 @@ void Test::render(){
 
 
 }
+
+
+
+*/

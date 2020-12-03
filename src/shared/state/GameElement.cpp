@@ -11,6 +11,7 @@ int GameElement::GetID (){
     return id;
 }
 
+/*
 //Change the id of a gameElement , mostly when a gameElement move from a zone to another
 void GameElement::ChangeID (){
     idTable.erase(this->id);
@@ -19,15 +20,23 @@ void GameElement::ChangeID (){
 
     GameElement::Store(this->shared_from_this());
 }
+*/
 
-int GameElement::NewID (){
+/*
+static int NewID (std::shared_ptr<GameElement> gameElement){
     GameElement::lastID++;
     return lastID;
 }
+*/
+
+/*
 void GameElement::Store(std::shared_ptr<GameElement> gameElement){
 
     GameElement::idTable[gameElement->id] = gameElement->weak_from_this();
 }
+*/
+
+/*
 std::string GameElement::type(){ 
     return "gameElement";
 }
@@ -57,6 +66,9 @@ GameElement::~GameElement(){
         }
         else{
             std::cout << this->id <<" not found" << std::endl;
-        }*/
+        }
     }
+
+
 }
+*/
