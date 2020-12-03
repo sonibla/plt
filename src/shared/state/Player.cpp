@@ -3,7 +3,7 @@
 //
 
 #include "Player.h"
-
+#include <iostream>
 using namespace state;
 using namespace std;
 
@@ -109,6 +109,7 @@ Player::Player(){
 Player::~Player(){}
 
 
+
 /*
 Target() demande à l'utilisateur les ID cartes cibles et 
 les renvoie dans une liste
@@ -127,3 +128,17 @@ std::list<std::weak_ptr<GameElement>> Target (){
 
     return _targetedCards;
 }
+
+std::string Player::type(){
+    return "player";
+}
+
+std::shared_ptr<GameElement> Player::Create(){
+    std::shared_ptr<Player> _gameElement = std::make_shared<Player>();
+
+    GameElement::Store(_gameElement);
+
+    std::cout << "created :" <<_gameElement->id << std::endl;
+    return _gameElement;
+}
+

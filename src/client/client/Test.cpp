@@ -9,7 +9,6 @@
 #include <stdio.h>
 #include <SFML/Graphics.hpp>
 
-
 using namespace client;
 using namespace state;
 using namespace render;
@@ -17,7 +16,7 @@ using namespace render;
 std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
     std::vector<std::shared_ptr<Card>> _cards;
     for(int i =0; i<6;i++){
-        std::shared_ptr<Card> _card = std::make_shared<Card>();
+        std::shared_ptr<Card> _card = std::dynamic_pointer_cast<Card>(Card::Create());
         //art of a black lotus
         _card->image_location = "../res/textures/card"+std::to_string(i)+".png";
         _card->name = "Place Holder";
@@ -29,7 +28,7 @@ std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
 std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(std::weak_ptr<state::Player> player){
     std::vector<std::shared_ptr<Permanent>> _permanents;
     for(int i =0; i<6;i++){
-        std::shared_ptr<Permanent> _permanent = std::make_shared<Permanent>();
+        std::shared_ptr<Permanent> _permanent = std::dynamic_pointer_cast<Permanent>(Token::Create());
         //art of a black lotus
         _permanent->image_location = "../res/textures/card"+std::to_string(i)+".png";
         _permanent->tapped = false;
@@ -41,7 +40,7 @@ std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(std::weak_
 
 std::shared_ptr<Player> create_player_placeholder(){
 
-    std::shared_ptr<Player> _player = std::make_shared<Player>();
+    std::shared_ptr<Player> _player = std::dynamic_pointer_cast<Player>(Player::Create());
     std::weak_ptr<Graveyard> _graveyard = _player->GetGraveyard();
     _graveyard.lock()->SetCards(create_cards_placeholder());
     std::weak_ptr<Library> _library = _player->GetLibrary();
@@ -55,11 +54,9 @@ void Test::state(){
     std::vector<std::shared_ptr<Player>> _players;
 
     std::shared_ptr<Player> _player = create_player_placeholder();
-    _player->id = 0;
     _players.push_back(_player);
 
     _player = create_player_placeholder();
-    _player->id = 1;
     _players.push_back(_player);
     
     std::weak_ptr<Game> game = Game::GetInstance();
@@ -71,7 +68,6 @@ void Test::state(){
     std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
     _battlefield->SetPermanents(create_permanents_placeholder(_player));
 
-    std::cout << _game->GetPlayers().size() << std::endl;
 }
 
 
@@ -82,9 +78,25 @@ void Test::state(){
 
 
 
-void Test::render(){
+void Test::render(){ 
+
+    
+
     this->state();
     render::RenderingManager* _renderingManager = new render::RenderingManager();
+
+    for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
+        std::string s;
+        if(it->second.expired())
+        {
+            s = "expired";
+        }
+        else{
+            s = it->second.lock()->type();
+        }
+        std::cout << it->first<< " : "<< s << std::endl;
+    }
+
     while (_renderingManager->window.isOpen())
     {
         // Process events
@@ -97,6 +109,7 @@ void Test::render(){
         }
         _renderingManager->update(nullptr,state::EventID::UPDATE);
     }
+
 
     /*
     std::shared_ptr<state::Player> _player = create_player_placeholder();

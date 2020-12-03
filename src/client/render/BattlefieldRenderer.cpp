@@ -60,7 +60,7 @@ void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates state
         std::shared_ptr<state::Player> _controller = _permanent->controller.lock();
 
         
-        if(_controller->id != 0){ //If the permanent is controlled by the opponent
+        if(_controller->GetID() != 0){ //If the permanent is controlled by the opponent
         
             if (_permanent->getRotation() == 0){ //Checking if the permanent is not tapped
                 _permanent->setPosition(bf_postion.x + opponentcount*90 + 10, bf_postion.y + 10);
