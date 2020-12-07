@@ -8,14 +8,12 @@
 using namespace state;
 using namespace std;
 
-std::shared_ptr<Game> Game::instance = (nullptr);
+std::weak_ptr<Game> Game::instance;
 
 std::weak_ptr<Game> Game::GetInstance(){
-    if(!instance){
-        instance = std::make_shared<Game>();
-    }
     return instance;
 }
+
 void Game::NextTurn(std::weak_ptr<Player> player){}
 std::weak_ptr<Battlefield> Game::GetBattlefield(){
     return battlefield;
@@ -36,6 +34,12 @@ std::vector<std::weak_ptr<Player>> Game::GetPlayers(){
 
 void Game::SetPlayers ( std::vector<std::shared_ptr<Player>> players){
     this->players = players;
+}
+
+std::shared_ptr<Game> Game::Create(){
+    std::shared_ptr<Game> game = make_shared<Game>();
+    game->instance = game->weak_from_this();
+    return game;
 }
 
 Game::Game (){

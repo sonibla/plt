@@ -60,6 +60,7 @@ void Test::state(){
     _players.push_back(_player);
     
     std::weak_ptr<Game> game = Game::GetInstance();
+    std::cout << 1 << std::endl;
     auto _game = game.lock();
     _game->GetExile().lock()->SetCards(create_cards_placeholder());
     _game->SetPlayers(_players);
@@ -76,7 +77,7 @@ void Test::state(){
 
 void Test::render(){ 
 
-    
+    std::shared_ptr<Game> game = Game::Create();
     this->state();
     render::RenderingManager* _renderingManager = new render::RenderingManager();
 

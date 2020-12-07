@@ -17,6 +17,9 @@ std::weak_ptr<GameElement> GameElement::GetPtr (int id){
     if(search != GameElement::idTable.end()){
         gameElement= search->second;
     }
+    else{
+        std::cout << "could not find gameElement " << id << std::endl;
+    }
     return gameElement;
 }
 
@@ -34,7 +37,6 @@ int GameElement::NewID (){
     return lastID;
 }
 void GameElement::Store(std::shared_ptr<GameElement> gameElement){
-
     GameElement::idTable[gameElement->id] = gameElement->weak_from_this();
 }
 std::string GameElement::type(){ 
@@ -57,13 +59,7 @@ GameElement::GameElement(){
 GameElement::~GameElement(){
 
     if(this->id != -1){
-        std::cout << "destroying :" << this->id << std::endl;
-        auto search = GameElement::idTable.find(id);
-        if(search != GameElement::idTable.end()){
-            std::cout << "could not find element " << this->id << " in GameElement::idTable" << std::endl;
-        }
-        else{
-            GameElement::idTable.erase(search);
-        }
+        std::cout << "destroying :" << this->id << std::endl;    
+        GameElement::idTable.erase(this->id);
     }
 }
