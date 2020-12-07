@@ -36,8 +36,8 @@ Permanent::~Permanent(){
 }
 
 
-void Permanent::setController (std::shared_ptr<Player> controller){
-    this->controller = controller;
+void Permanent::setControllerID (int controllerID){
+    this->controllerID = controllerID;
 }
 
 
@@ -52,24 +52,3 @@ void Permanent::setToughness (int toughness){
 
 
 
-
-
-
-
-/*
-std::string Permanent::type(){
-    return "permanent";
-}
-*/
-
-
-/*
-std::shared_ptr<GameElement> Permanent::Create(){
-    std::shared_ptr<Permanent> _gameElement = std::make_shared<Permanent>();
-
-    GameElement::Store(_gameElement);
-
-    std::cout << "created :" <<_gameElement->id << std::endl;
-    return _gameElement;
-}
-*/
