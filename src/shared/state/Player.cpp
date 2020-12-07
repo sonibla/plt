@@ -8,15 +8,16 @@ using namespace state;
 using namespace std;
 
 
-bool Player::Cast(std::weak_ptr<Card>){}
-bool Player::Play(std::weak_ptr<Card>){}
-bool Player::ActivateAbility(std::weak_ptr<PlayableGameElement> source){}
+bool Player::Cast(int cardID){}
+bool Player::Play(int cardID){}
+bool Player::ActivateAbility(int source){}
 void Player::PassPriority(){}
 bool Player::Draw(int nb){}
 bool Player::Discard(int nb){}
-std::list<std::weak_ptr<GameElement>> Player::Target(){}
+std::list<int> Player::Target(){}
 bool Player::Win(){}
 bool Player::Lose(){}
+
 std::weak_ptr<Graveyard> Player::GetGraveyard(){
     return graveyard;
 }
