@@ -7,6 +7,10 @@ void Ability::Resolve () {}
 bool Ability::ValidTargets () {return true;}
 void Ability::Copy () {}
 
+Ability::Ability () {}
+
+Ability::~Ability () {}
+
 std::string Ability::type(){
     return "Ability";   
 }
