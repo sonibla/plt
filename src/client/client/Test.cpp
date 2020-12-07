@@ -32,7 +32,7 @@ std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(std::weak_
         //art of a black lotus
         _permanent->image_location = "../res/textures/card"+std::to_string(i)+".png";
         _permanent->tapped = false;
-        _permanent->controller = player;
+        _permanent->controllerID = player.lock()->GetID();
         _permanents.push_back(_permanent);
     }
     return _permanents;
