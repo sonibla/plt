@@ -35,6 +35,9 @@ RenderingManager::RenderingManager(){
     //zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new StackRenderer(_game->GetStack(), sf::Vector2f(, )))); // A placer par dessus le battlefield
 
 }
+RenderingManager::~RenderingManager(){
+
+}
 
 void RenderingManager::update (state::IObservable* state,state::EventID eventID){
     this->window.clear();

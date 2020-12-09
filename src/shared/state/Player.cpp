@@ -10,7 +10,9 @@ using namespace std;
 /*
 Prend la carte et supprime de la main et créer un ability qui correspond à la carte et l'ajoute dans le stack 
 */
-bool Player::Cast(std::weak_ptr<Card> card){
+bool Player::Cast(int cardID){
+
+    /*
     //On a créer un nouveau ability - type Spell à mettre
     std::shared_ptr<state::Ability> _spell = std::make_shared<state::Ability>();
     std::shared_ptr<Card> _card = card.lock(); //on bloque le pointeur et on le transforme en shared
@@ -26,20 +28,21 @@ bool Player::Cast(std::weak_ptr<Card> card){
             this->hand->cards.erase(this->hand->cards.begin()+i); 
         }
     } 
+    */
     return true;
 }
 
 /*
 Plus besoin à effacer --
 */
-bool Player::Play(std::weak_ptr<Card>){
+bool Player::Play(int cardID){
 
 }
 
 /*
 A faire 
 */
-bool Player::ActivateAbility(std::weak_ptr<PlayableGameElement> source){
+bool Player::ActivateAbility(int sourceID){
 
 }
 
@@ -65,10 +68,12 @@ Discard(int nb)
 Renvoie un booléen 
 */
 bool Player::Discard(int nb){
-    std::list<std::weak_ptr<GameElement>> _list = Target ();
+    /*
+    std::list<std::weak_ptr<GameElement>> _list = Target();
     if (_list.size() == nb){
         //Mettre les cartes de la liste dans le cimetière
     }
+    */
 
 }
 
@@ -81,7 +86,6 @@ bool Player::Win(){
 bool Player::Lose(){
 
 }
-
 
 
 std::weak_ptr<Graveyard> Player::GetGraveyard(){
@@ -116,6 +120,7 @@ Target() demande à l'utilisateur les ID cartes cibles et
 les renvoie dans une liste
 */
 std::list<std::weak_ptr<GameElement>> Target (){
+    /*
     std::list<std::weak_ptr<GameElement>>  _targetedCards;
     std::weak_ptr<GameElement> pointeur;
     int ID;
@@ -128,17 +133,18 @@ std::list<std::weak_ptr<GameElement>> Target (){
     }
 
     return _targetedCards;
+    */
 }
 
-/*
+
 std::string Player::type(){
     return "player";
 }
-*/
 
 
 
-/*
+
+
 std::shared_ptr<GameElement> Player::Create(){
     std::shared_ptr<Player> _gameElement = std::make_shared<Player>();
 
@@ -147,4 +153,3 @@ std::shared_ptr<GameElement> Player::Create(){
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
 }
-*/

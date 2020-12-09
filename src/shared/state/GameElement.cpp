@@ -11,7 +11,18 @@ int GameElement::GetID (){
     return id;
 }
 
-/*
+std::weak_ptr<GameElement> GameElement::GetPtr (int id){
+    std::weak_ptr<GameElement> gameElement;
+    auto search = GameElement::idTable.find(id);
+    if(search != GameElement::idTable.end()){
+        gameElement= search->second;
+    }
+    else{
+        std::cout << "could not find gameElement " << id << std::endl;
+    }
+    return gameElement;
+}
+
 //Change the id of a gameElement , mostly when a gameElement move from a zone to another
 void GameElement::ChangeID (){
     idTable.erase(this->id);
@@ -20,23 +31,22 @@ void GameElement::ChangeID (){
 
     GameElement::Store(this->shared_from_this());
 }
-*/
 
-/*
-static int NewID (std::shared_ptr<GameElement> gameElement){
+
+
+int GameElement::NewID (){
     GameElement::lastID++;
-    return lastID;
+    return GameElement::lastID;
 }
-*/
 
-/*
+
+
 void GameElement::Store(std::shared_ptr<GameElement> gameElement){
-
     GameElement::idTable[gameElement->id] = gameElement->weak_from_this();
 }
-*/
 
-/*
+
+
 std::string GameElement::type(){ 
     return "gameElement";
 }
@@ -57,18 +67,9 @@ GameElement::GameElement(){
 GameElement::~GameElement(){
 
     if(this->id != -1){
-        std::cout << "destroying :" << this->id << std::endl;
-        GameElement::idTable.erase(GameElement::idTable.find(this->id));
-        /*auto finder = GameElement::idTable.find(this->id);
-        if(finder != GameElement::idTable.end()){
-            //GameElement::idTable.erase(finder);
-            std::cout << this->id <<" destroyed properly" << std::endl;
-        }
-        else{
-            std::cout << this->id <<" not found" << std::endl;
-        }
+        std::cout << "destroying :" << this->id << std::endl;    
+        GameElement::idTable.erase(this->id);
     }
 
 
 }
-*/
