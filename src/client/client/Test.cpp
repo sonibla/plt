@@ -42,11 +42,11 @@ std::shared_ptr<Player> create_player_placeholder(){
 
     std::shared_ptr<Player> _player = std::dynamic_pointer_cast<Player>(Player::Create());
     std::weak_ptr<Graveyard> _graveyard = _player->GetGraveyard();
-    _graveyard.lock()->SetCards(create_cards_placeholder());
+    _graveyard.lock()->setCards(create_cards_placeholder());
     std::weak_ptr<Library> _library = _player->GetLibrary();
-    _library.lock()->SetCards(create_cards_placeholder());
+    _library.lock()->setCards(create_cards_placeholder());
     std::weak_ptr<Hand> _hand = _player->GetHand();
-    _hand.lock()->SetCards(create_cards_placeholder());
+    _hand.lock()->setCards(create_cards_placeholder());
     return _player;
 }
 
@@ -62,7 +62,7 @@ void Test::state(){
     std::weak_ptr<Game> game = Game::GetInstance();
     std::cout << 1 << std::endl;
     auto _game = game.lock();
-    _game->GetExile().lock()->SetCards(create_cards_placeholder());
+    _game->GetExile().lock()->setCards(create_cards_placeholder());
     _game->SetPlayers(_players);
 
 
