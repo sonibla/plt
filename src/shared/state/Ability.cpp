@@ -3,9 +3,9 @@
 using namespace std;
 using namespace state;
 
-void Ability::Resolve () {}
-bool Ability::ValidTargets () {return true;}
-void Ability::Copy () {}
+void Ability::resolve () {}
+bool Ability::validTargets () {return true;}
+void Ability::copy () {}
 
 Ability::Ability () {}
 
@@ -15,7 +15,7 @@ std::string Ability::type(){
     return "Ability";   
 }
 
-std::shared_ptr<GameElement> Ability::Create(){
+std::shared_ptr<GameElement> Ability::create(){
     std::shared_ptr<Ability> _gameElement = std::make_shared<Ability>();
 
     GameElement::store(_gameElement);

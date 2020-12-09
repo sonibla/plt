@@ -6,7 +6,7 @@ using namespace state;
 TriggeredAbility::TriggeredAbility() {}
 TriggeredAbility::~TriggeredAbility() {}
 
-std::shared_ptr<GameElement> TriggeredAbility::Create(){
+std::shared_ptr<GameElement> TriggeredAbility::create(){
     std::shared_ptr<TriggeredAbility> _gameElement = std::make_shared<TriggeredAbility>();
 
     GameElement::store(_gameElement);

@@ -8,7 +8,7 @@ ActivatedAbility::ActivatedAbility() {}
 ActivatedAbility::~ActivatedAbility() {}
 
 
-std::shared_ptr<GameElement> ActivatedAbility::Create(){
+std::shared_ptr<GameElement> ActivatedAbility::create(){
     std::shared_ptr<ActivatedAbility> _gameElement = std::make_shared<ActivatedAbility>();
 
     GameElement::store(_gameElement);
