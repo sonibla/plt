@@ -39,6 +39,8 @@ bool Player::Draw(int nb){
         library->cards[library_size -1]->ChangeID();
         hand->cards.push_back(library->cards[library_size -1]);
         library->cards.pop_back();
+        hand->notify(EventID::UPDATE);
+        library->notify(EventID::UPDATE);
     }
 }
 bool Player::Discard(int nb){}

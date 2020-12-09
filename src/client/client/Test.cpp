@@ -15,7 +15,7 @@ using namespace render;
 
 std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
     std::vector<std::shared_ptr<Card>> _cards;
-    for(int i =0; i<6;i++){
+    for(int i =0; i<4;i++){
         std::shared_ptr<Card> _card = std::dynamic_pointer_cast<Card>(Card::Create());
         //art of a black lotus
         _card->image_location = "../res/textures/card"+std::to_string(i)+".png";
@@ -100,9 +100,11 @@ void Test::render(){
         while (_renderingManager->window.pollEvent(event))
         {
             // Close window: exit
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed){
                 _renderingManager->window.close();
+            }
         }
+
         _renderingManager->update(nullptr,state::EventID::UPDATE);
     }
 
@@ -112,14 +114,10 @@ void Test::render(){
 
 void Test::engine(){ 
 
-    std::shared_ptr<Game> _game = Game::Create();
+     std::shared_ptr<Game> game = Game::Create();
     this->state();
-
-
-    auto _stack =  _game->GetStack().lock();
-
-    auto _player = _game->GetPlayers()[0].lock();
-
+    auto _player = game->GetPlayers()[0].lock();
+    render::RenderingManager* _renderingManager = new render::RenderingManager();
 
     for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
         std::string s;
@@ -133,26 +131,22 @@ void Test::engine(){
         std::cout << it->first<< " : "<< s << std::endl;
     }
 
-    std::cout << "number of cards in player hand :" << _player->GetHand().lock()->cards.size() << "\n" <<std::endl;
-    std::cout << "number of cards in the library :" << _player->GetLibrary().lock()->cards.size() << "\n" <<std::endl;
-
-    std::cout << "Drawing 2 cards... \n" << std::endl;
-    _player->Draw(2);
-
-    std::cout << "number of cards in player hand :" << _player->GetHand().lock()->cards.size() << "\n" <<std::endl;
-    std::cout << "number of cards in the library :" << _player->GetLibrary().lock()->cards.size() << "\n" <<std::endl;   
-
-    for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
-        std::string s;
-        if(it->second.expired())
+    while (_renderingManager->window.isOpen())
+    {
+        // Process events
+        sf::Event event;
+        while (_renderingManager->window.pollEvent(event))
         {
-            s = "expired";
+            // Close window: exit
+            if (event.type == sf::Event::Closed){
+                _renderingManager->window.close();
+            }
+            if (event.type == sf::Event::KeyPressed){
+                game->GetPlayers()[0].lock()->Draw(2);
+            }
         }
-        else{
-            s = it->second.lock()->type();
-        }
-        std::cout << it->first<< " : "<< s << std::endl;
-    }
 
+        _renderingManager->update(nullptr,state::EventID::UPDATE);
+    }
 
 }
