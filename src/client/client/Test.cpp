@@ -59,14 +59,14 @@ void Test::state(){
     _player = create_player_placeholder();
     _players.push_back(_player);
     
-    std::weak_ptr<Game> game = Game::GetInstance();
+    std::weak_ptr<Game> game = Game::getInstance();
     std::cout << 1 << std::endl;
     auto _game = game.lock();
-    _game->GetExile().lock()->setCards(create_cards_placeholder());
-    _game->SetPlayers(_players);
+    _game->getExile().lock()->setCards(create_cards_placeholder());
+    _game->setPlayers(_players);
 
 
-    std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
+    std::shared_ptr<state::Battlefield> _battlefield = _game->getBattlefield().lock();
     _battlefield->setPermanents(create_permanents_placeholder(_player));
 
 }
@@ -77,7 +77,7 @@ void Test::state(){
 
 void Test::render(){ 
 
-    std::shared_ptr<Game> game = Game::Create();
+    std::shared_ptr<Game> game = Game::create();
     this->state();
     render::RenderingManager* _renderingManager = new render::RenderingManager();
 

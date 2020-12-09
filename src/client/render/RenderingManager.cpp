@@ -8,9 +8,9 @@ using namespace render;
 
 RenderingManager::RenderingManager(){
     this->window.create(sf::VideoMode(1000, 1000), "Rendering");
-    std::shared_ptr<state::Game> _game = state::Game::GetInstance().lock();
+    std::shared_ptr<state::Game> _game = state::Game::getInstance().lock();
 
-    std::vector<std::weak_ptr<state::Player>> _players = _game->GetPlayers();
+    std::vector<std::weak_ptr<state::Player>> _players = _game->getPlayers();
     
     int id_of_the_current_player=1; // To be changed later
 
@@ -30,9 +30,9 @@ RenderingManager::RenderingManager(){
         }
     }
     
-    zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new BattlefieldRenderer(_game->GetBattlefield(), sf::Vector2f(272, 220))));
-    zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new ExileRenderer(_game->GetExile(), sf::Vector2f(186, 778))));
-    //zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new StackRenderer(_game->GetStack(), sf::Vector2f(, )))); // A placer par dessus le battlefield
+    zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new BattlefieldRenderer(_game->getBattlefield(), sf::Vector2f(272, 220))));
+    zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new ExileRenderer(_game->getExile(), sf::Vector2f(186, 778))));
+    //zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new StackRenderer(_game->getStack(), sf::Vector2f(, )))); // A placer par dessus le battlefield
 
 }
 RenderingManager::~RenderingManager(){
