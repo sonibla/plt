@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <SFML/Graphics.hpp>
+#include <json/json.h>
 
 using namespace client;
 using namespace state;
@@ -111,7 +112,6 @@ void Test::render(){
 // Test Engine
 
 void Test::engine(){ 
-
     std::shared_ptr<Game> _game = Game::Create();
     this->state();
 
@@ -153,6 +153,5 @@ void Test::engine(){
         }
         std::cout << it->first<< " : "<< s << std::endl;
     }
-
 
 }
