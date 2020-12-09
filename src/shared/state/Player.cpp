@@ -3,12 +3,33 @@
 //
 
 #include "Player.h"
+#include "Spell.h"
 #include <iostream>
 using namespace state;
 using namespace std;
 
 
-bool Player::Cast(int cardID){}
+bool Player::Cast(int cardID){
+
+
+    //On a créer un nouveau ability - type Spell à mettre
+    std::shared_ptr<state::Spell> _spell = std::dynamic_pointer_cast<Spell>(state::Spell::Create());
+    std::shared_ptr<Card> _card = std::dynamic_pointer_cast<Card>(GameElement::GetPtr(cardID).lock()); //on bloque le pointeur et on le transforme en shared
+    _spell->source = _card; //On complète la source de l'ability par la carte en entrée 
+    std::weak_ptr<Game> game = Game::GetInstance();
+    auto _game = game.lock();
+    auto ptr_stack =  _game->GetStack().lock(); //renvoie le pointeur du stack 
+    ptr_stack->stackContent.push(_spell); //Ajout de la carte dans la stack
+    //boucle sur la taille main, comparaison id et enlever la carte en conséquence :
+    for(int i = 0; i < this->hand->cards.size(); i++){
+        if(this->hand->cards[i]->GetID () == cardID){
+            this->hand->cards.erase(this->hand->cards.begin()+i); 
+        }
+    } 
+    _card->ChangeID();
+
+    return true;
+}
 bool Player::Play(int cardID){}
 bool Player::ActivateAbility(int source){}
 void Player::PassPriority(){}
