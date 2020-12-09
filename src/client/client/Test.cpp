@@ -107,3 +107,52 @@ void Test::render(){
     }
 
 }
+
+// Test Engine
+
+void Test::engine(){ 
+
+    std::shared_ptr<Game> _game = Game::Create();
+    this->state();
+
+
+    auto _stack =  _game->GetStack().lock();
+
+    auto _player = _game->GetPlayers()[0].lock();
+
+
+    for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
+        std::string s;
+        if(it->second.expired())
+        {
+            s = "expired";
+        }
+        else{
+            s = it->second.lock()->type();
+        }
+        std::cout << it->first<< " : "<< s << std::endl;
+    }
+
+    std::cout << "number of cards in player hand :" << _player->GetHand().lock()->cards.size() << "\n" <<std::endl;
+    std::cout << "number of abilities in the stack :" << _stack->stackContent.size() << "\n" <<std::endl;
+
+    int cardID = _player->GetHand().lock()->cards[0]->GetID();
+
+    std::cout << "ID of the card that is going to be casted :" << cardID << "\n" << std::endl;
+    std::cout << "casting the card... \n" << std::endl;
+    _player->Cast(cardID);
+
+    for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
+        std::string s;
+        if(it->second.expired())
+        {
+            s = "expired";
+        }
+        else{
+            s = it->second.lock()->type();
+        }
+        std::cout << it->first<< " : "<< s << std::endl;
+    }
+
+
+}
