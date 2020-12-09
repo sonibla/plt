@@ -28,7 +28,7 @@ std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
 std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(std::weak_ptr<state::Player> player){
     std::vector<std::shared_ptr<Permanent>> _permanents;
     for(int i =0; i<6;i++){
-        std::shared_ptr<Permanent> _permanent = std::dynamic_pointer_cast<Permanent>(Token::Create());
+        std::shared_ptr<Permanent> _permanent = std::dynamic_pointer_cast<Permanent>(Token::create());
         //art of a black lotus
         _permanent->image_location = "../res/textures/card"+std::to_string(i)+".png";
         _permanent->tapped = false;

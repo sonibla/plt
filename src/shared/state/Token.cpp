@@ -7,7 +7,7 @@ Token::Token() {}
 Token::~Token() {}
 
 
-std::shared_ptr<GameElement> Token::Create(){
+std::shared_ptr<GameElement> Token::create(){
     std::shared_ptr<Token> _gameElement = std::make_shared<Token>();
 
     GameElement::store(_gameElement);
