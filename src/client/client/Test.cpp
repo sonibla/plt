@@ -117,3 +117,26 @@ void Test::render(){
 
 
 
+// Test Engine
+
+void Test::engine(){ 
+
+    std::shared_ptr<Game> _game = Game::Create();
+    this->state();
+
+
+    auto _stack =  _game->GetStack().lock();
+
+    auto _player = _game->GetPlayers()[0].lock();
+
+    std::cout << "number of cards in player hand :" << _player->GetHand().lock()->cards.size() << "\n" <<std::endl;
+    std::cout << "number of abilities in the stack :" << _stack->stackContent.size() << "\n" <<std::endl;
+/*
+    int cardID = _player->GetHand().lock()->cards[0]->GetID();
+    std::cout << "ID of the card that is going to be casted :" << cardID << "\n" << std::endl;
+    std::cout << "casting the card... \n" << std::endl;
+    //_player->Cast(cardID);
+
+*/
+
+}

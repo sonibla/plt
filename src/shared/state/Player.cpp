@@ -28,6 +28,7 @@ bool Player::Cast(int cardID){
             this->hand->cards.erase(this->hand->cards.begin()+i); 
         }
     } 
+    _card->ChangeID();
 
     return true;
 }
