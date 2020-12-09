@@ -8,23 +8,23 @@ using namespace state;
 using namespace std;
 
 
-bool Player::Cast(int cardID){}
-bool Player::Play(int cardID){}
-bool Player::ActivateAbility(int source){}
-void Player::PassPriority(){}
-bool Player::Draw(int nb){}
-bool Player::Discard(int nb){}
-std::list<int> Player::Target(){}
-bool Player::Win(){}
-bool Player::Lose(){}
+bool Player::cast(int cardID){}
+bool Player::play(int cardID){}
+bool Player::activateAbility(int source){}
+void Player::passPriority(){}
+bool Player::draw(int nb){}
+bool Player::discard(int nb){}
+std::list<int> Player::target(){}
+bool Player::win(){}
+bool Player::lose(){}
 
-std::weak_ptr<Graveyard> Player::GetGraveyard(){
+std::weak_ptr<Graveyard> Player::getGraveyard(){
     return graveyard;
 }
-std::weak_ptr<Library> Player::GetLibrary(){
+std::weak_ptr<Library> Player::getLibrary(){
     return library;
 }
-std::weak_ptr<Hand> Player::GetHand(){
+std::weak_ptr<Hand> Player::getHand(){
     return hand;
 }
 Player::Player(){
@@ -38,7 +38,7 @@ std::string Player::type(){
     return "player";
 }
 
-std::shared_ptr<GameElement> Player::Create(){
+std::shared_ptr<GameElement> Player::create(){
     std::shared_ptr<Player> _gameElement = std::make_shared<Player>();
 
     GameElement::store(_gameElement);

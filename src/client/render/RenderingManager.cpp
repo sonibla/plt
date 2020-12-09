@@ -18,15 +18,15 @@ RenderingManager::RenderingManager(){
         std::shared_ptr<state::Player> _player = _players[i].lock();
         if(id_of_the_current_player == _player->getID()){
             zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new PlayerRenderer(_player, sf::Vector2f(10, 690))));
-            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new GraveyardRenderer(_player->GetGraveyard(), sf::Vector2f(186, 890))));
-            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new HandRenderer(_player->GetHand(), sf::Vector2f(272, 790))));
-            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new LibraryRenderer(_player->GetLibrary(), sf::Vector2f(916, 890))));
+            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new GraveyardRenderer(_player->getGraveyard(), sf::Vector2f(186, 890))));
+            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new HandRenderer(_player->getHand(), sf::Vector2f(272, 790))));
+            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new LibraryRenderer(_player->getLibrary(), sf::Vector2f(916, 890))));
         }
         else{
             zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new PlayerRenderer(_player, sf::Vector2f(10, 20))));
-            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new GraveyardRenderer(_player->GetGraveyard(), sf::Vector2f(186, 220))));
-            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new HandRenderer(_player->GetHand(), sf::Vector2f(272, 10))));
-            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new LibraryRenderer(_player->GetLibrary(), sf::Vector2f(916, 220))));
+            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new GraveyardRenderer(_player->getGraveyard(), sf::Vector2f(186, 220))));
+            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new HandRenderer(_player->getHand(), sf::Vector2f(272, 10))));
+            zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new LibraryRenderer(_player->getLibrary(), sf::Vector2f(916, 220))));
         }
     }
     

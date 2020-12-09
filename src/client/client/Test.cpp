@@ -40,12 +40,12 @@ std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(std::weak_
 
 std::shared_ptr<Player> create_player_placeholder(){
 
-    std::shared_ptr<Player> _player = std::dynamic_pointer_cast<Player>(Player::Create());
-    std::weak_ptr<Graveyard> _graveyard = _player->GetGraveyard();
+    std::shared_ptr<Player> _player = std::dynamic_pointer_cast<Player>(Player::create());
+    std::weak_ptr<Graveyard> _graveyard = _player->getGraveyard();
     _graveyard.lock()->setCards(create_cards_placeholder());
-    std::weak_ptr<Library> _library = _player->GetLibrary();
+    std::weak_ptr<Library> _library = _player->getLibrary();
     _library.lock()->setCards(create_cards_placeholder());
-    std::weak_ptr<Hand> _hand = _player->GetHand();
+    std::weak_ptr<Hand> _hand = _player->getHand();
     _hand.lock()->setCards(create_cards_placeholder());
     return _player;
 }
