@@ -16,7 +16,7 @@ using namespace render;
 std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
     std::vector<std::shared_ptr<Card>> _cards;
     for(int i =0; i<6;i++){
-        std::shared_ptr<Card> _card = std::dynamic_pointer_cast<Card>(Card::Create());
+        std::shared_ptr<Card> _card = std::dynamic_pointer_cast<Card>(Card::create());
         //art of a black lotus
         _card->image_location = "../res/textures/card"+std::to_string(i)+".png";
         _card->name = "Place Holder";
@@ -32,7 +32,7 @@ std::vector<std::shared_ptr<Permanent>> create_permanents_placeholder(std::weak_
         //art of a black lotus
         _permanent->image_location = "../res/textures/card"+std::to_string(i)+".png";
         _permanent->tapped = false;
-        _permanent->controllerID = player.lock()->GetID();
+        _permanent->controllerID = player.lock()->getID();
         _permanents.push_back(_permanent);
     }
     return _permanents;
@@ -67,7 +67,7 @@ void Test::state(){
 
 
     std::shared_ptr<state::Battlefield> _battlefield = _game->GetBattlefield().lock();
-    _battlefield->SetPermanents(create_permanents_placeholder(_player));
+    _battlefield->setPermanents(create_permanents_placeholder(_player));
 
 }
 

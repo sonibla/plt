@@ -16,7 +16,7 @@ RenderingManager::RenderingManager(){
 
     for(std::size_t i =0;i<_players.size();i++){
         std::shared_ptr<state::Player> _player = _players[i].lock();
-        if(id_of_the_current_player == _player->GetID()){
+        if(id_of_the_current_player == _player->getID()){
             zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new PlayerRenderer(_player, sf::Vector2f(10, 690))));
             zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new GraveyardRenderer(_player->GetGraveyard(), sf::Vector2f(186, 890))));
             zoneRenderers.push_back(std::shared_ptr<ZoneRenderer>(new HandRenderer(_player->GetHand(), sf::Vector2f(272, 790))));

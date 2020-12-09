@@ -7,7 +7,7 @@ Battlefield::Battlefield() {}
 Battlefield::~Battlefield() {}
 
 
-std::vector<std::weak_ptr<Permanent>> Battlefield::GetPermanents (){
+std::vector<std::weak_ptr<Permanent>> Battlefield::getPermanents (){
     std::vector<std::weak_ptr<Permanent>> _permanents;
     for(size_t i =0; i<permanents.size();i++){
         _permanents.push_back(permanents[i]);
@@ -15,6 +15,6 @@ std::vector<std::weak_ptr<Permanent>> Battlefield::GetPermanents (){
     return _permanents;
 }
 
-void Battlefield::SetPermanents (std::vector<std::shared_ptr<Permanent>> permanents){
+void Battlefield::setPermanents (std::vector<std::shared_ptr<Permanent>> permanents){
     this->permanents = permanents;
 };

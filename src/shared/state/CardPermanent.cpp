@@ -9,7 +9,7 @@ CardPermanent::~CardPermanent() {}
 std::shared_ptr<GameElement> CardPermanent::Create(){
     std::shared_ptr<CardPermanent> _gameElement = std::make_shared<CardPermanent>();
 
-    GameElement::Store(_gameElement);
+    GameElement::store(_gameElement);
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
 }

@@ -41,7 +41,7 @@ std::string Player::type(){
 std::shared_ptr<GameElement> Player::Create(){
     std::shared_ptr<Player> _gameElement = std::make_shared<Player>();
 
-    GameElement::Store(_gameElement);
+    GameElement::store(_gameElement);
 
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
