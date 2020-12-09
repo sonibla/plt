@@ -33,7 +33,14 @@ bool Player::Cast(int cardID){
 bool Player::Play(int cardID){}
 bool Player::ActivateAbility(int source){}
 void Player::PassPriority(){}
-bool Player::Draw(int nb){}
+bool Player::Draw(int nb){
+    for(int i=0; i<nb; i++){
+        int library_size = library->cards.size();
+        library->cards[library_size -1]->ChangeID();
+        hand->cards.push_back(library->cards[library_size -1]);
+        library->cards.pop_back();
+    }
+}
 bool Player::Discard(int nb){}
 std::list<int> Player::Target(){}
 bool Player::Win(){}

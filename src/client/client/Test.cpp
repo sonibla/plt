@@ -134,13 +134,13 @@ void Test::engine(){
     }
 
     std::cout << "number of cards in player hand :" << _player->GetHand().lock()->cards.size() << "\n" <<std::endl;
-    std::cout << "number of abilities in the stack :" << _stack->stackContent.size() << "\n" <<std::endl;
+    std::cout << "number of cards in the library :" << _player->GetLibrary().lock()->cards.size() << "\n" <<std::endl;
 
-    int cardID = _player->GetHand().lock()->cards[0]->GetID();
+    std::cout << "Drawing 2 cards... \n" << std::endl;
+    _player->Draw(2);
 
-    std::cout << "ID of the card that is going to be casted :" << cardID << "\n" << std::endl;
-    std::cout << "casting the card... \n" << std::endl;
-    _player->Cast(cardID);
+    std::cout << "number of cards in player hand :" << _player->GetHand().lock()->cards.size() << "\n" <<std::endl;
+    std::cout << "number of cards in the library :" << _player->GetLibrary().lock()->cards.size() << "\n" <<std::endl;   
 
     for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
         std::string s;
