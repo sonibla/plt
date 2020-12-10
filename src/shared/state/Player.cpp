@@ -34,19 +34,31 @@ bool Player::Play(int cardID){}
 bool Player::ActivateAbility(int source){}
 void Player::PassPriority(){}
 bool Player::Draw(int nb){
-    for(int i=0; i<nb; i++){
-        int library_size = library->cards.size();
-        library->cards[library_size -1]->ChangeID();
-        hand->cards.push_back(library->cards[library_size -1]);
-        library->cards.pop_back();
-        hand->notify(EventID::UPDATE);
-        library->notify(EventID::UPDATE);
-    }
+    std::cout << "cards to be drawed :" << nb << std::endl;
+    std::cout << "cards in library :" << library->cards.size() << std::endl;
+        for(int i=0; i<nb; i++){
+            if(!library->cards.empty()){
+                int library_size = library->cards.size();
+                library->cards[library_size -1]->ChangeID();
+                hand->cards.push_back(library->cards[library_size -1]);
+                library->cards.pop_back();
+                hand->notify(EventID::UPDATE);
+                library->notify(EventID::UPDATE);
+            }
+            else{
+                this->Lose();
+            }
+        }
+    std::cout << "end drawing" << std::endl;
+    
 }
 bool Player::Discard(int nb){}
 std::list<int> Player::Target(){}
 bool Player::Win(){}
-bool Player::Lose(){}
+bool Player::Lose(){
+    std::cout << "you lose" << std::endl;
+    return true;
+}
 
 std::weak_ptr<Graveyard> Player::GetGraveyard(){
     return graveyard;

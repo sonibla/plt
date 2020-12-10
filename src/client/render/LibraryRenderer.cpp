@@ -29,30 +29,33 @@ void LibraryRenderer::update (state::IObservable* obj,state::EventID eventID) {
 }
 
 void LibraryRenderer::draw (sf::RenderTarget &target, sf::RenderStates states) const {
-	// Get my position:
-	sf::Vector2f _position = this->getPosition();
-	
-	// Card's relative position:
-	sf::Vector2f _card_position(2.f, 2.f);
-	
-	// Create a sprite with background texture :
-	sf::Sprite _SpriteLibrary(this->texture);
-	_SpriteLibrary.setPosition(_position);
-	
-	// Cf. Test.cpp for the magic numbers
-	_SpriteLibrary.setScale(73/_SpriteLibrary.getLocalBounds().width,100/_SpriteLibrary.getLocalBounds().height);
-	
-	// Only draw top card :
-	CardRenderer * _renderer = (this->cards.at(this->cards.size()-1).get());
-	
-	// Card's relative position and scale :
-	_renderer->setPosition(_card_position + _position);
-	_renderer->setScale(73/_renderer->getLocalBounds().width,100/_renderer->getLocalBounds().height);
-    
-    // Draw background
-	target.draw(_SpriteLibrary);
-	
-	// Draw Card
-	target.draw(*_renderer);
+
+	if(!this->library.lock()->cards.empty()){ //Check if the library isn't empty
+		// Get my position:
+		sf::Vector2f _position = this->getPosition();
+		
+		// Card's relative position:
+		sf::Vector2f _card_position(2.f, 2.f);
+		
+		// Create a sprite with background texture :
+		sf::Sprite _SpriteLibrary(this->texture);
+		_SpriteLibrary.setPosition(_position);
+		
+		// Cf. Test.cpp for the magic numbers
+		_SpriteLibrary.setScale(73/_SpriteLibrary.getLocalBounds().width,100/_SpriteLibrary.getLocalBounds().height);
+		
+		// Only draw top card :
+		CardRenderer * _renderer = (this->cards.at(this->cards.size()-1).get());
+		
+		// Card's relative position and scale :
+		_renderer->setPosition(_card_position + _position);
+		_renderer->setScale(73/_renderer->getLocalBounds().width,100/_renderer->getLocalBounds().height);
+		
+		// Draw background
+		target.draw(_SpriteLibrary);
+		
+		// Draw Card
+		target.draw(*_renderer);
+	}
 }
 

@@ -117,6 +117,12 @@ void Test::engine(){
      std::shared_ptr<Game> game = Game::Create();
     this->state();
     auto _player = game->GetPlayers()[0].lock();
+
+ //   game->GetPlayers()[0].lock()->Draw(2);
+ //   game->GetPlayers()[0].lock()->Draw(3);
+
+
+
     render::RenderingManager* _renderingManager = new render::RenderingManager();
 
     for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
