@@ -13,4 +13,12 @@ BOOST_AUTO_TEST_CASE(test_player_create){
     BOOST_TEST(player.get() != nullptr,"Player::Create create a non-Player object.");
 }
 
+BOOST_AUTO_TEST_CASE(test_player_draw){
+    BOOST_TEST(0);
+}
+
+BOOST_AUTO_TEST_CASE(test_player_draw){
+    BOOST_TEST(0);
+}
+
 BOOST_AUTO_TEST_SUITE_END();
