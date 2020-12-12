@@ -17,7 +17,7 @@ BOOST_AUTO_TEST_CASE(test_player_draw){
     BOOST_TEST(0);
 }
 
-BOOST_AUTO_TEST_CASE(test_player_draw){
+BOOST_AUTO_TEST_CASE(test_player_cast){
     BOOST_TEST(0);
 }
 
