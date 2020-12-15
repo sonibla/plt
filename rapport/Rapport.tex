@@ -248,19 +248,36 @@ Nos Renderers héritent de sf::Drawable et redéfinissent la méthode draw pour 
 \clearpage
 \section{Règles de changement d'états et moteur de jeu}
 
-\subsection{Règles}
-
-\clearpage
 \subsection{Conception logiciel}
 
+Notre conception se découpe en 3 classes principales : (voir figure \ref{uml:engine} pour les détails)
+\begin{description}
+\item[Engine :] gère l'état du jeu (changements d'état, interrogations des instances de Actor) : vérifications et exécution des commandes
+\item[Actor :] génère des commandes à la demande de l'Engine. Cette classe représente donc une IA ou un joueur.
+\item[Command :] décrit une commande émise par un Actor, peut être exécuté par l'Engine pour changer l'état du jeu. Cette classe contient les données qui transiteront sur le réseau.\\
+\end{description}
 
-%\begin{landscape}
-%\begin{figure}[p]
-%\includegraphics[width=0.9\paperheight]{engine.pdf}
-%\caption{\label{uml:engine}Diagramme des classes de moteur de jeu.} 
-%\end{figure}
-%\end{landscape}
+\begin{landscape}
+\begin{figure}[p]
+\includegraphics[width=0.8\paperheight, page=1, trim=0 400 100 150, clip]{engine.pdf}
+\caption{\label{uml:engine}Diagramme des classes du moteur du jeu.} 
+\end{figure}
+\end{landscape}
 
+\subsection{Règles}
+
+Au début du jeu, la méthode \texttt{Engine::start()} est appelée pour démarrer l'Engine.
+
+L'Engine interroge les Actor tour par tour (en respectant les priorités) en appelant \texttt{Actor::GetCommand()}.
+Les actors savent quels types de commande ils peuvent faire (grâce au CommandID).
+\texttt{Actor::GetCommand()} renvoie une instance de Command qui décrit une action, qui modifiera l'état du jeu.
+
+Avant d'exécuter une commande, l'Engine la vérifie (avec \texttt{Engine::verify()}).
+Si la commande est valide, elle est exécutée grace à \texttt{Engine::execute()}.
+
+Ce schéma boucle jusqu'à la fin de la partie.
+
+\clearpage
 
 \section{Intelligence Artificielle}
 
