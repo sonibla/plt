@@ -16,13 +16,8 @@ using namespace render;
 
 std::vector<std::shared_ptr<Card>> create_cards_placeholder(){
     std::vector<std::shared_ptr<Card>> _cards;
-<<<<<<< HEAD
-    for(int i =0; i<4;i++){
-        std::shared_ptr<Card> _card = std::dynamic_pointer_cast<Card>(Card::Create());
-=======
     for(int i =0; i<6;i++){
         std::shared_ptr<Card> _card = std::dynamic_pointer_cast<Card>(Card::create());
->>>>>>> origin/dev
         //art of a black lotus
         _card->image_location = "../res/textures/card"+std::to_string(i)+".png";
         _card->name = "Place Holder";
@@ -119,74 +114,7 @@ void Test::render(){
 // Test Engine
 
 void Test::engine(){ 
-<<<<<<< HEAD
-
-     std::shared_ptr<Game> game = Game::Create();
-=======
     std::shared_ptr<Game> _game = Game::create();
->>>>>>> origin/dev
     this->state();
-    auto _player = game->GetPlayers()[0].lock();
 
- //   game->GetPlayers()[0].lock()->Draw(2);
- //   game->GetPlayers()[0].lock()->Draw(3);
-
-<<<<<<< HEAD
-
-=======
-    auto _stack =  _game->getStack().lock();
-
-    auto _player = _game->getPlayers()[0].lock();
->>>>>>> origin/dev
-
-    render::RenderingManager* _renderingManager = new render::RenderingManager();
-
-    for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
-        std::string s;
-        if(it->second.expired())
-        {
-            s = "expired";
-        }
-        else{
-            s = it->second.lock()->type();
-        }
-        std::cout << it->first<< " : "<< s << std::endl;
-    }
-
-<<<<<<< HEAD
-    while (_renderingManager->window.isOpen())
-    {
-        // Process events
-        sf::Event event;
-        while (_renderingManager->window.pollEvent(event))
-=======
-    std::cout << "number of cards in player hand :" << _player->getHand().lock()->cards.size() << "\n" <<std::endl;
-    std::cout << "number of abilities in the stack :" << _stack->stackContent.size() << "\n" <<std::endl;
-
-    int cardID = _player->getHand().lock()->cards[0]->getID();
-
-    std::cout << "ID of the card that is going to be casted :" << cardID << "\n" << std::endl;
-    std::cout << "casting the card... \n" << std::endl;
-    _player->cast(cardID);
-
-    for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
-        std::string s;
-        if(it->second.expired())
->>>>>>> origin/dev
-        {
-            // Close window: exit
-            if (event.type == sf::Event::Closed){
-                _renderingManager->window.close();
-            }
-            if (event.type == sf::Event::KeyPressed){
-                game->GetPlayers()[0].lock()->Draw(2);
-            }
-        }
-
-<<<<<<< HEAD
-        _renderingManager->update(nullptr,state::EventID::UPDATE);
-    }
-
-=======
->>>>>>> origin/dev
 }
