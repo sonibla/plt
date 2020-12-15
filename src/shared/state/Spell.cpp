@@ -32,5 +32,5 @@ Json::Value Spell::serialize () {
 }
 
 void Spell::deserialize (Json::Value json) {
-    copy = json["bool"].asBool();
+    copy = json["copy"].asBool();
 }
