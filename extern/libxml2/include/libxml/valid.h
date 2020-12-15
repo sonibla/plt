@@ -272,7 +272,7 @@ XMLPUBFUN xmlIDPtr XMLCALL
 XMLPUBFUN void XMLCALL
 		xmlFreeIDTable	       (xmlIDTablePtr table);
 XMLPUBFUN xmlAttrPtr XMLCALL
-		xmlGetID	       (xmlDocPtr doc,
+		xmlgetID	       (xmlDocPtr doc,
 					const xmlChar *ID);
 XMLPUBFUN int XMLCALL
 		xmlIsID		       (xmlDocPtr doc,

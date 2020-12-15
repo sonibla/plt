@@ -6,15 +6,15 @@
 using namespace state;
 using namespace std;
 
-void CardZone::SetCards (std::vector<std::shared_ptr<Card>> cards){
+void CardZone::setCards (std::vector<std::shared_ptr<Card>> cards){
     this->cards = cards;
 }
 
-std::weak_ptr<Card> CardZone::GetCard(int position){
+std::weak_ptr<Card> CardZone::getCard(int position){
     return cards[position];
 }
 
-std::vector<std::weak_ptr<Card>> CardZone::GetCards(){
+std::vector<std::weak_ptr<Card>> CardZone::getCards(){
     std::vector<std::weak_ptr<Card>> _cards;
     for(size_t i =0; i<cards.size();i++){
         _cards.push_back(cards[i]);
@@ -23,4 +23,4 @@ std::vector<std::weak_ptr<Card>> CardZone::GetCards(){
 }
 
 
-void CardZone::PutOnTheBattlefield(std::weak_ptr<Card>){}
+void CardZone::putOnTheBattlefield(std::weak_ptr<Card>){}
