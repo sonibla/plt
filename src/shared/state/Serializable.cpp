@@ -3,11 +3,11 @@
 using namespace std;
 using namespace state;
 
-Json::Value serialize() {
+Json::Value Serializable::serialize() {
 	Json::Value emptyJson;
 	return emptyJson;
 }
 
-void deserialize(Json::Value json) {
+void Serializable::deserialize(Json::Value json) {
 
 }
