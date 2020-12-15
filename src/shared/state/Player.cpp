@@ -69,3 +69,20 @@ std::shared_ptr<GameElement> Player::create(){
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
 }
+
+Json::Value Player::serialize () {
+
+    Json::Value json;
+
+    json["life "] = life;
+    json["mana "] = mana;
+    json["manaMax "] = manaMax;
+
+    return json;
+}
+
+void Player::deserialize (Json::Value json) {
+    life = json["life"].asInt();
+    mana = json["mana"].asInt();
+    manaMax = json["manaMax"].asInt();
+}
