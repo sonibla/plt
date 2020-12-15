@@ -5,7 +5,3 @@ using namespace engine;
 PassCommand::PassCommand(){
     this->id = CommandID::PASS;
 }
-
-PassCommand::~PassCommand(){
-
-}

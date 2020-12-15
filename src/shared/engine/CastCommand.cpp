@@ -6,7 +6,3 @@ CastCommand::CastCommand(int cardID){
     this->id = CommandID::CAST;
     this->cardID = cardID;
 }
-
-CastCommand::~CastCommand(){
-
-}
