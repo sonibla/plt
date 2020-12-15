@@ -55,7 +55,7 @@ Json::Value Game::serialize() {
 	json["battlefield"] = this->battlefield->serialize();
 	json["stack"] = this->stack->serialize();
 	json["exile"] = this->exile->serialize();
-	json["turn"] = this->turn->serialize();
+	//json["turn"] = this->turn->serialize();
 	for (int i(0); i<this->players.size(); i++)
 	{
 		json["players"][i] = this->players[i]->serialize();
@@ -65,6 +65,13 @@ Json::Value Game::serialize() {
 }
 
 void Game::deserialize(Json::Value json) {
-
+    this->battlefield->serialize() = json["battlefield"];
+    this->stack->serialize() = json["stack"];
+    this->exile->serialize() = json["exile"];
+    //this->turn->serialize() = json["turn"];
+    for (int i(0); i<sizeof(json["players"]); i++)
+	{
+		this->players[i]->serialize()= json["players"][i];
+	}
 }
 
