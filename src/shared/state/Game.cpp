@@ -49,3 +49,22 @@ Game::Game (){
 }
 Game::~Game(){}
 
+Json::Value Game::serialize() {
+	Json::Value json;
+
+	json["battlefield"] = this->battlefield->serialize();
+	json["stack"] = this->stack->serialize();
+	json["exile"] = this->exile->serialize();
+	json["turn"] = this->turn->serialize();
+	for (int i(0); i<this->players.size(); i++)
+	{
+		json["players"][i] = this->players[i]->serialize();
+	}
+
+	return json;
+}
+
+void Game::deserialize(Json::Value json) {
+
+}
+
