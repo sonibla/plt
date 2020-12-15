@@ -27,7 +27,7 @@ int main(int argc,char* argv[])
         }else if (strcmp(argv[1], "render") == 0) {
             test.render();
         } else if (strcmp(argv[1], "engine") == 0) {
-            //test.engine();
+            test.engine();
         } else if (strcmp(argv[1], "random_ai") == 0) {
             //test.random_ai();
         } else if (strcmp(argv[1], "heuristic_ai") == 0) {

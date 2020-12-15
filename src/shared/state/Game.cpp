@@ -8,25 +8,23 @@
 using namespace state;
 using namespace std;
 
-std::shared_ptr<Game> Game::instance = (nullptr);
+std::weak_ptr<Game> Game::instance;
 
-std::weak_ptr<Game> Game::GetInstance(){
-    if(!instance){
-        instance = std::make_shared<Game>();
-    }
+std::weak_ptr<Game> Game::getInstance(){
     return instance;
 }
-void Game::NextTurn(std::weak_ptr<Player> player){}
-std::weak_ptr<Battlefield> Game::GetBattlefield(){
+
+void Game::nextTurn(std::weak_ptr<Player> player){}
+std::weak_ptr<Battlefield> Game::getBattlefield(){
     return battlefield;
 }
-std::weak_ptr<Exile> Game::GetExile(){
+std::weak_ptr<Exile> Game::getExile(){
     return exile;
 }
-std::weak_ptr<Stack> Game::GetStack(){
+std::weak_ptr<Stack> Game::getStack(){
     return stack;
 }
-std::vector<std::weak_ptr<Player>> Game::GetPlayers(){
+std::vector<std::weak_ptr<Player>> Game::getPlayers(){
     std::vector<std::weak_ptr<Player>> _players;
     for(size_t i=0;i<players.size();i++){
         _players.push_back(players[i]);
@@ -34,8 +32,14 @@ std::vector<std::weak_ptr<Player>> Game::GetPlayers(){
     return _players;
 }
 
-void Game::SetPlayers ( std::vector<std::shared_ptr<Player>> players){
+void Game::setPlayers ( std::vector<std::shared_ptr<Player>> players){
     this->players = players;
+}
+
+std::shared_ptr<Game> Game::create(){
+    std::shared_ptr<Game> game = make_shared<Game>();
+    game->instance = game->weak_from_this();
+    return game;
 }
 
 Game::Game (){
