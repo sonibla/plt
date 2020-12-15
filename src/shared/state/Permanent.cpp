@@ -4,17 +4,17 @@
 #include <iostream>
 using namespace state;
 
-void Tap () {}
+void tap () {}
 
-bool IsDead () {}
+bool isDead () {}
 
-void Untap () {}
+void untap () {}
 
-void SetControllerID(int controllerID) {}
+void setControllerID(int controllerID) {}
 
-void SetStrength(int strength) {}
+void setStrength(int strength) {}
 
-void SetToughness(int toughness) {}
+void setToughness(int toughness) {}
 
 Permanent::Permanent(){
 }
@@ -22,10 +22,10 @@ Permanent::Permanent(){
  Permanent::~Permanent(){
 }
 
-std::shared_ptr<GameElement> Permanent::Create(){
+std::shared_ptr<GameElement> Permanent::create(){
     std::shared_ptr<Permanent> _gameElement = std::make_shared<Permanent>();
 
-    GameElement::Store(_gameElement);
+    GameElement::store(_gameElement);
 
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;

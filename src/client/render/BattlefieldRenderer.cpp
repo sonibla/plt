@@ -10,7 +10,7 @@ void BattlefieldRenderer::update(state::IObservable* obj,state::EventID eventID)
 
     std::shared_ptr<state::Battlefield> _battlefield = this->battlefield.lock();
 
-    std::vector<std::weak_ptr<state::Permanent>> list_permanents = _battlefield->GetPermanents();
+    std::vector<std::weak_ptr<state::Permanent>> list_permanents = _battlefield->getPermanents();
 
     for (size_t i=0; i<list_permanents.size();i++){
         std::shared_ptr<PermanentRenderer> _rendered_permanent = std::make_shared<PermanentRenderer>(list_permanents[i]);
@@ -57,10 +57,10 @@ void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates state
     for (size_t i=0; i<this->permanents.size(); i++){
 
         std::shared_ptr<PermanentRenderer> _permanent = this->permanents[i];
-        std::shared_ptr<state::Player> _controller = std::dynamic_pointer_cast<state::Player>(state::GameElement::GetPtr(_permanent->controllerID).lock());
+        std::shared_ptr<state::Player> _controller = std::dynamic_pointer_cast<state::Player>(state::GameElement::getPtr(_permanent->controllerID).lock());
 
         
-        if(_controller->GetID() != 0){ //If the permanent is controlled by the opponent
+        if(_controller->getID() != 0){ //If the permanent is controlled by the opponent
         
             if (_permanent->getRotation() == 0){ //Checking if the permanent is not tapped
                 _permanent->setPosition(bf_postion.x + opponentcount*90 + 10, bf_postion.y + 10);
