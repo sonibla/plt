@@ -275,9 +275,19 @@ Les actors savent quels types de commande ils peuvent faire (grâce au CommandID
 Avant d'exécuter une commande, l'Engine la vérifie (avec \texttt{Engine::verify()}).
 Si la commande est valide, elle est exécutée grace à \texttt{Engine::execute()}.
 
-Ce schéma boucle jusqu'à la fin de la partie.
 
+Déroulement d'une étape de jeu (Les tours de jeu sont composés de phases qui sont elles composées d'étapes)
 Les détails du déroulement d'un step sont dans l'algorigramme figure \ref{step}.
+
+Détail de l'algorigramme:
+
+Dans cet algorigramme, Actor1 est le joueur actif et Actor2 le joueur réactif.
+
+Au début d'une étape, une logique est appliquée ,cette logique dépend de la phase en question, pour une phase de pioche , le joueur actif piocherait une carte par exemple.
+
+Ensuite Le joueur actif est interrogé par l'engine, tant qu'il n'émmet pas de commande PASS , il garde la priorité, une fois qu'il passe cette priorité c'est le joueur réactif qui prend le relais, ensuite si le joueur réactif a émit plus d'une action valide, autrement dit s'il n'a pas fait que passer la priorité, le joueur actif reprend la priorité et peut à nouveau ajouter des effets sur la pile.
+
+Une fois que les deux joueurs ont passé la priorité sans ajouter d'effets sur la pile, si la pile est vide alors l'étape est terminé , sinon on résout l'effet du haut de la pile et on redonne la priorité au joueur actif. 
 
 \begin{figure}[h]
 \begin{center}
