@@ -40,5 +40,5 @@ Json::Value Card::serialize ()  {
 void Card::deserialize (Json::Value json)  {
     name = json["name"].toStyledString(); //convertion JSON to string
     manaCost = json["manaCost"].asInt(); //convertion JSON to int
-    image_location = json["image_location"].toStyledString(); 
+    image_location = json["image_location"].asString(); 
 }

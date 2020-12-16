@@ -23,3 +23,19 @@ std::shared_ptr<GameElement> Ability::create(){
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
 }
+
+Json::Value Ability::serialize () {
+
+    Json::Value json;
+
+    //std::shared_ptr<GameElement> source;
+    //std::vector<int> targets;
+
+    
+
+    return json;
+}
+
+void Ability::deserialize (Json::Value json) {
+    
+}
