@@ -248,19 +248,55 @@ Nos Renderers héritent de sf::Drawable et redéfinissent la méthode draw pour 
 \clearpage
 \section{Règles de changement d'états et moteur de jeu}
 
-\subsection{Règles}
-
-\clearpage
 \subsection{Conception logiciel}
 
+Notre conception se découpe en 3 classes principales : (voir figure \ref{uml:engine} pour les détails)
+\begin{description}
+\item[Engine :] gère l'état du jeu (changements d'état, interrogations des instances de Actor) : vérifications et exécution des commandes
+\item[Actor :] génère des commandes à la demande de l'Engine. Cette classe représente donc une IA ou un joueur.
+\item[Command :] décrit une commande émise par un Actor, peut être exécuté par l'Engine pour changer l'état du jeu. Cette classe contient les données qui transiteront sur le réseau.\\
+\end{description}
 
-%\begin{landscape}
-%\begin{figure}[p]
-%\includegraphics[width=0.9\paperheight]{engine.pdf}
-%\caption{\label{uml:engine}Diagramme des classes de moteur de jeu.} 
-%\end{figure}
-%\end{landscape}
+\begin{landscape}
+\begin{figure}[p]
+\includegraphics[width=0.8\paperheight, page=1, trim=0 400 100 150, clip]{engine.pdf}
+\caption{\label{uml:engine}Diagramme des classes du moteur du jeu.} 
+\end{figure}
+\end{landscape}
 
+\subsection{Règles}
+
+Au début du jeu, la méthode \texttt{Engine::start()} est appelée pour démarrer l'Engine.
+
+L'Engine interroge les Actor tour par tour (en respectant les priorités) en appelant \texttt{Actor::GetCommand()}.
+Les actors savent quels types de commande ils peuvent faire (grâce au CommandID).
+\texttt{Actor::GetCommand()} renvoie une instance de Command qui décrit une action, qui modifiera l'état du jeu.
+
+Avant d'exécuter une commande, l'Engine la vérifie (avec \texttt{Engine::verify()}).
+Si la commande est valide, elle est exécutée grace à \texttt{Engine::execute()}.
+
+
+Déroulement d'une étape de jeu (Les tours de jeu sont composés de phases qui sont elles composées d'étapes)
+Les détails du déroulement d'un step sont dans l'algorigramme figure \ref{step}.
+
+Détail de l'algorigramme:
+
+Dans cet algorigramme, Actor1 est le joueur actif et Actor2 le joueur réactif.
+
+Au début d'une étape, une logique est appliquée ,cette logique dépend de la phase en question, pour une phase de pioche , le joueur actif piocherait une carte par exemple.
+
+Ensuite Le joueur actif est interrogé par l'engine, tant qu'il n'émmet pas de commande PASS , il garde la priorité, une fois qu'il passe cette priorité c'est le joueur réactif qui prend le relais, ensuite si le joueur réactif a émit plus d'une action valide, autrement dit s'il n'a pas fait que passer la priorité, le joueur actif reprend la priorité et peut à nouveau ajouter des effets sur la pile.
+
+Une fois que les deux joueurs ont passé la priorité sans ajouter d'effets sur la pile, si la pile est vide alors l'étape est terminé , sinon on résout l'effet du haut de la pile et on redonne la priorité au joueur actif. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.4\textwidth]{StepFlowchart.pdf}
+\caption{\label{step}Déroulement d'un Step}
+\end{center}
+\end{figure}
+
+\clearpage
 
 \section{Intelligence Artificielle}
 

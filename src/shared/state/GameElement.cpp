@@ -11,11 +11,11 @@ int GameElement::getID (){
     return id;
 }
 
-std::weak_ptr<GameElement> GameElement::getPtr (int id){
-    std::weak_ptr<GameElement> gameElement;
+std::shared_ptr<GameElement> GameElement::getPtr (int id){
+    std::shared_ptr<GameElement> gameElement;
     auto search = GameElement::idTable.find(id);
     if(search != GameElement::idTable.end()){
-        gameElement= search->second;
+        gameElement= search->second.lock();
     }
     else{
         std::cout << "could not find gameElement " << id << std::endl;
