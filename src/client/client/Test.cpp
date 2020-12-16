@@ -101,9 +101,11 @@ void Test::render(){
         while (_renderingManager->window.pollEvent(event))
         {
             // Close window: exit
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed){
                 _renderingManager->window.close();
+            }
         }
+
         _renderingManager->update(nullptr,state::EventID::UPDATE);
     }
 
@@ -114,44 +116,5 @@ void Test::render(){
 void Test::engine(){ 
     std::shared_ptr<Game> _game = Game::create();
     this->state();
-
-
-    auto _stack =  _game->getStack().lock();
-
-    auto _player = _game->getPlayers()[0].lock();
-
-
-    for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
-        std::string s;
-        if(it->second.expired())
-        {
-            s = "expired";
-        }
-        else{
-            s = it->second.lock()->type();
-        }
-        std::cout << it->first<< " : "<< s << std::endl;
-    }
-
-    std::cout << "number of cards in player hand :" << _player->getHand().lock()->cards.size() << "\n" <<std::endl;
-    std::cout << "number of abilities in the stack :" << _stack->stackContent.size() << "\n" <<std::endl;
-
-    int cardID = _player->getHand().lock()->cards[0]->getID();
-
-    std::cout << "ID of the card that is going to be casted :" << cardID << "\n" << std::endl;
-    std::cout << "casting the card... \n" << std::endl;
-    _player->cast(cardID);
-
-    for(auto it=GameElement::idTable.begin(); it!=GameElement::idTable.end() ; it++){
-        std::string s;
-        if(it->second.expired())
-        {
-            s = "expired";
-        }
-        else{
-            s = it->second.lock()->type();
-        }
-        std::cout << it->first<< " : "<< s << std::endl;
-    }
 
 }
