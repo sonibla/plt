@@ -19,7 +19,7 @@ void setToughness(int toughness) {}
 Permanent::Permanent(){
 }
 
- Permanent::~Permanent(){
+Permanent::~Permanent(){
 }
 
 std::shared_ptr<GameElement> Permanent::create(){
@@ -32,20 +32,10 @@ std::shared_ptr<GameElement> Permanent::create(){
 }
 
 Json::Value Permanent::serialize () {
-/*
-    std::list<ActivatedAbility> activatedAbilities;
-    std::list<TriggeredAbility> triggeredAbilities;
-    bool tapped     = false;
-    int strength     = 0;
-    int toughness     = 0;
-    std::string image_location;
-    int ownerID;
-    int controllerID;
-    std::vector<std::string> types;
 
-
-*/
     Json::Value json;
+
+    json = PlayableGameElement::serialize();
 
     json["tapped"] = tapped;
     json["strength"] = strength;
@@ -54,9 +44,11 @@ Json::Value Permanent::serialize () {
     json["ownerID"] = ownerID;
     json["controllerID"] = controllerID;
 
-    for (int i(0); i<this->types.size(); i++)
+    json["types"].resize(types.size());
+
+    for (size_t i(0); i<this->types.size(); i++)
 	{
-		json["types"][i] = this->types[i];
+		json["types"][(Json::ArrayIndex) i] = this->types[i];
 	}
 
     return json;
@@ -65,6 +57,9 @@ Json::Value Permanent::serialize () {
 
 
 void Permanent::deserialize (Json::Value json) {
+
+    PlayableGameElement::deserialize(json);
+
     tapped = json["tapped"].asBool();
     strength = json["strength"].asInt();
     toughness = json["toughness"].asInt();
