@@ -72,7 +72,7 @@ Json::Value GameElement::serialize () {
 
     json["behaviour"] = behaviour;
     json["id"] = id;
-    
+
     return json;
 }
 
@@ -81,6 +81,6 @@ void GameElement::deserialize (Json::Value json) {
     behaviour = json["behaviour"];    
     id = json["id"].asInt(); 
 
-    GameElement::store(std::make_shared(*this));
+    GameElement::store(std::make_shared<GameElement>(*this));
 }
 
