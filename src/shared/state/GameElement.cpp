@@ -64,3 +64,31 @@ GameElement::~GameElement(){
     }
 }
 
+Json::Value GameElement::serialize () {
+
+    Json::Value json;
+    json = Serializable::serialize();
+
+    json["behaviour"] = behaviour;
+    json["lastID"] = lastID;
+    json["id"] = id;
+
+
+    //static std::map<int,std::weak_ptr<GameElement>> idTable;
+
+
+
+
+    return json;
+}
+
+void GameElement::deserialize (Json::Value json) {
+    Serializable::deserialize(json);
+    behaviour = json["behaviour"];    
+    lastID = json["lastID"].asInt(); 
+    id = json["id"].asInt(); 
+
+    idTable.clear();
+    
+}
+
