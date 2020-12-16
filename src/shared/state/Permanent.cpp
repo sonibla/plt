@@ -54,25 +54,28 @@ Json::Value Permanent::serialize () {
     json["ownerID"] = ownerID;
     json["controllerID"] = controllerID;
 
-    for (int i(0); i<this->activatedAbilities.size(); i++)
-	{
-		json["activatedAbilities"][i] = this->activatedAbilities[i].serialize();
-	}
-
-    for (int i(0); i<this->triggeredAbilities.size(); i++)
-	{
-		json["triggeredAbilities"][i] = this->triggeredAbilities[i].serialize();
-	}
-
     for (int i(0); i<this->types.size(); i++)
 	{
 		json["types"][i] = this->types[i];
 	}
-
 
     return json;
 
 }
 
 
-void Permanent::deserialize (Json::Value json) {}
+void Permanent::deserialize (Json::Value json) {
+    tapped = json["tapped"].asBool();
+    strength = json["strength"].asInt();
+    toughness = json["toughness"].asInt();
+    image_location = json["copy"].asString();
+    ownerID = json["ownerID"].asInt();
+    controllerID = json["controllerID"].asInt();
+
+    types.clear();
+    for (Json::ArrayIndex i(0); i<json["types"].size(); i++)
+	{
+		types.push_back(json["types"][i].asString());
+	}
+
+}
