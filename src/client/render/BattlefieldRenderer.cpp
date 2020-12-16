@@ -57,7 +57,7 @@ void BattlefieldRenderer::draw (sf::RenderTarget &target, sf::RenderStates state
     for (size_t i=0; i<this->permanents.size(); i++){
 
         std::shared_ptr<PermanentRenderer> _permanent = this->permanents[i];
-        std::shared_ptr<state::Player> _controller = std::dynamic_pointer_cast<state::Player>(state::GameElement::getPtr(_permanent->controllerID).lock());
+        std::shared_ptr<state::Player> _controller = std::dynamic_pointer_cast<state::Player>(state::GameElement::getPtr(_permanent->controllerID));
 
         
         if(_controller->getID() != 0){ //If the permanent is controlled by the opponent
