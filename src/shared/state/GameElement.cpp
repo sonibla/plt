@@ -1,5 +1,6 @@
 #include "GameElement.h"
 #include <iostream>
+#include <memory>
 
 using namespace std;
 using namespace state;
@@ -70,25 +71,16 @@ Json::Value GameElement::serialize () {
     json = Serializable::serialize();
 
     json["behaviour"] = behaviour;
-    json["lastID"] = lastID;
     json["id"] = id;
-
-
-    //static std::map<int,std::weak_ptr<GameElement>> idTable;
-
-
-
-
+    
     return json;
 }
 
 void GameElement::deserialize (Json::Value json) {
     Serializable::deserialize(json);
     behaviour = json["behaviour"];    
-    lastID = json["lastID"].asInt(); 
     id = json["id"].asInt(); 
 
-    idTable.clear();
-    
+    GameElement::store(std::make_shared(*this));
 }
 
