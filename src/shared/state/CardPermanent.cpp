@@ -13,3 +13,18 @@ std::shared_ptr<GameElement> CardPermanent::create(){
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
 }
+
+Json::Value CardPermanent::serialize () {
+
+    Json::Value json;
+    json = Permanent::serialize();
+
+    json["cardID"] = cardID;
+
+    return json;
+}
+
+void CardPermanent::deserialize (Json::Value json) {
+    Permanent::deserialize(json);
+    cardID = json["cardID"].asInt();    
+}
