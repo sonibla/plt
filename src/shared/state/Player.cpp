@@ -11,7 +11,7 @@ using namespace std;
 bool Player::cast(int cardID){
     //On a créer un nouveau ability - type Spell à mettre
     std::shared_ptr<state::Spell> _spell = std::dynamic_pointer_cast<Spell>(state::Spell::create());
-    std::shared_ptr<Card> _card = std::dynamic_pointer_cast<Card>(GameElement::getPtr(cardID).lock()); //on bloque le pointeur et on le transforme en shared
+    std::shared_ptr<Card> _card = std::dynamic_pointer_cast<Card>(GameElement::getPtr(cardID)); //on bloque le pointeur et on le transforme en shared
     _spell->source = _card; //On complète la source de l'ability par la carte en entrée 
     std::weak_ptr<Game> game = Game::getInstance();
     auto _game = game.lock();
