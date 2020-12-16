@@ -1,4 +1,5 @@
 #include "AbilityRenderer.h"
+#include "state/Card.h"
 
 using namespace std;
 using namespace render;
@@ -14,7 +15,6 @@ AbilityRenderer::AbilityRenderer (std::weak_ptr<state::Ability> ability){
     this->setTexture(this->texture);
     this->controllerID = _ability->controller;
 }
-
 
 AbilityRenderer::~AbilityRenderer (){
 
