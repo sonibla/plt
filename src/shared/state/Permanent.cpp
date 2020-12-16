@@ -30,3 +30,49 @@ std::shared_ptr<GameElement> Permanent::create(){
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
 }
+
+Json::Value Permanent::serialize () {
+/*
+    std::list<ActivatedAbility> activatedAbilities;
+    std::list<TriggeredAbility> triggeredAbilities;
+    bool tapped     = false;
+    int strength     = 0;
+    int toughness     = 0;
+    std::string image_location;
+    int ownerID;
+    int controllerID;
+    std::vector<std::string> types;
+
+
+*/
+    Json::Value json;
+
+    json["tapped"] = tapped;
+    json["strength"] = strength;
+    json["toughness"] = toughness;
+    json["image_location"] = image_location;
+    json["ownerID"] = ownerID;
+    json["controllerID"] = controllerID;
+
+    for (int i(0); i<this->activatedAbilities.size(); i++)
+	{
+		json["activatedAbilities"][i] = this->activatedAbilities[i].serialize();
+	}
+
+    for (int i(0); i<this->triggeredAbilities.size(); i++)
+	{
+		json["triggeredAbilities"][i] = this->triggeredAbilities[i].serialize();
+	}
+
+    for (int i(0); i<this->types.size(); i++)
+	{
+		json["types"][i] = this->types[i];
+	}
+
+
+    return json;
+
+}
+
+
+void Permanent::deserialize (Json::Value json) {}
