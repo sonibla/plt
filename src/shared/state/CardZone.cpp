@@ -24,3 +24,15 @@ std::vector<std::weak_ptr<Card>> CardZone::getCards(){
 
 
 void CardZone::putOnTheBattlefield(std::weak_ptr<Card>){}
+
+
+
+Json::Value CardZone::serialize() {
+	
+
+	
+}
+
+void CardZone::deserialize (Json::Value ) {
+    
+}

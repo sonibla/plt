@@ -14,7 +14,7 @@ add_custom_test(state_stack)
 add_custom_test(state_token)
 add_custom_test(state_triggered_ability)
 add_custom_test(engine_castcommand)
-
+add_custom_test(state_serializable)
 
 # vim: set sw=2 sts=2 et:
 

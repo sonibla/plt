@@ -18,3 +18,22 @@ std::vector<std::weak_ptr<Permanent>> Battlefield::getPermanents (){
 void Battlefield::setPermanents (std::vector<std::shared_ptr<Permanent>> permanents){
     this->permanents = permanents;
 };
+
+Json::Value Battlefield::serialize() {
+	Json::Value json;
+
+    for (int i(0); i<this->permanents.size(); i++)
+	{
+		json["permanents"][i] = this->permanents[i]->serialize();
+	}
+	
+	return json;
+}
+
+
+void Battlefield::deserialize (Json::Value json) {
+    for (Json::ArrayIndex i(0); i<json["permanents"].size(); i++)
+	{
+		this->permanents[i]->serialize()= json["permanents"][i];
+	}
+}

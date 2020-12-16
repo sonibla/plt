@@ -8,3 +8,13 @@ using namespace std;
 
 Stack::Stack() {}
 Stack::~Stack() {}
+
+Json::Value Stack::serialize() {
+	
+
+	
+}
+
+void Stack::deserialize (Json::Value ) {
+    
+}

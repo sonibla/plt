@@ -19,3 +19,18 @@ std::shared_ptr<GameElement> Spell::create(){
     std::cout << "created :" <<_gameElement->id << std::endl;
     return _gameElement;
 }
+
+Json::Value Spell::serialize () {
+
+    Json::Value json;
+
+    //bool copy;
+
+    json["copy"] = copy;
+
+    return json;
+}
+
+void Spell::deserialize (Json::Value json) {
+    copy = json["copy"].asBool();
+}

@@ -20,5 +20,15 @@ BOOST_AUTO_TEST_CASE(test_castcommand_create){
     BOOST_TEST(castCommand->getId() == CommandID::CAST);
 }
 
+BOOST_AUTO_TEST_CASE(test_castcommand_verify){
+    //Create wrong castCommand in every possible way and verify that verify return false.
+    BOOST_TEST(1);
+}
+
+BOOST_AUTO_TEST_CASE(test_castcommand_cast){
+    //Create a valid castCommand and execute it , then verify that the spell casted is valid.
+    BOOST_TEST(1);
+}
+
 
 BOOST_AUTO_TEST_SUITE_END();
